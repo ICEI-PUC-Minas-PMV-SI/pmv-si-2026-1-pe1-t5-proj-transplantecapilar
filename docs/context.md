@@ -1,54 +1,67 @@
-# Introdução
+## Introdução
 
-Imagine que você deseja apresentar este projeto para investidores que deverão decidir se investem ou não no desenvolvimento da sua ferramenta.
+O transplante capilar é uma técnica que encontra aplicação generalizada no tratamento da alopecia androgenética, e o seu crescimento foi significativo nas últimas décadas em resultado da progressão de técnicas cirúrgicas, popularização dos custos e pelo crescente aumento da procura por procedimentos capilares estéticos. Dentre as técnicas mais utilizadas está a Follicular Unit Transplantation (FUT) e Follicular Unit Extraction (FUE), possibilitando a transferência de unidades foliculares da área doadora até a área receptora do couro cabeludo, fazendo restaurar cabelos de forma adequada (RAZMI; SUBBURAJ, 2022).
 
-A **Introdução** consiste das etapas: *Contextualização -- Definição do problema -- Definição dos Objetivos -- Justificativa*, e tem como função situar o seu trabalho dentro de um contexto de mercado e mostrar a importância da sua proposta para resolver a dor de um usuário.
+Independentemente da efetividade do procedimento, o êxito de um transplante capilar não se atribui somente à técnica cirúrgica, mas sim ao consecutivo pós-operatório. Durante os primeiros dias e semanas seguintes ao procedimento cirúrgico, os pacientes precisam passar por diversos cuidados como higiene, medicação, proteção da área transplantada e doadora e procura pelos sinais de qualquer complicação física.
 
-A Contextualização deve situar sem projeto em um determinado contexto de mercado, a fim de fornecer informações adicionais que possam ajudar a entender melhor o assunto que você irá abordar. Serve também para definir a relevância do seu assunto, uma vez que mostra o tamanho do mercado em que se está inserido. Ela pode envolver a análise de vários aspectos, como o ambiente histórico, cultural, político e social em que o problema a ser atacado surgiu.
+Neste contexto, tem se feito uso das tecnologias digitais para melhorar o acompanhamento médico da parte do profissional de saúde e paciente. Aplicações móveis e sistemas digitais de monitoramento já revelaram potencial para auxiliar na recuperação cirúrgica e aumentar aderência do protocolo pós-operatório e melhor acompanhamento clínico do paciente (D’AMBROSIO et al., 2026; SEMPLE et al., 2015).
 
-Escreva de 2 a 3 parágrafos para contetualizar o seu projeto.
+Assim se apresenta, portanto, o desenvolvimento de soluções tecnológicas que proporcionem este acompanhamento: registrando informação relevante do paciente de forma organizada e que possam monitorar remotamente sua recuperação pós transplante capilar.
 
 ## Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, **não** é a hora de comentar sobre a solução/aplicação.
+Depois a realização da cirurgia, os 30 dias consecutivos após o transplante capilar são significativamente o espaço de tempo mais crítico para o bom resultado da técnica. No decorrer desta etapa, os pacientes necessitam acompanhar várias indicações médicas, tais como: precauções com a região transplantada, utilização adequada dos fármacos, assepsia apropriada do couro cabeludo e análise de prováveis indícios de distúrbios clínicos.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
+Todavia, inúmeros pacientes mostram problemas em preservar um hábito pertinente de precauções pós-operatórias. Pesquisas mostram que aspectos como descuido com a terapia medicamentosa, dificuldade em promover adequadamente os cuidados com a lesão cirúrgica e as barreiras no contato com os profissionais de saúde podem prejudicar a restauração e os resultados do transplante capilar (SHICHANG et al., 2024).
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+Além do mais, o diálogo entre equipe médica e paciente no período pós-operatório constantemente acontece de modo informal, através de mensagens ou envio de fotos em aplicativos de comunicação, sendo mais utilizado o Whatsapp, o que pode ocasionar em informações desorganizadas, perda de registros importantes e dificuldades no acompanhamento clínico. Além disso, estudos apontam que a ausência de ferramentas estruturadas de acompanhamento pode comprometer a qualidade do cuidado e a adesão do paciente ao tratamento pós-operatório (PATEL et al., 2020).
 
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Dessa forma, existe a necessidade de uma solução que permita registrar e organizar as informações do pós-operatório, facilitar a comunicação entre médico e paciente e possibilitar o acompanhamento estruturado da recuperação, visando o bem-estar, saúde, manutenção da autoestima e a probabilidade maior de alcançar um ótimo resultado.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo geral deste projeto é desenvolver uma aplicação web simples para auxiliar no acompanhamento pós-operatório de pacientes que realizaram transplante capilar.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Entre os objetivos específicos do projeto estão:
+
+- Permitir que o paciente registre diariamente informações sobre sua recuperação;
+- Possibilitar o envio de fotos da área transplantada para acompanhamento médico;
+- Organizar as informações do pós-operatório em um sistema estruturado;
+- Permitir que o médico visualize de forma clara a evolução do paciente durante o período de recuperação;
+- Facilitar a comunicação entre paciente e médico durante os primeiros 30 dias após a cirurgia.
+
+Com isso, busca-se criar uma ferramenta que contribua para o monitoramento da recuperação cirúrgica e para a organização das informações relacionadas ao pós-operatório.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+O transplante capilar é um procedimento cada vez mais realizado para o tratamento da alopecia androgenética, sendo amplamente utilizado na medicina estética. Apesar dos avanços nas técnicas cirúrgicas, o sucesso do procedimento depende fortemente do correto seguimento das orientações pós-operatórias, especialmente nos primeiros 30 dias após a cirurgia, período considerado crítico para a recuperação do paciente e para a fixação dos folículos transplantados.
 
-Lembre-se de pesquisar e utilizar números que justifiquem por que é importante que tal problema seja resolvido ou que mostrem o impacto do problema na vida das pessoas.
+Entretanto, muitos pacientes apresentam dificuldades em manter o acompanhamento adequado durante o período pós-operatório, seja por dúvidas sobre os cuidados necessários, esquecimento de orientações médicas ou dificuldade de comunicação com a equipe responsável pelo procedimento. Estudos indicam que tecnologias digitais, como aplicativos móveis e sistemas de monitoramento remoto, podem auxiliar no acompanhamento da recuperação cirúrgica, permitindo melhor comunicação entre paciente e médico e facilitando o registro de informações sobre o estado clínico do paciente (EL HADI et al., 2025).
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Dessa forma, o desenvolvimento de uma aplicação web voltada ao acompanhamento do pós-operatório de transplante capilar se justifica pela possibilidade de organizar as informações da recuperação do paciente, facilitar o monitoramento médico e contribuir para que os pacientes sigam corretamente as orientações pós-cirúrgicas. Além disso, a utilização de tecnologias de telemedicina tem demonstrado benefícios como maior acessibilidade, redução de custos e melhoria na satisfação dos pacientes durante o acompanhamento pós-operatório (WILLIAMS et al., 2018). Ainda, diretrizes clínicas ressaltam a importância da padronização e acompanhamento adequado no transplante capilar para melhores resultados a longo prazo (MYSORE et al., 2021).
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+## Público-alvo
 
-## Público-Alvo
+O público-alvo do sistema é composto por dois grupos principais de usuários:
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+### Pacientes submetidos ao transplante capilar
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+São indivíduos que realizaram o procedimento cirúrgico e necessitam de acompanhamento durante o período pós-operatório. Esses pacientes podem possuir diferentes níveis de familiaridade com tecnologias digitais, mas em geral utilizam smartphones e aplicativos no cotidiano.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+As principais necessidades desse grupo incluem:
+
+- Acesso fácil às orientações pós-operatórias;
+- Possibilidade de registrar informações sobre a recuperação;
+- Envio de fotos da área transplantada;
+- Comunicação simplificada com o médico.
+
+### Médicos que realizam transplante capilar
+
+São profissionais responsáveis pelo acompanhamento dos pacientes após a cirurgia. Esses usuários necessitam de uma forma organizada de visualizar informações sobre o pós operatório de seus pacientes.
+
+Entre suas necessidades estão:
+
+- Acesso às informações registradas pelos pacientes;
+- Visualização das fotos enviadas durante a recuperação;
+- Acompanhamento da evolução clínica do paciente;
+- Identificação rápida de possíveis complicações.
