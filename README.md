@@ -27,8 +27,7 @@ Além disso, a aplicação possibilita que o médico responsável acompanhe, de 
 
 | Etapa         | Atividades |
 |  :----:   | ----------- |
-| ETAPA 1         https://sgapucminasbr-my.sharepoint.com/my?viewid=e2b5ab35%2De7a3%2D4788%2D8464%2Dd55f626d5d0b&id=%2Fpersonal%2F1663220%5Fsga%5Fpucminas%5Fbr%2FDocuments%2FArtigos%20Projeto%2FProjeto%20Etapa%201%2FProjeto%2DAplica%C3%A7%C3%B5es%2DWEB%2DEtapa1%2Epdf&parent=%2Fpersonal%2F1663220%5Fsga%5Fpucminas%5Fbr%2FDocuments%2FArtigos%20Projeto%2FProjeto%20Etapa%201
-|[Documentação de Contexto](docs/context.md) <br> [Especificação do Projeto](docs/especification.md) |
+| ETAPA 1         |[Documentação de Contexto](docs/context.md) <br> [Especificação do Projeto](docs/especification.md) |
 | ETAPA 2         |[Projeto de Interface](docs/interface.md) <br> [Template Padrão](docs/template.md) |
 | ETAPA 3         |[Programação de Funcionalidades - HTML e CSS](docs/development.md) |
 | ETAPA 4        |[Programação de Funcionalidades - Javascript](docs/development.md) <br> [Testes de Software ](docs/tests.md) |
