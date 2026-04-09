@@ -1,4 +1,4 @@
-# Título do Projeto
+APLICAÇÃO WEB PARA ACOMPANHAMENTO PÓS-OPERATÓRIO DE TRANSPLANTE CAPILAR
 
 `CURSO: Sistemas de Informação`
 
@@ -6,12 +6,13 @@
 
 `SEMESTRE: 1º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto consiste no desenvolvimento de uma aplicação web voltada ao acompanhamento pós-operatório de pacientes submetidos ao transplante capilar. O sistema tem como objetivo principal auxiliar no monitoramento da recuperação durante os primeiros 30 dias após a cirurgia, permitindo que o paciente registre diariamente informações sobre seu estado, envie fotos da área transplantada e relate dúvidas ou sintomas.
+Além disso, a aplicação possibilita que o médico responsável acompanhe, de forma organizada, a evolução clínica de seus pacientes, acessando registros, imagens e comentários em um único ambiente. Dessa forma, busca-se melhorar a comunicação entre paciente e profissional de saúde, aumentar a adesão aos cuidados pós-operatórios e contribuir para melhores resultados no processo de recuperação.
 
 ## Integrantes
 
 * Nome completo do aluno 1
-* Nome completo do aluno 2
+* Higor Pierri de Castro Pereira
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 * Nome completo do aluno 5
@@ -19,7 +20,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Orientador
 
-* Nome completo do professor 1
+* Roberto Felipe Dias Ferreira da Rocha
 
 # Planejamento
 
