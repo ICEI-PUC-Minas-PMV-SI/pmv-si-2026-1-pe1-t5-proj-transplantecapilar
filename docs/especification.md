@@ -1,91 +1,122 @@
-# Especificações do Projeto
+## Especificação do Projeto
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
+### Perfis de Usuários
 
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto.
+#### Perfil: Paciente
 
-Caso deseje atribuir uma imagem a sua persona, utilize o site https://thispersondoesnotexist.com/
+**Descrição:**
 
+Pessoa que realizou o transplante capilar e precisa registrar informações sobre o período pós-operatório.
+
+**Necessidades:**
+
+- Registrar sintomas e evolução da recuperação;
+- Enviar fotos da área transplantada;
+- Receber orientações sobre cuidados pós-operatórios;
+
+---
+
+#### Perfil: Médico
+
+**Descrição:**
+
+Profissional responsável pelo acompanhamento do paciente após o transplante capilar.
+
+**Necessidades:**
+
+- Visualizar informações enviadas pelos pacientes;
+- Acompanhar evolução pós-operatória;
+- Identificar possíveis complicações;
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+### Persona 1 — Paciente
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+João Silva tem 32 anos, é empresário e realizou recentemente um transplante capilar. Preocupa-se com sua aparência e autoestima, e busca garantir o melhor resultado possível após o procedimento. Possui rotina agitada e, por isso, tem dificuldade em lembrar e seguir corretamente todas as orientações pós-operatórias.
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+João utiliza frequentemente o smartphone no dia a dia e está habituado a aplicativos, mas prefere soluções simples e intuitivas. Durante o período de recuperação, sente insegurança quanto aos cuidados necessários, dúvidas sobre sintomas e dificuldade em manter contato frequente com o médico.
+
+Suas principais necessidades são registrar informações sobre sua recuperação, enviar fotos da área transplantada, esclarecer dúvidas rapidamente e acompanhar sua evolução de forma organizada.
+
+---
+
+### Persona 2 — Médico
+
+Dr. Carlos Mendes tem 45 anos, é médico especialista em transplante capilar e realiza diversos procedimentos por mês. Ele precisa acompanhar a evolução de seus pacientes no pós-operatório, mas enfrenta dificuldades devido à comunicação descentralizada, muitas vezes feita por aplicativos de mensagem.
+
+Carlos busca uma forma mais organizada de visualizar informações dos pacientes, acompanhar fotos da evolução e identificar possíveis complicações de maneira rápida. Ele valoriza ferramentas que otimizem seu tempo e melhorem a qualidade do acompanhamento clínico.
+
+Suas principais necessidades são acessar dados estruturados dos pacientes, acompanhar a evolução pós-operatória, visualizar imagens enviadas e identificar sinais de alerta com facilidade.
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+### Paciente
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+- Como paciente, quero registrar diariamente informações sobre meu pós-operatório para permitir que o médico acompanhe minha recuperação.
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
+- Como paciente, quero enviar fotos da área transplantada para possibilitar a avaliação da evolução do transplante.
 
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+- Como paciente, quero registrar sintomas ou dúvidas no sistema para receber orientação da equipe médica.
 
-## Requisitos
+---
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
+### Médico
+
+- Como médico, quero visualizar os registros enviados pelos pacientes para acompanhar o processo de recuperação pós-cirúrgica.
+
+- Como médico, quero analisar as fotos enviadas pelos pacientes para identificar possíveis complicações no pós-operatório.
+
+## Requisitos do Projeto
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade | 
-|------|-----------------------------------------|----| 
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA |  
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês   | MÉDIA | 
+| ID     | Descrição                                                                 | Prioridade |
+|--------|-------------------------------------------------------------------------|-----------|
+| RF-01  | Permitir cadastro de pacientes no sistema.                              | Alta      |
+| RF-02  | Permitir que o paciente registre informações diárias sobre o pós operatório. | Alta      |
+| RF-03  | Permitir o envio de fotos da área transplantada.                        | Alta      |
+| RF-04  | Permitir que o médico visualize as informações registradas pelos pacientes. | Alta      |
+| RF-05  | Exibir resumo da evolução do paciente durante o pós-operatório.         | Média     |
+| RF-06  | Permitir exportação do histórico de acompanhamento do paciente em relatório. | Baixa     |
+| RF-07  | Permitir cadastro de médicos no sistema.                                | Alta      |
+| RF-08  | Permitir login de pacientes e médicos no sistema.                       | Alta      |
+| RF-09  | Permitir que o paciente visualize seu histórico de registros durante o pós-operatório. | Média     |
+| RF-10  | Permitir que o médico filtre pacientes por data da cirurgia ou nome.    | Média     |
+| RF-11  | Permitir que o paciente edite informações registradas no mesmo dia.     | Baixa     |
+| RF-12  | Permitir envio de comentários ou mensagens entre paciente e médico no sistema. | Média     |
 
+---
 
-### Requisitos não Funcionais
+### Requisitos Não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+| ID     | Descrição                                                                 | Prioridade |
+|--------|-------------------------------------------------------------------------|-----------|
+| RNF-01 | O sistema deve possuir interface simples e de fácil utilização.         | Alta      |
+| RNF-02 | O sistema deve permitir acesso por meio de navegadores web.             | Alta      |
+| RNF-03 | O sistema deve garantir a segurança das informações registradas.        | Alta      |
+| RNF-04 | O sistema deve ser responsivo, permitindo utilização adequada em computadores, tablets e smartphones. | Média     |
+| RNF-05 | O sistema deve permitir armazenamento das informações dos pacientes de forma organizada e acessível para consulta durante o acompanhamento pós-operatório. | Média     |
+| RNF-06 | O sistema deve apresentar tempo de carregamento inferior a 3 segundos.  | Baixa     |
+| RNF-07 | O sistema deve garantir que apenas usuários autenticados tenham acesso às informações. | Alta      |
+| RNF-08 | O sistema deve apresentar navegação intuitiva, com organização clara das funcionalidades. | Alta      |
+| RNF-09 | O sistema deve manter disponibilidade mínima de 95% do tempo.           | Média     |
+| RNF-10 | O sistema deve permitir fácil manutenção e atualização do código.       | Média     |
+| RNF-11 | O sistema deve ser compatível com os principais navegadores (Chrome, Firefox, Edge). | Baixa     |
+| RNF-12 | O sistema deve apresentar mensagens de erro claras e compreensíveis para o usuário. | Média     |
 
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
+| ID  | Restrição |
+|-----|-----------|
+| 01  | O projeto deverá ser entregue até o final do semestre. |
+| 02  | Não poderá ser desenvolvido um módulo de backend. |
+| 03  | O sistema deverá ser desenvolvido apenas como aplicação web. |
+| 04  | O projeto deverá contemplar somente os 30 primeiros dias do pós-operatório. |
+| 05  | O sistema deverá possuir apenas dois perfis de usuário: paciente e médico. |
+| 06  | O projeto deverá priorizar funcionalidades simples, compatíveis com o nível de desenvolvimento da equipe. |
+| 07  | O sistema não substituirá a avaliação médica presencial. |
+| 08  | O projeto não contará com integração a prontuários eletrônicos ou sistemas externos de clínicas. |
+| 09  | O sistema deverá ser desenvolvido com foco em interface e funcionalidades compatíveis com HTML, CSS e JavaScript. |
+| 10  | O projeto estará limitado ao escopo acadêmico definido para a disciplina, podendo sofrer adaptações conforme orientação do professor. |
 > - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
