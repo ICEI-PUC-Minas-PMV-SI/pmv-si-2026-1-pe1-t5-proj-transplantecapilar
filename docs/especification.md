@@ -119,4 +119,3 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 | 08  | O projeto não contará com integração a prontuários eletrônicos ou sistemas externos de clínicas. |
 | 09  | O sistema deverá ser desenvolvido com foco em interface e funcionalidades compatíveis com HTML, CSS e JavaScript. |
 | 10  | O projeto estará limitado ao escopo acadêmico definido para a disciplina, podendo sofrer adaptações conforme orientação do professor. |
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
