@@ -12,11 +12,12 @@ Além disso, a aplicação possibilita que o médico responsável acompanhe, de 
 
 ## Integrantes
 
-* Nome completo do aluno 1
+* Gabriel Victor Soares
 * Higor Pierri de Castro Pereira
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
+* Letícia Oliveira Lacerda
+* Matheus de Souza Pinto
+* Thiago de Paulo Alves Silva
+* Wesley Henrique Dos Santos Silva
 
 
 ## Orientador
