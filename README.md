@@ -19,7 +19,7 @@ Além disso, a aplicação possibilita que o médico responsável acompanhe, de 
 * Thiago de Paulo Alves Silva
 * Wesley Henrique Dos Santos Silva
 
-## 👥 Divisão de Tarefas
+## Divisão de Tarefas
 
 | Integrante | Responsabilidades |
 |-----------|------------------|
