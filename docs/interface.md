@@ -9,7 +9,7 @@ Além disso, o sistema foi projetado para ser responsivo e de fácil navegação
 
 O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando as interações entre pacientes e médicos, desde o acesso inicial até as funcionalidades de acompanhamento pós-operatório.
 
-![Fluxograma do Sistema](img/fluxograma.jpeg)
+![Fluxograma](img/Fluxograma.jpeg)
 
 ## Wireframes
 
