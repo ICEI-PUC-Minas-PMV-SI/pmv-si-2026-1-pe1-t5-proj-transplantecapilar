@@ -44,7 +44,7 @@ Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapea
 ![Tela 3B](img/Tela%203B.png)
 
 ### Tela 4A — Questionário Diário
-![Tela 4A](img/Tela%204A.png)
+![Tela 4A](img/Tela%204A%20.png)
 
 ### Tela 4B — Envio de Fotos
 ![Tela 4B](img/Tela%204B.png)
