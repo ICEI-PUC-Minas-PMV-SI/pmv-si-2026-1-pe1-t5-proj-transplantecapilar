@@ -58,3 +58,63 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 ### Tela 4F — Visualização de Fotos
 ![Tela 4F](img/Tela%204F.png)
+
+## Mapa do Sistema
+
+```mermaid
+flowchart LR
+    A[Paciente] -->|Envia dados| B[Sistema Web]
+    B -->|Exibe informações| A
+
+    C[Médico] -->|Acessa dados| B
+    B -->|Atualizações| C
+
+---
+
+# 👤 2. JORNADA DO USUÁRIO (PACIENTE)
+
+```markdown
+## Jornada do Usuário — Paciente
+
+```mermaid
+flowchart LR
+    A[Login] --> B[Dashboard]
+    B --> C[Responder Questionário]
+    B --> D[Enviar Fotos]
+    B --> E[Enviar Dúvida]
+    C --> F[Aguardar avaliação]
+    D --> F
+    E --> F
+
+---
+
+# 👨‍⚕️ 3. JORNADA DO USUÁRIO (MÉDICO)
+
+```markdown
+## Jornada do Usuário — Médico
+
+```mermaid
+flowchart LR
+    A[Login] --> B[Dashboard Médico]
+    B --> C[Listar Pacientes]
+    C --> D[Selecionar Paciente]
+    D --> E[Ver Respostas]
+    D --> F[Ver Fotos]
+    D --> G[Responder Dúvidas]
+
+---
+
+# 🏗️ 4. ARQUITETURA DO SISTEMA
+
+(IMPORTANTE porque vocês NÃO têm backend)
+
+```markdown
+## Arquitetura do Sistema
+
+```mermaid
+flowchart LR
+    A[Usuário] --> B[Navegador]
+    B --> C[Interface Web]
+    C --> D[HTML]
+    C --> E[CSS]
+    C --> F[JavaScript]
