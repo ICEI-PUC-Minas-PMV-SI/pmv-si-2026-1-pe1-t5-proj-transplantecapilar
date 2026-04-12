@@ -19,6 +19,18 @@ Além disso, a aplicação possibilita que o médico responsável acompanhe, de 
 * Thiago de Paulo Alves Silva
 * Wesley Henrique Dos Santos Silva
 
+## Metodologia de Desenvolvimento
+
+O projeto está sendo desenvolvido utilizando metodologia ágil, com organização das tarefas em um quadro Kanban no GitHub Projects, permitindo o acompanhamento do progresso e divisão eficiente das atividades entre os membros da equipe.
+
+## Elementos do Sistema de Informação
+
+O sistema será composto por:
+- Entrada de dados: informações e fotos enviadas pelos pacientes;
+- Processamento: organização e armazenamento das informações;
+- Saída: visualização da evolução do paciente pelo médico;
+- Controle: acompanhamento do cumprimento das orientações pós-operatórias.
+
 ## Divisão de Tarefas
 
 As atividades foram divididas entre os integrantes da equipe, garantindo a colaboração no desenvolvimento das diferentes etapas do projeto.
