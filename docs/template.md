@@ -1,36 +1,124 @@
 # Template padrão do site
 
-Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+O sistema foi desenvolvido utilizando um layout padrão baseado em HTML e CSS, com foco em usabilidade, organização das informações e experiência do usuário. Todas as páginas seguem um mesmo padrão visual, garantindo consistência na navegação e facilitando o uso tanto por pacientes quanto por médicos.
 
-Explique as guias de estilo utilizadas no seu projeto.
+O layout é responsivo, permitindo acesso por diferentes dispositivos como computadores, tablets e smartphones. Além disso, foram utilizados elementos visuais simples e intuitivos para facilitar a interação com o sistema.
+
+---
 
 ## Design
 
-Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo do sistema. Defina os menus padrões, entre outras coisas.
+O design do sistema foi construído com base em uma estrutura lateral fixa (sidebar) e uma área principal de conteúdo.
 
+- O **logo do sistema** está posicionado na parte superior da barra lateral esquerda.
+- O menu lateral contém as principais funcionalidades, como:
+  - Início
+  - Orientações
+  - Chat com médico
+  - Histórico
+  - Perfil
+- A área principal da tela apresenta os conteúdos dinâmicos, como:
+  - Questionários
+  - Upload de fotos
+  - Listagem de pacientes
+  - Informações clínicas
+
+Os layouts foram projetados para serem limpos, organizados e com foco na leitura fácil das informações.
+
+---
 
 ## Cores
 
-Apresente a paleta de cores que será utilizada. Uma ferramenta interessante para a criação de palestas de cores é o *Adobe Color* ([https://color.adobe.com/pt/create/color-wheel](https://color.adobe.com/pt/create/color-wheel)).
+A paleta de cores do sistema foi escolhida com base em tons sóbrios e relacionados à área da saúde, transmitindo confiança e segurança ao usuário.
 
+Principais cores utilizadas:
+
+- Azul escuro: utilizado na barra lateral e elementos principais  
+- Azul claro: utilizado em destaques e botões  
+- Branco: utilizado como fundo principal  
+- Cinza claro: utilizado em caixas de conteúdo  
+- Verde: indica status positivo (ex: concluído)  
+- Vermelho: indica alertas ou problemas  
+
+Essa combinação garante boa legibilidade e diferenciação visual das informações.
+
+---
 
 ## Tipografia
 
-Apresente as fontes que serão utilizadas e sua função no site. As principais funções são: Título de página, Título de Seção, Rótulos de componentes e Corpo de Texto.
+Foram utilizadas fontes simples e modernas, visando legibilidade e clareza.
 
+Funções da tipografia no sistema:
+
+- **Título de página:** fonte maior e em negrito  
+- **Títulos de seção:** tamanho médio, com destaque visual  
+- **Rótulos de componentes:** utilizados em formulários e campos  
+- **Corpo de texto:** fonte padrão, com fácil leitura  
+
+A tipografia foi aplicada de forma consistente em todas as telas.
+
+---
 
 ## Iconografia
 
-Defina os ícones que serão utilizados e suas respectivas funções.
+Os ícones utilizados no sistema têm o objetivo de facilitar a compreensão das funcionalidades e melhorar a experiência do usuário.
 
-Apresente os estilos CSS criados para cada um dos elementos apresentados.
-Outras seções podem ser adicionadas neste documento para apresentar padrões de componentes, de menus, etc.
+Principais ícones utilizados:
 
+- Ícone de usuário: identificação de perfil  
+- Ícone de câmera: envio de fotos  
+- Ícone de mensagem: comunicação com médico  
+- Ícone de alerta: indicação de problemas  
+- Ícone de check: tarefas concluídas  
 
-> **Links Úteis**:
->
-> -  [Como criar um guia de estilo de design da Web](https://edrodrigues.com.br/blog/como-criar-um-guia-de-estilo-de-design-da-web/#)
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+Os ícones são simples, intuitivos e seguem um padrão visual consistente.
+
+---
+
+## Estilos CSS
+
+Os estilos CSS foram definidos para garantir padronização visual e boa usabilidade.
+
+Principais definições:
+
+- Layout com sidebar fixa à esquerda  
+- Botões com cores destacadas e bordas arredondadas  
+- Cards para organização das informações  
+- Espaçamento adequado entre elementos  
+- Responsividade para diferentes tamanhos de tela  
+
+Esses estilos contribuem para uma interface organizada, moderna e fácil de utilizar.
+
+---
+
+## Telas do Template
+
+### Tela 1 — Login
+![Tela 1](img/0001.jpg)
+
+### Tela 2 — Cadastro Médico
+![Tela 2](img/0002.jpg)
+
+### Tela 3 — Cadastro Paciente
+![Tela 3](img/0003.jpg)
+
+### Tela 4 — Dashboard Paciente
+![Tela 4](img/0004.jpg)
+
+### Tela 5 — Questionário Diário
+![Tela 5](img/0005.jpg)
+
+### Tela 6 — Upload de Fotos
+![Tela 6](img/0006.jpg)
+
+### Tela 7 — Dashboard Médico
+![Tela 7](img/0007.jpg)
+
+### Tela 8 — Lista de Pacientes
+![Tela 8](img/0008.jpg)
+
+### Tela 9 — Detalhes do Paciente
+![Tela 9](img/0009.jpg)
+
+### Tela 10 — Galeria de Fotos
+![Tela 10](img/0010.jpg)
