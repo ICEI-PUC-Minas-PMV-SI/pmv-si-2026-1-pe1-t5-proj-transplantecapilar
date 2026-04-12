@@ -5,13 +5,13 @@ As interfaces foram desenvolvidas com foco na simplicidade e usabilidade, atende
 
 Além disso, o sistema foi projetado para ser responsivo e de fácil navegação, atendendo aos requisitos não funcionais e às necessidades descritas nas histórias de usuário.
 
-## User Flow
+## Fluxo do Usuário
 
 O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando as interações entre pacientes e médicos, desde o acesso inicial até as funcionalidades de acompanhamento pós-operatório.
 
 ![Fluxograma](img/Fluxograma.jpeg)
 
-## Wireframes
+## Protótipos de Interface (Wireframes)
 
 ### Tela 1A — Tela Inicial
 ![Tela 1A](img/Tela%201A.png)
