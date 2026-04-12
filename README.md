@@ -21,14 +21,16 @@ Além disso, a aplicação possibilita que o médico responsável acompanhe, de 
 
 ## Divisão de Tarefas
 
+As atividades foram divididas entre os integrantes da equipe, garantindo a colaboração no desenvolvimento das diferentes etapas do projeto.
+
 | Integrante | Responsabilidades |
 |-----------|------------------|
-| Gabriel Victor Soares | Construção do Documento Etapa 1, WireFrame Etapa 2 |
-| Higor Pierri de Castro Pereira | Construção do Documento Etapa 1, Template Descritivo Etapa 2 |
-| Letícia Oliveira Lacerda | Construção do Documento Etapa 1, PPT Etapa 2 |
-| Matheus de Souza Pinto | Construção do Documento Etapa 1, Fluxograma Etapa 2 |
-| Thiago de Paulo Alves Silva | Construção do Documento Etapa 1, Template Visual Etapa 2 |
-| Wesley Henrique dos Santos Silva | Construção do Documento Etapa 1, Apresentação Etapa 2 |
+| Gabriel Victor Soares | Documentação inicial (Etapa 1) e criação dos wireframes (Etapa 2) |
+| Higor Pierri de Castro Pereira | Definição do problema e referências (Etapa 1) e desenvolvimento do template do site (Etapa 2) |
+| Letícia Oliveira Lacerda | Público-alvo e organização do conteúdo (Etapa 1) e elaboração da apresentação (Etapa 2) |
+| Matheus de Souza Pinto | Perfis de usuários (Etapa 1) e construção do fluxograma do sistema (Etapa 2) |
+| Thiago de Paulo Alves Silva | Histórias de usuários (Etapa 1) e criação do layout visual (Etapa 2) |
+| Wesley Henrique dos Santos Silva | Requisitos do sistema (Etapa 1) e apoio na apresentação do projeto (Etapa 2) |
 
 ## Orientador
 
