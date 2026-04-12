@@ -19,6 +19,16 @@ Além disso, a aplicação possibilita que o médico responsável acompanhe, de 
 * Thiago de Paulo Alves Silva
 * Wesley Henrique Dos Santos Silva
 
+## 👥 Divisão de Tarefas
+
+| Integrante | Responsabilidades |
+|-----------|------------------|
+| Gabriel Victor Soares | Construção do Documento Etapa 1, WireFrame Etapa 2 |
+| Higor Pierri de Castro Pereira | Construção do Documento Etapa 1, Template Descritivo Etapa 2 |
+| Letícia Oliveira Lacerda | Construção do Documento Etapa 1, PPT Etapa 2 |
+| Matheus de Souza Pinto | Construção do Documento Etapa 1, Fluxograma Etapa 2 |
+| Thiago de Paulo Alves Silva | Construção do Documento Etapa 1, Template Visual Etapa 2 |
+| Wesley Henrique dos Santos Silva | Construção do Documento Etapa 1, Apresentação Etapa 2 |
 
 ## Orientador
 
