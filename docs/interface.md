@@ -1,9 +1,9 @@
 
 # Projeto de Interface
 
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
+As interfaces foram desenvolvidas com foco na simplicidade e usabilidade, atendendo aos requisitos funcionais definidos, como registro de informações, envio de fotos e acompanhamento pelo médico.
 
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
+Além disso, o sistema foi projetado para ser responsivo e de fácil navegação, atendendo aos requisitos não funcionais e às necessidades descritas nas histórias de usuário.
 
 ## User Flow
 
@@ -19,8 +19,49 @@ Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapea
 
 ## Wireframes
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface e é fundamental sempre relacionar cada wireframe com o(s) requisito(s) que ele atende.
+## Wireframes
 
+### Tela 1 — Tela Inicial
+![Tela 1](img/tela1.png)
+
+### Tela 2 — Seleção de Ação
+![Tela 2](img/tela2.png)
+
+### Tela 3 — Cadastro de Paciente
+![Tela 3](img/tela3.png)
+
+### Tela 4 — Login de Paciente
+![Tela 4](img/tela4.png)
+
+### Tela 5 — Cadastro de Médico
+![Tela 5](img/tela5.png)
+
+### Tela 6 — Login de Médico
+![Tela 6](img/tela6.png)
+
+### Tela 7 — Dashboard do Paciente
+![Tela 7](img/tela7.png)
+
+### Tela 8 — Dashboard do Médico
+![Tela 8](img/tela8.png)
+
+### Tela 9 — Questionário Diário
+![Tela 9](img/tela9.png)
+
+### Tela 10 — Envio de Fotos
+![Tela 10](img/tela10.png)
+
+### Tela 11 — Registro de Dúvidas/Comentários
+![Tela 11](img/tela11.png)
+
+### Tela 12 — Lista de Pacientes
+![Tela 12](img/tela12.png)
+
+### Tela 13 — Detalhes do Paciente
+![Tela 13](img/tela13.png)
+
+### Tela 14 — Visualização de Fotos
+![Tela 14](img/tela14.png)
 ### Exemplo
 
 A tela inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade. Nesta tela, são apresentados os seguintes requisitos
