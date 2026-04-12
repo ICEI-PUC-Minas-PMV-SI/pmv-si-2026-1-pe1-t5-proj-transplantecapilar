@@ -65,3 +65,21 @@ Entre suas necessidades estão:
 - Visualização das fotos enviadas durante a recuperação;
 - Acompanhamento da evolução clínica do paciente;
 - Identificação rápida de possíveis complicações.
+
+## Referências Bibliográficas
+
+D’AMBROSIO, P. D. et al. Mobile applications in enhanced recovery after surgery: a systematic review. Journal of Clinical Medicine, v. 15, n. 2, 2026. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC12885806/. Acesso em: 12 mar. 2026.
+
+EL-HADI, H. et al. A systematic review of smartphone applications for surgical patient monitoring. Healthcare, v. 13, n. 21, 2025. Disponível em: https://www.mdpi.com/2227-9032/13/21/2775. Acesso em: 12 mar. 2026.
+
+MYSORE, V. et al. Hair transplantation practice guidelines. Journal of Cutaneous and Aesthetic, v. 14, n. 1, p. 3-25, 2021. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC8611706/. Acesso em: 12 mar. 2026.
+
+PATEL, B. et al. Usability of mobile health apps for postoperative care: a systematic review. JMIR mHealth and uHealth, v. 8, n. 12, 2020. Disponível em: https://pubmed.ncbi.nlm.nih.gov/33393925/. Acesso em: 12 mar. 2026.
+
+RAZMI, M. T.; SUBBURAJ, K. Hair transplantation: a brief review. Clinical Dermatology Review, v. 6, n. 2, p. 80-87, 2022. Disponível em: hair_transplantation__a_brief_r…. Acesso em: 12 mar. 2026.
+
+SEMPLE, J. L. et al. Using a mobile app for monitoring post-operative quality of recovery of patients at home: a feasibility study. JMIR mHealth and uHealth, v. 3, n. 1, 2015. Disponível em: https://mhealth.jmir.org/2015/1/e18/. Acesso em: 12 mar. 2026.
+
+SHICHANG, L. et al. Self-management in the post-hair transplantation recovery period: facilitators and barriers. BMC Health Services Research, v. 24, 2024. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC11401157/. Acesso em: 12 mar. 2026.
+
+WILLIAMS, A. M. et al. The role of telemedicine in postoperative care. Surgical Technology International, 33, p. 101-106, 2018. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC5994447/. Acesso em: 12 mar. 2026.
