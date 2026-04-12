@@ -5,6 +5,10 @@ As interfaces foram desenvolvidas com foco na simplicidade e usabilidade, atende
 
 Além disso, o sistema foi projetado para ser responsivo e de fácil navegação, atendendo aos requisitos não funcionais e às necessidades descritas nas histórias de usuário.
 
+A estrutura das telas foi organizada de acordo com os diferentes perfis de acesso (paciente e médico), garantindo que cada usuário tenha acesso apenas às funcionalidades relevantes ao seu papel. O fluxo de navegação foi definido de forma intuitiva, iniciando pela tela principal e direcionando o usuário para ações como cadastro, login e acesso às funcionalidades do sistema.
+
+Dessa forma, o projeto de interface busca proporcionar uma experiência clara, objetiva e eficiente, facilitando o acompanhamento pós-operatório e a comunicação entre paciente e médico.
+
 ## Fluxo do Usuário
 
 O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando as interações entre pacientes e médicos, desde o acesso inicial até as funcionalidades de acompanhamento pós-operatório.
