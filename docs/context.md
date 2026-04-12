@@ -42,6 +42,8 @@ Dessa forma, o desenvolvimento de uma aplicação web voltada ao acompanhamento 
 
 ## Público-alvo
 
+O sistema foi pensado para atender usuários com diferentes níveis de familiaridade com tecnologia, priorizando simplicidade, acessibilidade e facilidade de uso.
+
 O público-alvo do sistema é composto por dois grupos principais de usuários:
 
 ### Pacientes submetidos ao transplante capilar
