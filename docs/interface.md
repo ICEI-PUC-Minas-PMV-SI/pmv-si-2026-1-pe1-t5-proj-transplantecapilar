@@ -19,49 +19,47 @@ Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapea
 
 ## Wireframes
 
-## Wireframes
+### Tela 1A — Tela Inicial
+![Tela 1A](img/Tela%201A.png)
 
-### Tela 1 — Tela Inicial
-![Tela 1](img/tela1.png)
+### Tela 1B — Seleção de Ação
+![Tela 1B](img/Tela%201B.png)
 
-### Tela 2 — Seleção de Ação
-![Tela 2](img/tela2.png)
+### Tela 2A — Cadastro de Paciente
+![Tela 2A](img/Tela%202A.png)
 
-### Tela 3 — Cadastro de Paciente
-![Tela 3](img/tela3.png)
+### Tela 2B — Login de Paciente
+![Tela 2B](img/Tela%202B.png)
 
-### Tela 4 — Login de Paciente
-![Tela 4](img/tela4.png)
+### Tela 2C — Cadastro de Médico
+![Tela 2C](img/Tela%202C.png)
 
-### Tela 5 — Cadastro de Médico
-![Tela 5](img/tela5.png)
+### Tela 2D — Login de Médico
+![Tela 2D](img/Tela%202D.png)
 
-### Tela 6 — Login de Médico
-![Tela 6](img/tela6.png)
+### Tela 3A — Dashboard do Paciente
+![Tela 3A](img/Tela%203A.png)
 
-### Tela 7 — Dashboard do Paciente
-![Tela 7](img/tela7.png)
+### Tela 3B — Dashboard do Médico
+![Tela 3B](img/Tela%203B.png)
 
-### Tela 8 — Dashboard do Médico
-![Tela 8](img/tela8.png)
+### Tela 4A — Questionário Diário
+![Tela 4A](img/Tela%204A.png)
 
-### Tela 9 — Questionário Diário
-![Tela 9](img/tela9.png)
+### Tela 4B — Envio de Fotos
+![Tela 4B](img/Tela%204B.png)
 
-### Tela 10 — Envio de Fotos
-![Tela 10](img/tela10.png)
+### Tela 4C — Registro de Dúvidas/Comentários
+![Tela 4C](img/Tela%204C.png)
 
-### Tela 11 — Registro de Dúvidas/Comentários
-![Tela 11](img/tela11.png)
+### Tela 4D — Lista de Pacientes
+![Tela 4D](img/Tela%204D.png)
 
-### Tela 12 — Lista de Pacientes
-![Tela 12](img/tela12.png)
+### Tela 4E — Detalhes do Paciente
+![Tela 4E](img/Tela%204E.png)
 
-### Tela 13 — Detalhes do Paciente
-![Tela 13](img/tela13.png)
-
-### Tela 14 — Visualização de Fotos
-![Tela 14](img/tela14.png)
+### Tela 4F — Visualização de Fotos
+![Tela 4F](img/Tela%204F.png)
 ### Exemplo
 
 A tela inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade. Nesta tela, são apresentados os seguintes requisitos
