@@ -28,14 +28,6 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 |------------------------------|--------------------------|
 | **Tela Inicial** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
-### Tela 1B 
-|![Tela 1B](img/Tela%201B.png)|
-|:---------------------------:|
-|       **Seleção de Ação**      |
-
-| **Componente**               | **Requisitos Atendidos** |
-|------------------------------|--------------------------|
-| **Seleção de Ação** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 2A 
 |![Tela 2A](img/Tela%202A.png)|
