@@ -20,7 +20,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 ## Wireframes
 
 ### Tela 1A 
-|![Tela 1A](docs/img/Tela 1A.jpeg)|
+|![Tela 1A](img/Tela%201A.jpeg)|
 |:---------------------------:|
 |       **Tela Inicial**      |
 
