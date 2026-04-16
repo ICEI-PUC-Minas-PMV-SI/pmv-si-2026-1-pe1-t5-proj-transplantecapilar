@@ -26,43 +26,121 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF03: TEXTO.|
+| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
-### Tela 1B — Seleção de Ação
-![Tela 1B](img/Tela%201B.png)
+### Tela 1B 
+|![Tela 1B](img/Tela%201B.png)|
+|:---------------------------:|
+|       **Seleção de Ação**      |
 
-### Tela 2A — Cadastro de Paciente
-![Tela 2A](img/Tela%202A.png)
+| **Componente**               | **Requisitos Atendidos** |
+|------------------------------|--------------------------|
+| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
-### Tela 2B — Login de Paciente
-![Tela 2B](img/Tela%202B.png)
+### Tela 2A 
+|![Tela 2A](img/Tela%202A.png)|
+|:---------------------------:|
+|       **Cadastro de Paciente**      |
 
-### Tela 2C — Cadastro de Médico
-![Tela 2C](img/Tela%202C.png)
+| **Componente**               | **Requisitos Atendidos** |
+|------------------------------|--------------------------|
+| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
-### Tela 2D — Login de Médico
-![Tela 2D](img/Tela%202D.png)
+### Tela 2B
+|![Tela 2B](img/Tela%202B.png)|
+|:---------------------------:|
+|       **Login de Paciente**      |
 
-### Tela 3A — Dashboard do Paciente
-![Tela 3A](img/Tela%203A.png)
+| **Componente**               | **Requisitos Atendidos** |
+|------------------------------|--------------------------|
+| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
-### Tela 3B — Dashboard do Médico
-![Tela 3B](img/Tela%203B.png)
+### Tela 2C 
+|![Tela 2C](img/Tela%202C.png)|
+|:---------------------------:|
+|       **Cadastro de Médico**      |
+
+| **Componente**               | **Requisitos Atendidos** |
+|------------------------------|--------------------------|
+| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+
+### Tela 2D 
+|![Tela 2D](img/Tela%202D.png)|
+|:---------------------------:|
+|       **Login de Médico**      |
+
+| **Componente**               | **Requisitos Atendidos** |
+|------------------------------|--------------------------|
+| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+
+### Tela 3A 
+|![Tela 3A](img/Tela%203A.png)|
+|:---------------------------:|
+|       **Dashboard do Paciente**      |
+
+| **Componente**               | **Requisitos Atendidos** |
+|------------------------------|--------------------------|
+| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+
+### Tela 3B 
+|![Tela 3B](img/Tela%203B.png)|
+|:---------------------------:|
+|       **Dashboard do Médico**      |
+
+| **Componente**               | **Requisitos Atendidos** |
+|------------------------------|--------------------------|
+| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 4A — Questionário Diário
-![Tela 4A](img/Tela%204A%20.png)
+|![Tela 4A](img/Tela%204A%20.png)|
+|:---------------------------:|
+|       **Questionário Diário**      |
+
+| **Componente**               | **Requisitos Atendidos** |
+|------------------------------|--------------------------|
+| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 4B — Envio de Fotos
-![Tela 4B](img/Tela%204B.png)
+|![Tela 4B](img/Tela%204B.png)|
+|:---------------------------:|
+|       **Envio de Fotos**      |
 
-### Tela 4C — Registro de Dúvidas/Comentários
-![Tela 4C](img/Tela%204C.png)
+| **Componente**               | **Requisitos Atendidos** |
+|------------------------------|--------------------------|
+| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
-### Tela 4D — Lista de Pacientes
-![Tela 4D](img/Tela%204D.png)
+### Tela 4C 
+|![Tela 4C](img/Tela%204C.png)|
+|:---------------------------:|
+|       **Registro de Dúvidas/Comentários**      |
 
-### Tela 4E — Detalhes do Paciente
-![Tela 4E](img/Tela%204E.png)
+| **Componente**               | **Requisitos Atendidos** |
+|------------------------------|--------------------------|
+| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
-### Tela 4F — Visualização de Fotos
-![Tela 4F](img/Tela%204F.png)
+### Tela 4D 
+|![Tela 4D](img/Tela%204D.png)|
+|:---------------------------:|
+|       **Lista de Pacientes      |
+
+| **Componente**               | **Requisitos Atendidos** |
+|------------------------------|--------------------------|
+| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+
+### Tela 4E 
+|![Tela 4E](img/Tela%204E.png)|
+|:---------------------------:|
+|       **Detalhes do Paciente**      |
+
+| **Componente**               | **Requisitos Atendidos** |
+|------------------------------|--------------------------|
+| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+
+### Tela 4F 
+|![Tela 4F](img/Tela%204F.png)|
+|:---------------------------:|
+|       **Visualização de Fotos**      |
+
+| **Componente**               | **Requisitos Atendidos** |
+|------------------------------|--------------------------|
+| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
