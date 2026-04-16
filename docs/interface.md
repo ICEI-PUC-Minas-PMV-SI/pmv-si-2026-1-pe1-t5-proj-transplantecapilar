@@ -20,7 +20,8 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 ## Wireframes
 
 ### Tela 1A — Tela Inicial
-![Tela 1A](img/Tela%201A.png)
+|![Tela 1A](img/Tela%201A.png)|
+|:---------------------------:|
 
 ### Tela 1B — Seleção de Ação
 ![Tela 1B](img/Tela%201B.png)
