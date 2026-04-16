@@ -19,6 +19,10 @@ Além disso, a aplicação possibilita que o médico responsável acompanhe, de 
 * Thiago de Paulo Alves Silva
 * Wesley Henrique Dos Santos Silva
 
+## Orientador
+
+* Roberto Felipe Dias Ferreira da Rocha
+
 ## Metodologia de Desenvolvimento
 
 O projeto está sendo desenvolvido utilizando metodologia ágil, com organização das tarefas em um quadro Kanban no GitHub Projects, permitindo o acompanhamento do progresso e divisão eficiente das atividades entre os membros da equipe.
