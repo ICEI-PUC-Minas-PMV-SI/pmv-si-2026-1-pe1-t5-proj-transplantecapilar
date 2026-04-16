@@ -17,6 +17,10 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 |:--------------------------------:|
 |  **Fluxo do Usuário (User Flow)**    |
 
+| **Componente**               | **Requisitos Atendidos** |
+|------------------------------|--------------------------|
+| **Tela de login** | RF01:	TEXTO. <br> RF03: TEXTO.|
+
 ## Wireframes
 
 ### Tela 1A 
