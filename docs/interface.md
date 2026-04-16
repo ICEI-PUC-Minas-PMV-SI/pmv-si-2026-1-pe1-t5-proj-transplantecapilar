@@ -26,7 +26,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF08:	Permitir login de pacientes e médicos no sistema|
+| **Tela Inicial** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 1B 
 |![Tela 1B](img/Tela%201B.png)|
@@ -35,7 +35,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Seleção de Ação** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 2A 
 |![Tela 2A](img/Tela%202A.png)|
@@ -44,7 +44,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Cadastro de Paciente** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 2B
 |![Tela 2B](img/Tela%202B.png)|
@@ -53,7 +53,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Login de Paciente** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 2C 
 |![Tela 2C](img/Tela%202C.png)|
@@ -62,7 +62,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Cadastro de Médico** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 2D 
 |![Tela 2D](img/Tela%202D.png)|
@@ -71,7 +71,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Login de Médico** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 3A 
 |![Tela 3A](img/Tela%203A.png)|
@@ -80,7 +80,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Dashboard do Paciente** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 3B 
 |![Tela 3B](img/Tela%203B.png)|
@@ -89,7 +89,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Dashboard do Médico** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 4A — Questionário Diário
 |![Tela 4A](img/Tela%204A%20.png)|
@@ -98,16 +98,16 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Questionário Diário** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
-### Tela 4B — Envio de Fotos
+### Tela 4B
 |![Tela 4B](img/Tela%204B.png)|
 |:---------------------------:|
 |       **Envio de Fotos**      |
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Envio de Fotos** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 4C 
 |![Tela 4C](img/Tela%204C.png)|
@@ -116,16 +116,16 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Registro de Dúvidas/Comentários** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 4D 
 |![Tela 4D](img/Tela%204D.png)|
 |:---------------------------:|
-|       **Lista de Pacientes      |
+|       **Lista de Pacientes**      |
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Lista de Pacientes** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 4E 
 |![Tela 4E](img/Tela%204E.png)|
@@ -134,7 +134,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Detalhes do Paciente** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 4F 
 |![Tela 4F](img/Tela%204F.png)|
@@ -143,4 +143,4 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Visualização de Fotos** | RF01:	TEXTO. <br> RF01: TEXTO.|
