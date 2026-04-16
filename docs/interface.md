@@ -9,13 +9,13 @@ A estrutura das telas foi organizada de acordo com os diferentes perfis de acess
 
 Dessa forma, o projeto de interface busca proporcionar uma experiência clara, objetiva e eficiente, facilitando o acompanhamento pós-operatório e a comunicação entre paciente e médico.
 
-## Fluxo do Usuário
+## User Flow
 
 O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando as interações entre pacientes e médicos, desde o acesso inicial até as funcionalidades de acompanhamento pós-operatório.
 
 ![Fluxograma](img/Fluxograma.jpeg)
 
-## Protótipos de Interface (Wireframes)
+## Wireframes
 
 ### Tela 1A — Tela Inicial
 ![Tela 1A](img/Tela%201A.png)
