@@ -26,7 +26,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Tela de login** | RF08:	Permitir login de pacientes e médicos no sistema|
 
 ### Tela 1B 
 |![Tela 1B](img/Tela%201B.png)|
