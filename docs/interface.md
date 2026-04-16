@@ -13,7 +13,9 @@ Dessa forma, o projeto de interface busca proporcionar uma experiência clara, o
 
 O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando as interações entre pacientes e médicos, desde o acesso inicial até as funcionalidades de acompanhamento pós-operatório.
 
-![Fluxograma](img/Fluxograma.jpeg)
+|![Fluxograma](img/Fluxograma.jpeg)|
+|:--------------------------------:|
+|  Fluxo do Usuário (User Flow)**  |
 
 ## Wireframes
 
