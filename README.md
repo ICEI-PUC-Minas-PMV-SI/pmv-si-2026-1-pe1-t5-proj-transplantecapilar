@@ -25,7 +25,7 @@ Além disso, a aplicação possibilita que o médico responsável acompanhe, de 
 
 ## Metodologia de Desenvolvimento
 
-O projeto está sendo desenvolvido utilizando metodologia ágil, com organização das tarefas em um quadro Kanban no GitHub Projects, permitindo o acompanhamento do progresso e divisão eficiente das atividades entre os membros da equipe.
+O projeto está sendo desenvolvido utilizando uma metodologia ágil, com organização das tarefas em um quadro Kanban no GitHub Projects. Essa abordagem permite o acompanhamento contínuo do progresso e a divisão eficiente das atividades entre os membros da equipe.
 
 ## Elementos do Sistema de Informação
 
@@ -37,7 +37,7 @@ O sistema será composto por:
 
 ## Divisão de Tarefas
 
-As atividades foram divididas entre os integrantes da equipe, garantindo a colaboração no desenvolvimento das diferentes etapas do projeto.
+As atividades foram distribuídas entre os integrantes da equipe, garantindo a colaboração nas diferentes etapas do projeto.
 
 | Integrante | Responsabilidades |
 |-----------|------------------|
@@ -47,10 +47,6 @@ As atividades foram divididas entre os integrantes da equipe, garantindo a colab
 | Matheus de Souza Pinto | Perfis de usuários (Etapa 1) e construção do fluxograma do sistema (Etapa 2) |
 | Thiago de Paulo Alves Silva | Histórias de usuários (Etapa 1) e criação do layout visual (Etapa 2) |
 | Wesley Henrique dos Santos Silva | Requisitos do sistema (Etapa 1) e apoio na apresentação do projeto (Etapa 2) |
-
-## Orientador
-
-* Roberto Felipe Dias Ferreira da Rocha
 
 # Planejamento
 
