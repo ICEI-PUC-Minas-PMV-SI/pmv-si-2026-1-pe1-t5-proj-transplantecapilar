@@ -15,7 +15,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 |![Fluxograma](img/Fluxograma.jpeg)|
 |:--------------------------------:|
-|  Fluxo do Usuário (User Flow)    |
+|  **Fluxo do Usuário (User Flow)**    |
 
 ## Wireframes
 
