@@ -30,7 +30,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 
 ### Tela 2A 
-|![Tela 2A](img/Tela%202A.png)|
+|![Tela 2A](img/Tela%202A.jpeg)|
 |:---------------------------:|
 |       **Cadastro de Paciente**      |
 
