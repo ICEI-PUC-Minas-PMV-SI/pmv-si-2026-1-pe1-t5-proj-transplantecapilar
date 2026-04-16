@@ -22,7 +22,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 ### Tela 1A 
 |![Tela 1A](img/Tela%201A.png)|
 |:---------------------------:|
-|         Tela Inicial        |
+|       **Tela Inicial**      |
 
 ### Tela 1B — Seleção de Ação
 ![Tela 1B](img/Tela%201B.png)
