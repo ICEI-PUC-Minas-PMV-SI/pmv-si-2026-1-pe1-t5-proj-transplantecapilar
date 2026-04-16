@@ -17,7 +17,7 @@ Além disso, a aplicação possibilita que o médico responsável acompanhe, de 
 * Letícia Oliveira Lacerda
 * Matheus de Souza Pinto
 * Thiago de Paulo Alves Silva
-* Wesley Henrique Dos Santos Silva
+* Wesley Henrique dos Santos Silva
 
 ## Orientador
 
@@ -55,7 +55,7 @@ As atividades foram distribuídas entre os integrantes da equipe, garantindo a c
 | ETAPA 1         |[Documentação de Contexto](docs/context.md) <br> [Especificação do Projeto](docs/especification.md) |
 | ETAPA 2         |[Projeto de Interface](docs/interface.md) <br> [Template Padrão](docs/template.md) |
 | ETAPA 3         |[Programação de Funcionalidades - HTML e CSS](docs/development.md) |
-| ETAPA 4        |[Programação de Funcionalidades - Javascript](docs/development.md) <br> [Testes de Software ](docs/tests.md) |
+| ETAPA 4        |[Programação de Funcionalidades - JavaScript](docs/development.md) <br> [Testes de Software](docs/tests.md) |
 | ETAPA 5         | [Apresentação](presentation/README.md) |
 
 # Código
