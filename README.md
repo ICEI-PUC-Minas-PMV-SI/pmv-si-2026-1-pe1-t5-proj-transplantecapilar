@@ -1,10 +1,10 @@
-APLICAÇÃO WEB PARA ACOMPANHAMENTO PÓS-OPERATÓRIO DE TRANSPLANTE CAPILAR
+# APLICAÇÃO WEB PARA ACOMPANHAMENTO PÓS-OPERATÓRIO DE TRANSPLANTE CAPILAR
 
 `CURSO: Sistemas de Informação`
 
 `DISCIPLINA: Projeto - Aplicações Web`
 
-`SEMESTRE: 1º`
+`SEMESTRE: 1º | Turma 5 | Grupo 5`
 
 O projeto consiste no desenvolvimento de uma aplicação web voltada ao acompanhamento pós-operatório de pacientes submetidos ao transplante capilar. O sistema tem como objetivo principal auxiliar no monitoramento da recuperação durante os primeiros 30 dias após a cirurgia, permitindo que o paciente registre diariamente informações sobre seu estado, envie fotos da área transplantada e relate dúvidas ou sintomas.
 
