@@ -54,7 +54,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Dashboard do Paciente** | RF-09:	Permitir que o paciente visualize seu histórico de registros durante o pós-operatório. <br> RF-11: Permita que o paciente edite informações registradas no mesmo dia.|
+| **Dashboard do Paciente** | RF-09:	Permitir que o paciente visualize seu histórico de registros durante o pós-operatório. <br> RF-11: Permita que o paciente edite informações registradas no mesmo dia. <br> RF-13: Tela principal do paciente, contendo acesso e direcionamento para as demais funcionalidades do sistema.|
 
 ### Tela 3B 
 |![Tela 3B](img/Tela%203B.png)|
@@ -63,7 +63,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Dashboard do Médico** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Dashboard do Médico** | RF-14:	Tela principal do médico, contendo acesso e direcionamento para as demais funcionalidades do sistema.|
 
 ### Tela 4A — Questionário Diário
 |![Tela 4A](img/Tela%204A%20.png)|
@@ -72,7 +72,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Questionário Diário** | RF-02:	Permitir que o paciente registre informações diárias sobre o pós-operatório.|
+| **Questionário Diário** | RF-02:	Permitir que o paciente registre informações diárias sobre o pós-operatório. <br> RF-15: Tela de questionários diários destinados aos pacientes, contendo perguntas relacionadas ao tratamento realizado.| 
 
 ### Tela 4B
 |![Tela 4B](img/Tela%204B.png)|
@@ -90,7 +90,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Registro de Dúvidas/Comentários** | RF-12:	Permitir envio de comentários ou mensagens entre pacientes e médicos no sistema.|
+| **Registro de Dúvidas/Comentários** | RF-12:	Permitir envio de comentários ou mensagens entre pacientes e médicos no sistema. <br> RF-16: Tela para registro de dúvidas, comentários e envio de fotos, com o objetivo de auxiliar o paciente durante o tratamento.|
 
 ### Tela 4D 
 |![Tela 4D](img/Tela%204D.png)|
@@ -117,4 +117,4 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Visualização de Fotos** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Visualização de Fotos** | RF-17:	Tela destinada ao registro de fotos do paciente para acompanhamento e avaliação médica contínua.|
