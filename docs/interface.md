@@ -90,7 +90,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Registro de Dúvidas/Comentários** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Registro de Dúvidas/Comentários** | RF-12:	Permitir envio de comentários ou mensagens entre pacientes e médicos no sistema.|
 
 ### Tela 4D 
 |![Tela 4D](img/Tela%204D.png)|
