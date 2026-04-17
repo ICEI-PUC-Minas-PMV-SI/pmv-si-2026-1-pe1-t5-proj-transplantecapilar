@@ -39,31 +39,13 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 | **Cadastro de Paciente** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 2B
-|![Tela 2B](img/Tela%202B.png)|
+|![Tela 2C](img/Tela%202C.png)|
 |:---------------------------:|
 |       **Login de Paciente**      |
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
 | **Login de Paciente** | RF01:	TEXTO. <br> RF01: TEXTO.|
-
-### Tela 2C 
-|![Tela 2C](img/Tela%202C.png)|
-|:---------------------------:|
-|       **Cadastro de Médico**      |
-
-| **Componente**               | **Requisitos Atendidos** |
-|------------------------------|--------------------------|
-| **Cadastro de Médico** | RF01:	TEXTO. <br> RF01: TEXTO.|
-
-### Tela 2D 
-|![Tela 2D](img/Tela%202D.png)|
-|:---------------------------:|
-|       **Login de Médico**      |
-
-| **Componente**               | **Requisitos Atendidos** |
-|------------------------------|--------------------------|
-| **Login de Médico** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 3A 
 |![Tela 3A](img/Tela%203A.png)|
