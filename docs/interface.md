@@ -72,7 +72,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Questionário Diário** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Questionário Diário** | RF-02:	Permitir que o paciente registre informações diárias sobre o pós-operatório.|
 
 ### Tela 4B
 |![Tela 4B](img/Tela%204B.png)|
