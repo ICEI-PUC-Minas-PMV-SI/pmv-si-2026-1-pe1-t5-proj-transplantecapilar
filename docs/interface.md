@@ -22,11 +22,11 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 ### Tela 1A 
 |![Tela 1A](img/Tela%201A.jpeg)|
 |:---------------------------:|
-|       **Tela Inicial**      |
+|       **Tela de Login**      |
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela Inicial** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Tela de Login** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 
 ### Tela 2A 
@@ -41,11 +41,11 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 ### Tela 2B
 |![Tela 2C](img/Tela%202C.png)|
 |:---------------------------:|
-|       **Login de Paciente**      |
+|       **Login de Medico**      |
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Login de Paciente** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Login de Medico** | RF01:	TEXTO. <br> RF01: TEXTO.|
 
 ### Tela 3A 
 |![Tela 3A](img/Tela%203A.png)|
