@@ -108,7 +108,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Detalhes do Paciente** | RF-05:	Exibir resumo da evolução do paciente durante o pós-operatório. <br> 	RF-04 Permita que o médico visualize as informações registradas pelos pacientes.|
+| **Detalhes do Paciente** | RF-05:	Exibir resumo da evolução do paciente durante o pós-operatório. <br> 	RF-04: Permita que o médico visualize as informações registradas pelos pacientes. <BR> RF-06: Permitir exportação do histórico de acompanhamento do paciente em relatório.| 
 
 ### Tela 4F 
 |![Tela 4F](img/Tela%204F.png)|
