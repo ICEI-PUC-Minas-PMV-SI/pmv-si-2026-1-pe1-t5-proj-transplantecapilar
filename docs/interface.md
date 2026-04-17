@@ -99,7 +99,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Lista de Pacientes** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Lista de Pacientes** | RF-10:	Permitir que o médico filtre pacientes por dados da cirurgia ou nome.|
 
 ### Tela 4E 
 |![Tela 4E](img/Tela%204E.png)|
