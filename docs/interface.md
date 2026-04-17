@@ -26,7 +26,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Tela de Login** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Tela de Login** | RF-08: Permitir login de pacientes e médicos no sistema.|
 
 
 ### Tela 2A 
@@ -36,7 +36,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Cadastro de Paciente** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Cadastro de Paciente** | RF-01:	Permitir cadastro de pacientes no sistema.|
 
 ### Tela 2B
 |![Tela 2C](img/Tela%202C.png)|
@@ -45,7 +45,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Login de Medico** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Login de Medico** | RF-07: Permitir cadastro de médicos no sistema.|
 
 ### Tela 3A 
 |![Tela 3A](img/Tela%203A.png)|
