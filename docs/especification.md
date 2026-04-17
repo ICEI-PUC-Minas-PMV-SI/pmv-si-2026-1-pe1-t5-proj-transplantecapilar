@@ -83,6 +83,11 @@ Suas principais necessidades são acessar dados estruturados dos pacientes, acom
 | RF-10  | Permitir que o médico filtre pacientes por data da cirurgia ou nome.    | Média     |
 | RF-11  | Permitir que o paciente edite informações registradas no mesmo dia.     | Baixa     |
 | RF-12  | Permitir envio de comentários ou mensagens entre paciente e médico no sistema. | Média     |
+| RF-13  | Tela principal do paciente, contendo acesso e direcionamento para as demais funcionalidades do sistema. | Alta     |
+| RF-14  | Tela principal do médico, contendo acesso e direcionamento para as demais funcionalidades do sistema.. | Alta    |
+| RF-15  | Tela de questionários diários destinada aos pacientes, contendo perguntas relacionadas ao tratamento realizado. | Alta     |
+| RF-16  | Tela para registro de dúvidas, comentários e envio de fotos, com o objetivo de auxiliar o paciente durante o tratamento. | Média     |
+| RF-17 | Tela destinada ao registro de fotos do paciente para acompanhamento e avaliação médica contínua. | alta    |
 
 ---
 
