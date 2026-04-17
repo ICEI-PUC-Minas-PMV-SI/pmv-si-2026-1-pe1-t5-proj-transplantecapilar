@@ -54,7 +54,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Dashboard do Paciente** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Dashboard do Paciente** | RF-09:	Permitir que o paciente visualize seu histórico de registros durante o pós-operatório.|
 
 ### Tela 3B 
 |![Tela 3B](img/Tela%203B.png)|
