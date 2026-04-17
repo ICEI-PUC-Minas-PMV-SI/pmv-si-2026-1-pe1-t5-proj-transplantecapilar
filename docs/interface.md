@@ -108,7 +108,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Detalhes do Paciente** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Detalhes do Paciente** | RF-05:	Exibir resumo da evolução do paciente durante o pós-operatório.|
 
 ### Tela 4F 
 |![Tela 4F](img/Tela%204F.png)|
