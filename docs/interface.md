@@ -81,7 +81,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 
 | **Componente**               | **Requisitos Atendidos** |
 |------------------------------|--------------------------|
-| **Envio de Fotos** | RF01:	TEXTO. <br> RF01: TEXTO.|
+| **Envio de Fotos** | RF-03:	permitir o envio de fotos da área transplantada.|
 
 ### Tela 4C 
 |![Tela 4C](img/Tela%204C.png)|
