@@ -39,7 +39,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 | **Cadastro de Paciente** | RF-01:	Permitir cadastro de pacientes no sistema.|
 
 ### Tela 2B
-|![Tela 2C](img/Tela%202C.png)|
+|![Tela 2C](img/Tela%202C.jpeg)|
 |:---------------------------:|
 |       **Login de Medico**      |
 
@@ -48,7 +48,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 | **Login de Medico** | RF-07: Permitir cadastro de médicos no sistema.|
 
 ### Tela 3A 
-|![Tela 3A](img/Tela%203A.png)|
+|![Tela 3A](img/Tela%203A.jpeg)|
 |:---------------------------:|
 |       **Dashboard do Paciente**      |
 
@@ -57,7 +57,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 | **Dashboard do Paciente** | RF-09:	Permitir que o paciente visualize seu histórico de registros durante o pós-operatório. <br> RF-11: Permita que o paciente edite informações registradas no mesmo dia. <br> RF-13: Tela principal do paciente, contendo acesso e direcionamento para as demais funcionalidades do sistema.|
 
 ### Tela 3B 
-|![Tela 3B](img/Tela%203B.png)|
+|![Tela 3B](img/Tela%203B.jpeg)|
 |:---------------------------:|
 |       **Dashboard do Médico**      |
 
@@ -66,7 +66,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 | **Dashboard do Médico** | RF-14:	Tela principal do médico, contendo acesso e direcionamento para as demais funcionalidades do sistema.|
 
 ### Tela 4A — Questionário Diário
-|![Tela 4A](img/Tela%204A%20.png)|
+|![Tela 4A](img/Tela%204A%20.jpeg)|
 |:---------------------------:|
 |       **Questionário Diário**      |
 
@@ -75,7 +75,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 | **Questionário Diário** | RF-02:	Permitir que o paciente registre informações diárias sobre o pós-operatório. <br> RF-15: Tela de questionários diários destinados aos pacientes, contendo perguntas relacionadas ao tratamento realizado.| 
 
 ### Tela 4B
-|![Tela 4B](img/Tela%204B.png)|
+|![Tela 4B](img/Tela%204B.jpeg)|
 |:---------------------------:|
 |       **Envio de Fotos**      |
 
@@ -84,7 +84,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 | **Envio de Fotos** | RF-03:	permitir o envio de fotos da área transplantada.|
 
 ### Tela 4C 
-|![Tela 4C](img/Tela%204C.png)|
+|![Tela 4C](img/Tela%204C.jpeg)|
 |:---------------------------:|
 |       **Registro de Dúvidas/Comentários**      |
 
@@ -93,7 +93,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 | **Registro de Dúvidas/Comentários** | RF-12:	Permitir envio de comentários ou mensagens entre pacientes e médicos no sistema. <br> RF-16: Tela para registro de dúvidas, comentários e envio de fotos, com o objetivo de auxiliar o paciente durante o tratamento.|
 
 ### Tela 4D 
-|![Tela 4D](img/Tela%204D.png)|
+|![Tela 4D](img/Tela%204D.jpeg)|
 |:---------------------------:|
 |       **Lista de Pacientes**      |
 
@@ -102,7 +102,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 | **Lista de Pacientes** | RF-10:	Permitir que o médico filtre pacientes por dados da cirurgia ou nome.|
 
 ### Tela 4E 
-|![Tela 4E](img/Tela%204E.png)|
+|![Tela 4E](img/Tela%204E.jpeg)|
 |:---------------------------:|
 |       **Detalhes do Paciente**      |
 
@@ -111,7 +111,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 | **Detalhes do Paciente** | RF-05:	Exibir resumo da evolução do paciente durante o pós-operatório. <br> 	RF-04: Permita que o médico visualize as informações registradas pelos pacientes. <BR> RF-06: Permitir exportação do histórico de acompanhamento do paciente em relatório.| 
 
 ### Tela 4F 
-|![Tela 4F](img/Tela%204F.png)|
+|![Tela 4F](img/Tela%204F.jpeg)|
 |:---------------------------:|
 |       **Visualização de Fotos**      |
 
