@@ -66,7 +66,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 | **Dashboard do Médico** | RF-14:	Tela principal do médico, contendo acesso e direcionamento para as demais funcionalidades do sistema.|
 
 ### Tela 4A — Questionário Diário
-|![Tela 4A](img/Tela%204A%20.jpeg)|
+|![Tela 4A](img/Tela%204A.jpeg)|
 |:---------------------------:|
 |       **Questionário Diário**      |
 
