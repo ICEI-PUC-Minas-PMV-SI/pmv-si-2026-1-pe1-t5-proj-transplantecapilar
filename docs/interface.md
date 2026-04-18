@@ -39,7 +39,7 @@ O fluxograma a seguir representa o fluxo de navegação do sistema, demonstrando
 | **Cadastro de Paciente** | RF-01:	Permitir cadastro de pacientes no sistema.|
 
 ### Tela 2B
-|![Tela 2C](img/Tela%202C.jpeg)|
+|![Tela 2C](img/Tela%202C.png)|
 |:---------------------------:|
 |       **Login de Medico**      |
 
