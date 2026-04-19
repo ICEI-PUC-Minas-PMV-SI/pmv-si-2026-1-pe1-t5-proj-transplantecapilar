@@ -38,6 +38,7 @@ Interface baseada em <b>Menu Lateral + Barra Superior</b>, com conteúdo central
 ### Barra Superior e Campo de Busca
 
 <img width="1121" height="794" alt="image" src="https://github.com/user-attachments/assets/062c76b0-22c0-428a-9453-96aed6b8eac0" />
+.
  
 | Elemento         | Função                                                                         |
 |------------------|--------------------------------------------------------------------------------|
