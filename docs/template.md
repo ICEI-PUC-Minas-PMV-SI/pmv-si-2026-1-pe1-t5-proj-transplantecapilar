@@ -23,7 +23,7 @@ Interface baseada em <b>Menu Lateral + Barra Superior</b>, com conteúdo central
 ## Menus Padrões
 
 |### Menu Lateral|
-|<img width="241" height="888" alt="image" src="https://github.com/user-attachments/assets/e07edcb2-5ec6-4e30-a662-7f83dff72d32" />|
+|<img width="241" height="888" alt="image" src="https://github.com/user-attachments/assets/e07edcb2-5ec6-4e30-a662-7f83dff72d32" />| |
 
 |:------------------------------------------------------------------------------------------------:|
 
