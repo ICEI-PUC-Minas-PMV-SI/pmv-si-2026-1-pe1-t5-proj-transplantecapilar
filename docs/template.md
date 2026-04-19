@@ -5,7 +5,7 @@ O projeto utiliza um layout base em HTML e CSS padronizado para todas as página
 ## Design
 Tela Inicial
 
-|<img width="1302" height="906" alt="image" src="https://github.com/user-attachments/assets/1c35b945-9b7c-4ab6-90e2-8ce697a3bce5" />|
+<img width="1302" height="906" alt="image" src="https://github.com/user-attachments/assets/1c35b945-9b7c-4ab6-90e2-8ce697a3bce5" />
 
 
 Interface baseada em <b>Menu Lateral + Barra Superior</b>, com conteúdo central organizado em <b>painéis de acompanhamento e formulários clínicos</b>, com a exibição de <b>alertas, notificações e foto de perfil no menu superior</b>.
@@ -38,7 +38,8 @@ Interface baseada em <b>Menu Lateral + Barra Superior</b>, com conteúdo central
 ### Barra Superior e Campo de Busca
 
 <img width="1121" height="794" alt="image" src="https://github.com/user-attachments/assets/062c76b0-22c0-428a-9453-96aed6b8eac0" />
-.
+
+|:-------------------------------------------------------------------------------------------------:|
  
 | Elemento         | Função                                                                         |
 |------------------|--------------------------------------------------------------------------------|
