@@ -12,7 +12,7 @@ Interface baseada em <b>Menu Lateral + Barra Superior</b>, com conteúdo central
 
 ## Logo da Aplicação
 
-<img width="243" height="100" alt="image" src="https://github.com/user-attachments/assets/e6f087a2-d7cc-4cbb-8adc-25cca158e74a" />
+|<img width="243" height="100" alt="image" src="https://github.com/user-attachments/assets/e6f087a2-d7cc-4cbb-8adc-25cca158e74a" />|
 
 
 - **Localização**: Canto superior esquerdo, dentro do menu lateral
