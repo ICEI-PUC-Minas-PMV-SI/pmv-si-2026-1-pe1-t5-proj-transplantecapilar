@@ -56,6 +56,8 @@ Para esta etapa, foi utilizada uma estrutura simples baseada em formulários HTM
 
 A implementação atual é uma versão inicial (protótipo funcional), sem integração com banco de dados real. Os dados são manipulados apenas no navegador para fins acadêmicos.
 
+# TEXTA PADRÃO QUE O PROFESSOS DEIXOU COMO ORIENTAÇÃO ABAIXO
+
 # Programação de Funcionalidades
 
 Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
