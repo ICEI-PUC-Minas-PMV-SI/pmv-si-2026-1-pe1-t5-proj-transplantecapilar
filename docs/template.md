@@ -1,6 +1,6 @@
 # Template padrão do site - HairCare Pro
 
-O projeto utiliza um layout base em HTML e CSS padronizado para todas as páginas da aplicação. Esse template define a **identidade visual**, contempla princípios de **responsividade** para diferentes dispositivos e incorpora **iconografia funcional** com base em bibliotecas modernas, focando na melhor experiência para médicos e pacientes.
+O projeto utiliza um layout base em HTML e CSS padronizado para todas as páginas da aplicação. Esse template define a **identidade visual**, contempla princípios de **responsividade** para diferentes dispositivos e incorpora **iconografia funcional** com base em bibliotecas modernas, focando na melhor experiência para médicos e pacientes..
 
 ## Design
 Tela Inicial
