@@ -15,6 +15,34 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 
 ---
 
+## Funcionalidades do Sistema
+
+### Tela 1A – Login
+
+- **Requisito relacionado:** RF-08  
+- **Descrição:** Tela responsável pela autenticação do usuário no sistema HairCare Pro.  
+- **Tecnologias utilizadas:** HTML, CSS e JavaScript.  
+- **Funcionalidades implementadas:**
+  - Campo para inserção de e-mail e senha  
+  - Validação básica dos campos obrigatórios  
+  - Botão de login com simulação de acesso ao sistema  
+  - Interface padronizada conforme o template visual da aplicação  
+
+---
+
+### Tela 2A – Cadastro de Paciente
+
+- **Requisito relacionado:** RF-01  
+- **Descrição:** Tela destinada ao cadastro de novos pacientes na plataforma, permitindo o registro de informações pessoais para acesso ao sistema.  
+- **Tecnologias utilizadas:** HTML, CSS e JavaScript.  
+- **Funcionalidades implementadas:**
+  - Formulário com campos de dados pessoais (nome, CPF, data de nascimento, telefone, sexo, e-mail e senha)  
+  - Validação básica dos campos obrigatórios  
+  - Estrutura preparada para futura integração com banco de dados  
+  - Interface padronizada seguindo o layout do sistema HairCare Pro  
+
+---
+
 ## Descrição das estruturas
 
 Para esta etapa, foi utilizada uma estrutura simples baseada em formulários HTML para coleta de dados do usuário, com validação e manipulação utilizando JavaScript.
@@ -35,26 +63,26 @@ Para esta etapa, foi utilizada uma estrutura simples baseada em formulários HTM
 
 ## Tecnologias Utilizadas
 
-- HTML5: Estrutura das páginas
-- CSS3: Estilização da interface
-- JavaScript: Validação de formulários e simulação de login
-- LocalStorage: Armazenamento temporário de dados no navegador
+- HTML5: Estrutura das páginas  
+- CSS3: Estilização da interface  
+- JavaScript: Validação de formulários e simulação de login  
+- LocalStorage: Armazenamento temporário de dados no navegador  
 
 ---
 
 ## Instruções para Execução
 
-1. Abrir o projeto no Visual Studio Code
-2. Instalar a extensão Live Server
-3. Executar o arquivo `login.html` com Live Server
-4. Navegar entre login e cadastro
-5. Testar o preenchimento dos formulários
+1. Realizar o download ou clonar o repositório do projeto via GitHub  
+2. Abrir o projeto no Visual Studio Code  
+3. Acessar a pasta `src/pages`  
+4. Executar os arquivos `login.html` e `cadastro.html` utilizando a extensão Live Server  
+5. Testar o preenchimento dos formulários  
 
 ---
 
 ## Observações
 
-A implementação atual é uma versão inicial (protótipo funcional), sem integração com banco de dados real. Os dados são manipulados apenas no navegador para fins acadêmicos.
+A implementação atual é uma versão inicial (protótipo funcional), sem integração com banco de dados real. Os dados são manipulados apenas no navegador para fins acadêmicos. As regras de negócio e funcionalidades dinâmicas serão aprofundadas nas próximas etapas do projeto.
 
 # TEXTA PADRÃO QUE O PROFESSOS DEIXOU COMO ORIENTAÇÃO ABAIXO
 
