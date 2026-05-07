@@ -13,7 +13,7 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 | RF-01 | Permitir cadastro de pacientes no sistema                                             | Higor Pierri    | cadastro.html           |
 | RF-08 | Permitir login de pacientes e médicos no sistema                                      | Higor Pierri    | login.html              |
 | RF-02 | Permitir que o paciente registre informações diárias sobre o pós-operatório           | Thiago de Paulo    | -------------        |
-| RF-07 | Permitir cadastro de médicos no sistema                                               | Thiago de Paulo    | -------              |
+| RF-07 | Permitir cadastro de médicos no sistema                                               | Thiago de Pauloo    | -------              |
 | RF-15 | Tela de questionários diários destinados aos pacientes, contendo perguntas relacionadas ao tratamento realizado                                      | Thiago de Paulo    | -------              |
 
 ---
