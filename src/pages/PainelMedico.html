@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visão do Médico</title>
+
+  <link rel="stylesheet" href="painel-medico.css"/>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-logo-circle">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        </svg>
+      </div>
+
+      <div class="brand-name">HAIRCARE PRO</div>
+      <div class="brand-subtitle">Painel do Médico</div>
+    </div>
+
+    <nav class="nav-menu">
+      <a href="#" id="nav-painel" class="nav-item active">Painel Inicial</a>
+      <a href="#" class="nav-item">Meus Pacientes</a>
+      <a href="#" id="nav-alertas" class="nav-item">Alertas <span class="badge-nav">2</span></a>
+      <a href="#" id="nav-mensagens" class="nav-item">Dúvidas <span class="badge-nav">2</span></a>
+
+      <div class="nav-footer">
+        <div class="nav-divider"></div>
+        <a href="#" id="nav-configuracoes" class="nav-item">Configurações</a>
+        <a href="#" class="nav-item">Sair</a>
+      </div>
+    </nav>
+  </aside>
+
+  <main class="main-wrapper">
+
+    <header class="topbar">
+      <div class="page-title">Bom dia, Dr. João!</div>
+
+      <div class="topbar-actions">
+        <div class="notification-wrapper">
+          <button class="notification-btn" id="notification-btn" aria-label="Abrir notificações" type="button">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+
+            <span class="notification-dot">3</span>
+          </button>
+
+          <div class="notification-menu" id="notification-menu">
+            <div class="notification-menu-header">Notificações</div>
+
+            <button class="notification-item" type="button" data-target-section="alertas" data-target-id="alerta-rafael" data-notification-category="criticos">
+              <div class="notification-icon red"></div>
+
+              <div class="notification-text">
+                <strong>Alerta crítico</strong>
+                <span>Rafael Souza relatou dor nível 8.</span>
+              </div>
+            </button>
+
+            <button class="notification-item" type="button" data-target-section="alertas" data-target-id="alerta-lucas" data-notification-category="atrasos">
+              <div class="notification-icon yellow"></div>
+
+              <div class="notification-text">
+                <strong>Fotos atrasadas</strong>
+                <span>Lucas Fernandes está há 2 dias sem envio.</span>
+              </div>
+            </button>
+
+            <button class="notification-item" type="button" data-target-section="duvidas" data-target-id="duvida-andre" data-notification-category="duvidas" data-question-notification="true">
+              <div class="notification-icon blue"></div>
+
+              <div class="notification-text">
+                <strong>Dúvida pendente</strong>
+                <span>André Lima enviou uma dúvida.</span>
+              </div>
+            </button>
+
+            <button class="notification-item" type="button" data-target-section="duvidas" data-target-id="duvida-gabriel" data-notification-category="duvidas" data-question-notification="true">
+              <div class="notification-icon blue"></div>
+
+              <div class="notification-text">
+                <strong>Nova dúvida</strong>
+                <span>Gabriel Victor perguntou sobre vermelhidão.</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="user-profile">
+          <span>Dr. João da Silva</span>
+          <div class="avatar">JS</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-area">
+      <section id="painel-section" class="page-section">
+
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+
+            <div class="kpi-info">
+              <h3>42</h3>
+              <p>Pacientes Ativos</p>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+
+            <div class="kpi-info">
+              <h3>18</h3>
+              <p>Atualizações Hoje</p>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon red">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+            </div>
+
+            <div class="kpi-info">
+              <h3>2</h3>
+              <p>Atenção Necessária</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-split">
+          <div>
+            <div class="section-header">
+              <h2 class="section-title">Últimas Atualizações</h2>
+            </div>
+
+            <div class="panel feed-list">
+              <div class="feed-item">
+                <div class="feed-avatar">GV</div>
+
+                <div class="feed-content">
+                  <div class="feed-header">
+                    <span class="feed-name">Gabriel Victor (Dia 5)</span>
+                    <span class="feed-time">Há 15 min</span>
+                  </div>
+
+                  <p class="feed-text">Enviou as fotos diárias da área doadora e receptora.</p>
+
+                  <button class="btn-small" id="btn-avaliar-fotos">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                      <circle cx="8.5" cy="8.5" r="1.5"/>
+                      <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+
+                    Avaliar Fotos
+                  </button>
+                </div>
+              </div>
+
+              <div class="feed-item">
+                <div class="feed-avatar">MC</div>
+
+                <div class="feed-content">
+                  <div class="feed-header">
+                    <span class="feed-name">Marcos Castro (Dia 2)</span>
+                    <span class="feed-time">Há 1 hora</span>
+                  </div>
+
+                  <p class="feed-text">Respondeu ao questionário de sintomas: <strong>Tudo sob controle. Nenhuma dor relatada.</strong></p>
+                </div>
+              </div>
+
+              <div class="feed-item">
+                <div class="feed-avatar">AL</div>
+
+                <div class="feed-content">
+                  <div class="feed-header">
+                    <span class="feed-name">André Lima (Dia 12)</span>
+                    <span class="feed-time">Há 2 horas</span>
+                  </div>
+
+                  <p class="feed-text">Enviou uma dúvida: <em>"Doutor, já posso voltar a usar boné para sair de casa?"</em></p>
+
+                  <button class="btn-small" id="btn-responder-mensagem">Responder Mensagem</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="section-header">
+              <h2 class="section-title">Pendências e Alertas</h2>
+            </div>
+
+            <div class="panel alert-list">
+              <div class="alert-item">
+                <div class="alert-info">
+                  <div class="alert-dot dot-red"></div>
+
+                  <div class="alert-text">
+                    <h4>Rafael Souza</h4>
+                    <p>Relatou inchaço intenso e dor (Nível 8) na área frontal.</p>
+                  </div>
+                </div>
+
+                <button class="btn-action red">Atender</button>
+              </div>
+
+              <div class="alert-item">
+                <div class="alert-info">
+                  <div class="alert-dot dot-yellow"></div>
+
+                  <div class="alert-text">
+                    <h4>Lucas Fernandes</h4>
+                    <p>Atrasado: Não enviou fotos nos últimos 2 dias.</p>
+                  </div>
+                </div>
+
+                <button class="btn-action">Cobrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="alertas-section" class="page-section hidden">
+        <div class="alerts-hero">
+          <div>
+            <h1>Central de Alertas</h1>
+            <p>Acompanhe pacientes que precisam de atenção, atraso no envio de fotos ou sintomas fora do esperado.</p>
+          </div>
+
+          <div class="alerts-counter">
+            <strong>2</strong>
+            <span>alertas abertos</span>
+          </div>
+        </div>
+
+        <div class="filter-row">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="critico">Críticos</button>
+          <button class="filter-btn" data-filter="atraso">Atrasos</button>
+          <button class="filter-btn" data-filter="resolvido">Resolvidos</button>
+        </div>
+
+        <div class="alerts-grid">
+          <section>
+            <div class="section-header">
+              <h2 class="section-title">Alertas recentes</h2>
+            </div>
+
+            <div class="panel">
+              <article class="alert-card" id="alerta-rafael" data-status="critico">
+                <div class="severity-icon high">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                    <line x1="12" y1="9" x2="12" y2="13"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                  </svg>
+                </div>
+
+                <div class="alert-content">
+                  <h3>Rafael Souza</h3>
+
+                  <div class="alert-meta">
+                    <span>Dia 3 pós-operatório</span>
+                    <span>Há 12 min</span>
+                  </div>
+
+                  <p>Paciente relatou inchaço intenso e dor nível 8 na região frontal. Recomenda-se atendimento prioritário.</p>
+
+                  <span class="status-badge badge-danger">Crítico</span>
+                </div>
+
+                <div class="alert-actions">
+                  <button class="btn-action red">Atender</button>
+                </div>
+              </article>
+
+              <article class="alert-card" id="alerta-lucas" data-status="atraso">
+                <div class="severity-icon medium">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+
+                <div class="alert-content">
+                  <h3>Lucas Fernandes</h3>
+
+                  <div class="alert-meta">
+                    <span>Dia 7 pós-operatório</span>
+                    <span>Há 1 hora</span>
+                  </div>
+
+                  <p>Paciente não enviou fotos de acompanhamento nos últimos 2 dias. Pode ser necessário enviar lembrete.</p>
+
+                  <span class="status-badge badge-warning">Atraso</span>
+                </div>
+
+                <div class="alert-actions">
+                  <button class="btn-action">Cobrar</button>
+                </div>
+              </article>
+
+              <div class="empty-alerts" id="empty-alerts">
+                <strong>Nenhum alerta encontrado</strong>
+                Não há pacientes nesta categoria no momento.
+              </div>
+            </div>
+          </section>
+
+          <aside>
+            <div class="section-header">
+              <h2 class="section-title">Resumo</h2>
+            </div>
+
+            <div class="panel">
+              <div class="summary-card">
+                <h3>Status de hoje</h3>
+
+                <div class="summary-list">
+                  <div class="summary-item">
+                    <span>Críticos</span>
+                    <span class="summary-number">1</span>
+                  </div>
+
+                  <div class="summary-item">
+                    <span>Atrasos</span>
+                    <span class="summary-number">1</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="summary-card">
+                <h3>Prioridade recomendada</h3>
+
+                <div class="doctor-note">
+                  Atenda primeiro os alertas críticos, depois pacientes com atraso de fotos e, por último, dúvidas gerais.
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="mensagens-section" class="page-section hidden">
+        <div class="messages-hero">
+          <div>
+            <h1>Responder Dúvidas</h1>
+            <p>Revise as dúvidas enviadas pelos pacientes e responda de forma objetiva, mantendo o acompanhamento do pós-operatório organizado.</p>
+          </div>
+
+          <div class="messages-counter">
+            <strong>2</strong>
+            <span>dúvidas</span>
+          </div>
+        </div>
+
+        <div class="filter-row questions-filter-row">
+          <button class="filter-btn question-filter-btn active" data-question-filter="todas">Todas</button>
+          <button class="filter-btn question-filter-btn" data-question-filter="pending">Pendentes</button>
+          <button class="filter-btn question-filter-btn" data-question-filter="answered">Respondidas</button>
+        </div>
+
+        <div class="questions-layout">
+          <section>
+            <div class="section-header">
+              <h2 class="section-title" id="questions-list-title">Todas as dúvidas</h2>
+            </div>
+
+            <article class="question-card" id="duvida-andre" data-question-status="pending">
+              <div class="question-header">
+                <div class="question-patient">
+                  <div class="question-avatar">AL</div>
+
+                  <div>
+                    <h3>André Lima</h3>
+                    <span>Dia 12 pós-operatório · há 2 horas</span>
+                  </div>
+                </div>
+
+                <span class="question-badge">Aguardando resposta</span>
+              </div>
+
+              <div class="question-body">
+                <div class="question-label">Dúvida do paciente</div>
+
+                <div class="question-text">
+                  Doutor, já posso voltar a usar boné para sair de casa? Também queria saber se posso pegar um pouco de sol no fim da tarde.
+                </div>
+
+                <textarea class="answer-box" placeholder="Digite a orientação para o paciente..."></textarea>
+
+                <div class="question-actions">
+                  <button class="btn-secondary btn-view-photos" type="button" data-patient="André Lima">Ver fotos enviadas</button>
+                  <button class="btn-secondary btn-save-draft" type="button">Salvar rascunho</button>
+                  <button class="btn-primary send-answer" type="button">Enviar resposta</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="question-card" id="duvida-gabriel" data-question-status="pending">
+              <div class="question-header">
+                <div class="question-patient">
+                  <div class="question-avatar">GV</div>
+
+                  <div>
+                    <h3>Gabriel Victor</h3>
+                    <span>Dia 5 pós-operatório · há 4 horas</span>
+                  </div>
+                </div>
+
+                <span class="question-badge">Aguardando resposta</span>
+              </div>
+
+              <div class="question-body">
+                <div class="question-label">Dúvida do paciente</div>
+
+                <div class="question-text">
+                  Enviei novas fotos para avaliação. A vermelhidão na área doadora está normal nessa fase?
+                </div>
+
+                <textarea class="answer-box" placeholder="Digite a orientação para o paciente..."></textarea>
+
+                <div class="question-actions">
+                  <button class="btn-secondary btn-view-photos" type="button" data-patient="Gabriel Victor">Ver fotos enviadas</button>
+                  <button class="btn-secondary btn-save-draft" type="button">Salvar rascunho</button>
+                  <button class="btn-primary send-answer" type="button">Enviar resposta</button>
+                </div>
+              </div>
+            </article>
+
+            <div class="empty-alerts" id="empty-questions">
+              <strong>Nenhuma dúvida encontrada</strong>
+              Não há dúvidas nesta categoria no momento.
+            </div>
+          </section>
+
+          <aside>
+            <div class="section-header">
+              <h2 class="section-title">Apoio</h2>
+            </div>
+
+            <div class="questions-side-panel">
+              <div class="questions-side-card">
+                <h3>Respostas rápidas</h3>
+
+                <div class="quick-answer-list">
+                  <button class="quick-answer" type="button">Evite boné apertado e exposição direta ao sol até liberação médica.</button>
+                  <button class="quick-answer" type="button">A vermelhidão leve pode ser esperada, mas envie fotos se houver dor intensa.</button>
+                  <button class="quick-answer" type="button">Mantenha a medicação conforme prescrição e siga as orientações de lavagem.</button>
+                </div>
+              </div>
+
+              <div class="questions-side-card">
+                <h3>Resumo</h3>
+
+                <div class="questions-summary">
+                  <div class="questions-summary-item">
+                    <span>Dúvidas pendentes</span>
+                    <strong>2</strong>
+                  </div>
+
+                  <div class="questions-summary-item">
+                    <span>Respondidas hoje</span>
+                    <strong>3</strong>
+                  </div>
+
+                  <div class="questions-summary-item">
+                    <span>Tempo médio</span>
+                    <strong>1h 20min</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="configuracoes-section" class="page-section hidden">
+        <div class="settings-layout">
+          <section>
+            <div class="section-header">
+              <h2 class="section-title">Dados do perfil</h2>
+            </div>
+
+            <div class="settings-panel">
+              <div class="settings-card">
+                <h3>Informações do médico</h3>
+
+                <div class="profile-photo-row">
+                  <div class="profile-photo-preview" id="profile-photo-preview">JS</div>
+
+                  <div class="profile-photo-actions">
+                    <div class="profile-photo-buttons">
+                      <label for="config-foto" class="btn-photo">Alterar foto de perfil</label>
+                      <button class="btn-photo secondary" id="reset-profile-photo" type="button">Redefinir foto</button>
+                    </div>
+
+                    <input type="file" id="config-foto" class="photo-input" accept="image/*"/>
+                  </div>
+                </div>
+
+                <div class="settings-grid">
+                  <div class="settings-group">
+                    <label for="config-nome">Nome</label>
+                    <input type="text" id="config-nome" value="Dr. João da Silva" readonly/>
+                  </div>
+
+                  <div class="settings-group">
+                    <label for="config-crm">CRM</label>
+                    <input type="text" id="config-crm" value="123456" readonly/>
+                  </div>
+
+                  <div class="settings-group">
+                    <label for="config-especialidade">Especialidade</label>
+                    <input type="text" id="config-especialidade" value="Dermatologia" readonly/>
+                  </div>
+
+                  <div class="settings-group">
+                    <label for="config-clinica">Clínica</label>
+                    <input type="text" id="config-clinica" value="HairCare Pro" readonly/>
+                  </div>
+
+                  <div class="settings-group full">
+                    <label for="config-assinatura">Assinatura padrão</label>
+                    <textarea id="config-assinatura">Atenciosamente, Dr. João da Silva - HairCare Pro</textarea>
+                  </div>
+                </div>
+
+                <div class="settings-actions">
+                  <button class="btn-secondary" type="button">Cancelar</button>
+                  <button class="btn-primary" id="save-profile-settings" type="button">Salvar alterações</button>
+                </div>
+
+                <div class="settings-save-message" id="settings-save-message">
+                  Configurações salvas com sucesso.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <aside>
+            <div class="section-header">
+              <h2 class="section-title">Preferências</h2>
+            </div>
+
+            <div class="settings-panel">
+              <div class="settings-card">
+                <h3>Notificações</h3>
+
+                <div class="settings-toggle-row">
+                  <div class="settings-toggle">
+                    <div>
+                      <strong>Alertas críticos</strong>
+                      <span>Mostrar avisos de dor intensa, inchaço ou sintomas graves.</span>
+                    </div>
+
+                    <label class="switch">
+                      <input type="checkbox" id="toggle-alertas-criticos" data-notification-toggle="criticos" checked/>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="settings-toggle">
+                    <div>
+                      <strong>Dúvidas pendentes</strong>
+                      <span>Mostrar notificações quando pacientes enviarem perguntas.</span>
+                    </div>
+
+                    <label class="switch">
+                      <input type="checkbox" id="toggle-duvidas" data-notification-toggle="duvidas" checked/>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="settings-toggle">
+                    <div>
+                      <strong>Atraso de fotos</strong>
+                      <span>Avisar quando o paciente não enviar fotos no prazo.</span>
+                    </div>
+
+                    <label class="switch">
+                      <input type="checkbox" id="toggle-atraso-fotos" data-notification-toggle="atrasos" checked/>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="photos-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h2 id="photos-modal-title">Fotos enviadas</h2>
+          <span>Área doadora e área receptora</span>
+        </div>
+
+        <button class="modal-close" type="button" data-close-modal="photos-modal">×</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="photos-grid">
+          <div class="photo-card">
+            <div class="photo-placeholder" data-photo-label="Área doadora">
+              <svg width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+            </div>
+
+            <div class="photo-caption">
+              <strong>Área doadora</strong>
+              <span>Foto enviada pelo paciente para acompanhamento.</span>
+            </div>
+          </div>
+
+          <div class="photo-card">
+            <div class="photo-placeholder" data-photo-label="Área receptora">
+              <svg width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+            </div>
+
+            <div class="photo-caption">
+              <strong>Área receptora</strong>
+              <span>Foto enviada pelo paciente para avaliação médica.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="image-viewer-modal">
+    <div class="modal-card image-viewer-card">
+      <div class="modal-header">
+        <div>
+          <h2 id="image-viewer-title">Imagem ampliada</h2>
+          <span>Visualização em tamanho maior</span>
+        </div>
+
+        <button class="modal-close" type="button" data-close-modal="image-viewer-modal">×</button>
+      </div>
+
+      <div class="image-viewer-body">
+        <div class="image-viewer-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+
+          <div class="image-viewer-label" id="image-viewer-label">Área doadora</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="painel-medico.js"></script>
+</body>
+</html>
