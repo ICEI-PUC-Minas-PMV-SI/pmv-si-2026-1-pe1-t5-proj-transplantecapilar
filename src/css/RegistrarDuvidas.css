@@ -1,0 +1,162 @@
+.conteudo-duvida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.cartao-duvida {
+    background-color: #fdfff9;
+    border: 1px solid #c9d6e3;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 760px;
+    overflow: hidden;
+}
+
+.cartao-cabecalho {
+    padding: 28px 32px;
+    border-bottom: 1px solid #c9d6e3;
+}
+
+.cartao-titulo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #283d74;
+    text-decoration: underline;
+    margin-bottom: 8px;
+}
+
+.cartao-subtitulo {
+    font-size: 14px;
+    color: #4a6070;
+    line-height: 1.5;
+}
+
+.cartao-secao {
+    padding: 24px 32px;
+    border-bottom: 1px solid #c9d6e3;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cartao-secao-botao {
+    padding: 0;
+}
+
+.secao-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a2a40;
+}
+
+.duvida-textarea {
+    width: 100%;
+    min-height: 110px;
+    padding: 16px;
+    border: 1.5px solid #c9d6e3;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #1a2a40;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.duvida-textarea:focus {
+    border-color: #283d74;
+}
+
+.zona-upload-duvida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 2px dashed #a0b4c8;
+    border-radius: 10px;
+    padding: 32px 24px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.zona-upload-duvida:hover {
+    border-color: #283d74;
+    background-color: #e8edf5;
+}
+
+.upload-texto-principal {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a2a40;
+}
+
+.upload-texto-dica {
+    font-size: 13px;
+    color: #4a6070;
+}
+
+.input-arquivo {
+    display: none;
+}
+
+.botao-enviar-duvida {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 18px;
+    background-color: #283d74;
+    color: #fdfff9;
+    border: none;
+    border-radius: 0 0 12px 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botao-enviar-duvida:hover {
+    background-color: #2f4a8c;
+}
+
+.topbar-direita {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sino-btn {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4a6070;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
+.sino-btn:hover {
+    color: #283d74;
+}
+
+.sino-bolinha {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 9px;
+    height: 9px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    border: 2px solid #fdfff9;
+}
