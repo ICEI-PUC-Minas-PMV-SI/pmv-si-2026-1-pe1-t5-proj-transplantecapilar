@@ -1,151 +1,378 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-body {
-    background-color: #f4f4f4;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-.auth-container {
-    display: flex;
-    min-height: 100vh;
-}
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #F8F9FA;
+        color: #161917;
+    }
 
-/* LADO ESQUERDO */
-.auth-left {
-    width: 50%;
-    background-color: #e5e5e5;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    /* CONTAINER PRINCIPAL */
 
-.brand {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.logo-circle {
-    width: 40px;
-    height: 40px;
-    border: 2px solid black;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.auth-left h2 {
-    margin: 20px 0 10px;
-}
-
-.auth-left ul {
-    margin-top: 20px;
-}
-
-.auth-left li {
-    margin-bottom: 10px;
-}
-
-/* LADO DIREITO */
-.auth-right {
-    width: 50%;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.auth-right h2 {
-    margin-bottom: 10px;
-}
-
-.divider {
-    margin: 20px 0;
-}
-
-.profile-buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.profile {
-    padding: 10px;
-    border: 1px solid #000;
-    background: none;
-    cursor: pointer;
-}
-
-.profile.active {
-    background-color: #000;
-    color: #fff;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-top: 10px;
-}
-
-input {
-    padding: 10px;
-    margin-top: 5px;
-}
-
-.form-options {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0;
-    font-size: 14px;
-}
-
-.primary-button {
-    margin-top: 15px;
-    padding: 12px;
-    background-color: #ccc;
-    border: none;
-    cursor: pointer;
-}
-
-.create-account {
-    margin-top: 10px;
-    text-align: center;
-}
-
-footer {
-    margin-top: 20px;
-    font-size: 12px;
-    text-align: center;
-}
-
-.message {
-    margin-top: 10px;
-    text-align: center;
-    color: red;
-}
-select {
-    padding: 10px;
-    margin-top: 5px;
-}
-
-.auth-right {
-    overflow-y: auto;
-}
-
-@media (max-width: 900px) {
     .auth-container {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    /* LADO ESQUERDO */
+
+    .auth-left {
+        width: 45%;
+        background-color: #1E3F66;
+        color: white;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .logo-circle {
+        width: 70px;
+        height: 70px;
+        border: 2px solid white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-circle svg {
+        width: 36px;
+        height: 36px;
+        stroke: white;
+        stroke-width: 2.5;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .brand h1 {
+        font-size: 42px;
+        font-weight: 700;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        color: #DEE2E6;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .auth-left h2 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .auth-left p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .auth-left ul {
+        margin-top: 30px;
+        padding-left: 20px;
+    }
+
+    .auth-left li {
+        margin-bottom: 14px;
+        font-size: 15px;
+        color: #DEE2E6;
+    }
+
+    /* LADO DIREITO */
+
+    .auth-right {
+        width: 55%;
+        background-color: white;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow-y: auto;
+    }
+
+    .auth-right h2 {
+        font-size: 34px;
+        margin-bottom: 10px;
+        color: #161917;
+    }
+
+    .auth-right p {
+        color: #535353;
+        margin-bottom: 30px;
+    }
+
+    /* BOTÕES PERFIL */
+
+    .profile-buttons {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 30px;
+    }
+
+    .profile {
+        padding: 12px 20px;
+        border-radius: 10px;
+        border: 2px solid #1E3F66;
+        background: transparent;
+        color: #1E3F66;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .profile:hover {
+        background-color: #DEE2E6;
+    }
+
+    .profile.active {
+        background-color: #1E3F66;
+        color: white;
+    }
+
+    /* FORMULÁRIO */
+
+    form {
+        display: flex;
         flex-direction: column;
     }
 
-    .auth-left,
-    .auth-right {
-        width: 100%;
+    label {
+        margin-top: 16px;
+        margin-bottom: 6px;
+        font-weight: 500;
+        color: #2E3236;
     }
-}
+
+    input,
+    select {
+        padding: 14px;
+        border: 1px solid #DEE2E6;
+        border-radius: 10px;
+        font-size: 15px;
+        transition: 0.3s;
+        background-color: #fff;
+    }
+
+    input:focus,
+    select:focus {
+        border-color: #1E3F66;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(30, 63, 102, 0.15);
+    }
+
+    /* OPÇÕES */
+
+    .form-options {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+        font-size: 14px;
+    }
+
+    .form-options a {
+        color: #1E3F66;
+        text-decoration: none;
+    }
+
+    .form-options a:hover {
+        text-decoration: underline;
+    }
+
+    /* CHECKBOX */
+
+    .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 18px;
+    }
+
+    .checkbox-group input {
+        width: auto;
+    }
+
+    /* BOTÃO */
+
+    .primary-button {
+        margin-top: 24px;
+        padding: 16px;
+        background-color: #1E3F66;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .primary-button:hover {
+        background-color: #111827;
+    }
+
+    /* LINKS */
+
+    .create-account {
+        margin-top: 24px;
+        text-align: center;
+    }
+
+    .create-account a {
+        color: #1E3F66;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .create-account a:hover {
+        text-decoration: underline;
+    }
+
+    /* FOOTER */
+
+    footer {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 13px;
+        color: #888888;
+    }
+
+    /* MENSAGEM */
+
+    .message {
+        margin-top: 18px;
+        text-align: center;
+        font-weight: 500;
+        color: #D02828;
+    }
+
+    /* RESPONSIVO */
+
+    @media (max-width: 900px) {
+
+        .auth-container {
+            flex-direction: column;
+        }
+
+        .auth-left,
+        .auth-right {
+            width: 100%;
+            padding: 40px;
+        }
+
+        .brand h1 {
+            font-size: 34px;
+        }
+
+        .auth-left h2,
+        .auth-right h2 {
+            font-size: 28px;
+        }
+    }/* AJUSTE PARA CABER EM UMA TELA */
+
+    .auth-left {
+    padding: 36px 48px;
+    }
+
+    .auth-right {
+    padding: 32px 64px;
+    }
+
+    .brand {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    }
+
+    .logo-circle {
+    width: 64px;
+    height: 64px;
+    }
+
+    .logo-circle svg {
+    width: 34px;
+    height: 34px;
+    }
+
+    .brand h1 {
+    font-size: 28px;
+    line-height: 1.1;
+    }
+
+    .system-subtitle {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #DEE2E6;
+    }
+
+    .auth-left h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    }
+
+    .auth-left p {
+    font-size: 14px;
+    line-height: 1.5;
+    }
+
+    .auth-left ul {
+    margin-top: 18px;
+    }
+
+    .auth-left li {
+    font-size: 13px;
+    margin-bottom: 8px;
+    }
+
+    .auth-right h2 {
+    font-size: 28px;
+    margin-bottom: 6px;
+    }
+
+    .auth-right p {
+    font-size: 13px;
+    margin-bottom: 16px;
+    }
+
+    label {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    }
+
+    input,
+    select {
+    padding: 10px 12px;
+    font-size: 13px;
+    border-radius: 8px;
+    }
+
+    .checkbox-label {
+    margin-top: 10px;
+    font-size: 13px;
+    }
+
+    .primary-button {
+    margin-top: 14px;
+    padding: 13px;
+    font-size: 14px;
+    }
+
+    .create-account {
+    margin-top: 12px;
+    font-size: 13px;
+    }
