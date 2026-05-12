@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #edf1f7;
+}
+
+.layout{
+    display: flex;
+    min-height: 100vh;
+}
+
+.menu-lateral{
+    width: 260px;
+    background-color: #283d74;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    color: white;
+}
+
+.logo-area{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lateral-logo-circulo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.logo-area h2{
+    margin-bottom: 8px;
+}
+
+.logo-area p{
+    font-size: 11px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.menu-rodape{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.menu-item{
+    text-decoration: none;
+    color: white;
+    padding: 14px;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.menu-item:hover{
+    background-color: rgba(255,255,255,0.08);
+}
+
+.ativo{
+    background-color: rgba(255,255,255,0.08);
+}
+
+.menu-item i{
+    margin-right: 10px;
+}
+
+.conteudo{
+    flex: 1;
+}
+
+.topo{
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid #dbe3ec;
+}
+
+.caminho{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4a6070;
+    font-size: 14px;
+}
+
+.perfil-area{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notificacao{
+    position: relative;
+}
+
+.sino{
+    font-size: 20px;
+    color: #283d74;
+}
+
+.bolinha{
+    width: 10px;
+    height: 10px;
+    background-color: #ff3b30;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 2px solid white;
+}
+
+.perfil{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.perfil-circulo{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #283d74;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.area-principal{
+    padding: 40px;
+}
+
+.cabecalho-paciente{
+    background-color: white;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.paciente-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.paciente-circulo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #e8edf5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #283d74;
+}
+
+.paciente-info h1{
+    margin-bottom: 8px;
+    color: #1a2a40;
+}
+
+.paciente-info p{
+    color: #4a6070;
+}
+
+.cards-fotos{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.card-foto{
+    width: 320px;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card-foto:hover{
+    transform: translateY(-5px);
+}
+
+.foto-area{
+    height: 250px;
+    background-color: #f4f7fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    color: #c4c4c4;
+}
+
+.card-info{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.data{
+    font-size: 13px;
+    color: #7a8a99;
+}
+
+.botao-ampliar{
+    background-color: #283d74;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.botao-ampliar:hover{
+    background-color: #35519a;
+}
+
+.botao-voltar{
+    margin-top: 40px;
+    border: 1px solid #c9d6e3;
+    background-color: white;
+    padding: 14px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
