@@ -458,7 +458,6 @@ body {
   display:none;
 }
 
-.alerts-hero,
 .messages-hero {
   background:var(--white);
   color:var(--text);
@@ -473,14 +472,12 @@ body {
   gap:24px;
 }
 
-.alerts-hero h1,
 .messages-hero h1 {
   font-size:26px;
   margin-bottom:8px;
   line-height:1.2;
 }
 
-.alerts-hero p,
 .messages-hero p {
   color:var(--text-soft);
   font-size:14px;
@@ -488,7 +485,6 @@ body {
   max-width:620px;
 }
 
-.alerts-counter,
 .messages-counter {
   width:168px;
   padding:16px 18px;
@@ -499,7 +495,6 @@ body {
   flex-shrink:0;
 }
 
-.alerts-counter strong,
 .messages-counter strong {
   display:block;
   font-size:34px;
@@ -508,7 +503,6 @@ body {
   color:var(--white);
 }
 
-.alerts-counter span,
 .messages-counter span {
   color:var(--blue-pale);
   font-size:12px;
@@ -543,7 +537,6 @@ body {
   color:var(--white);
 }
 
-#alertas-section,
 #mensagens-section,
 #configuracoes-section {
   max-width:1000px;
@@ -552,171 +545,28 @@ body {
   transform:none;
 }
 
-.alerts-grid {
-  display:grid;
-  grid-template-columns:minmax(0,1.35fr) minmax(260px,.75fr);
-  gap:32px;
-  align-items:start;
-  width:100%;
-}
 
-.alert-card {
-  padding:20px 22px;
-  border-bottom:1px solid var(--neutral);
-  display:grid;
-  grid-template-columns:44px minmax(0,1fr) 104px;
-  gap:18px;
-  align-items:center;
-  transition:background .2s;
-}
 
-.alert-card:hover {
-  background:#fafbfc;
-}
 
-.alert-card:last-child {
-  border-bottom:none;
-}
 
-.severity-icon {
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  flex-shrink:0;
-}
 
-.severity-icon.high {
-  background:var(--danger-bg);
-  color:var(--danger);
-}
 
-.severity-icon.medium {
-  background:var(--warning-bg);
-  color:var(--warning);
-}
 
-.alert-content {
-  min-width:0;
-}
 
-.alert-content h3 {
-  font-size:15px;
-  color:var(--text);
-  margin-bottom:6px;
-  line-height:1.25;
-}
 
-.alert-meta {
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-bottom:9px;
-  color:var(--neutral-dk);
-  font-size:12px;
-  font-weight:700;
-}
 
-.alert-content p {
-  color:var(--text-soft);
-  font-size:13px;
-  line-height:1.45;
-  margin-bottom:12px;
-  max-width:560px;
-}
 
-.status-badge {
-  display:inline-flex;
-  align-items:center;
-  padding:6px 12px;
-  border-radius:999px;
-  font-size:11px;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:.5px;
-  white-space:nowrap;
-}
 
-.badge-danger {
-  background:var(--danger-bg);
-  color:var(--danger);
-}
 
-.badge-warning {
-  background:var(--warning-bg);
-  color:#b45309;
-}
 
-.alert-actions {
-  display:flex;
-  justify-content:flex-end;
-  align-items:center;
-  min-width:112px;
-}
 
-.alert-actions .btn-action {
-  width:100%;
-  padding:9px 14px;
-  text-align:center;
-  white-space:nowrap;
-}
 
-.summary-card,
-.questions-side-card,
-.settings-card {
-  padding:22px 24px;
-  border-bottom:1px solid var(--neutral);
-}
 
-.summary-card:last-child,
-.questions-side-card:last-child,
-.settings-card:last-child {
-  border-bottom:none;
-}
 
-.summary-card h3,
-.questions-side-card h3,
-.settings-card h3 {
-  font-size:15px;
-  margin-bottom:14px;
-  color:var(--text);
-}
 
-.summary-list,
-.questions-summary,
-.quick-answer-list,
-.settings-toggle-row {
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
 
-.summary-item,
-.questions-summary-item {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  color:var(--text-soft);
-  font-size:13px;
-  gap:16px;
-}
 
-.summary-number,
-.questions-summary-item strong {
-  color:var(--text);
-  font-weight:700;
-}
 
-.doctor-note {
-  background:var(--blue-pale);
-  color:var(--blue);
-  border-radius:var(--radius);
-  padding:16px;
-  font-size:13px;
-  line-height:1.5;
-  font-weight:700;
-}
 
 .empty-alerts {
   display:none;
@@ -1486,9 +1336,7 @@ body {
     display:none;
   }
 
-  .alerts-grid,
   .dashboard-split,
-  #alertas-section .alerts-grid,
   .questions-layout,
   .settings-layout {
     grid-template-columns:1fr;
@@ -1500,14 +1348,12 @@ body {
   }
 
   .messages-hero,
-  .settings-hero,
-  .alerts-hero {
+  .settings-hero {
     grid-template-columns:1fr;
   }
 
   .messages-counter,
-  .settings-counter,
-  .alerts-counter {
+  .settings-counter {
     width:100%;
   }
 
@@ -1538,20 +1384,5 @@ body {
 
   .content-area {
     padding:24px 16px;
-  }
-
-  .alert-card {
-    grid-template-columns:44px 1fr;
-    align-items:flex-start;
-  }
-
-  .alert-actions {
-    grid-column:1 / -1;
-    justify-content:flex-start;
-    min-width:0;
-  }
-
-  .alert-actions .btn-action {
-    width:auto;
   }
 }
