@@ -10,15 +10,17 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 
 | ID    | Descrição do Requisito                                                                 | Responsável     | Artefato Criado         |
 |-------|----------------------------------------------------------------------------------------|-----------------|-------------------------|
-| RF-01 | Permitir cadastro de pacientes no sistema                                             | Higor Pierri    | cadastro.html           |
-| RF-08 | Permitir login de pacientes e médicos no sistema                                      | Higor Pierri    | login.html              |
-| RF-02 | Permitir que o paciente registre informações diárias sobre o pós-operatório           | Thiago de Paulo    | quest-dia-15.html        |
-| RF-07 | Permitir cadastro de médicos no sistema                                               | Thiago de Paulo    | cad-med.html              |
-| RF-15 | Tela de questionários diários destinados aos pacientes, contendo perguntas relacionadas ao tratamento realizado                                      | Thiago de Paulo    | -------              |
-| RF-14 | Tela principal do médico, contendo acesso e direcionamento para as demais funcionalidades do sistema                                              | Gabriel Victor    | PainelMedico.html             |
-| RF-09 | Permitir que o paciente visualize seu histórico de registros durante o pós-operatório                                              | Gabriel Victor    | ---------             |
-| RF-11 | Permita que o paciente edite informações registradas no mesmo dia                                              | Gabriel Victor    | ---------             |
-| RF-13 | Tela principal do paciente, contendo acesso e direcionamento para as demais funcionalidades do sistema                                              | Gabriel Victor    | ---------             |
+| RF-01 | Permitir cadastro de pacientes no sistema                                                                       | Higor Pierri     | cadastro.html     |
+| RF-02 | Permitir que o paciente registre informações diárias sobre o pós-operatório                                     | Thiago de Paulo  | quest-dia-15.html |
+| RF-07 | Permitir cadastro de médicos no sistema                                                                         | Thiago de Paulo  | cad-med.html      |
+| RF-08 | Permitir login de pacientes e médicos no sistema                                                                | Higor Pierri     | login.html        |
+| RF-09 | Permitir que o paciente visualize seu histórico de registros durante o pós-operatório                           | Gabriel Victor   | ---------         |
+| RF-11 | Permita que o paciente edite informações registradas no mesmo dia                                               | Gabriel Victor   | ---------         |
+| RF-13 | Tela principal do paciente, contendo acesso e direcionamento para as demais funcionalidades do sistema          | Gabriel Victor   | ---------         |
+| RF-14 | Tela principal do médico, contendo acesso e direcionamento para as demais funcionalidades do sistema            | Gabriel Victor   | PainelMedico.html |
+| RF-15 | Tela de questionários diários destinados aos pacientes, contendo perguntas relacionadas ao tratamento realizado | Thiago de Paulo  | quest-dia-15.html |
+
+
 
 ---
 
@@ -47,6 +49,32 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
   - Validação básica dos campos obrigatórios  
   - Estrutura preparada para futura integração com banco de dados  
   - Interface padronizada seguindo o layout do sistema HairCare Pro  
+
+---
+
+### Tela 2B – Cadastro de Médico
+
+- **Requisito relacionado:** RF-07  
+- **Descrição:** Tela destinada ao cadastro de novos médicos no sistema, permitindo o registro de informações pessoais para acesso ao sistema.  
+- **Tecnologias utilizadas:** HTML, CSS e JavaScript.  
+- **Funcionalidades implementadas:**
+  - Formulário com campos de dados pessoais (nome, idade, sexo, e-mail, senha, CRM UF do CRM e especialização)  
+  - Validação básica do campo obrigatório (CRM e UF do CRM)  
+  - Estrutura preparada para futura integração com banco de dados  
+  - Interface padronizada seguindo o layout do sistema HairCare Pro  
+
+---
+
+### Tela 4A – Questionário do Paciente dia 15
+
+- **Requisito relacionado:** RF-02 & RF-15 
+- **Descrição:** Tela destinada ao paciente durante o acompanhamento pós-operatório. Nela, a partir do procedimento ao qual foi submetido no dia 15, o paciente deve relatar informações ao seu médico responsável.   
+- **Tecnologias utilizadas:** HTML, CSS e JavaScript.  
+- **Funcionalidades implementadas:**
+  - Formulário de perguntas para o dia em questão  
+  - Campos de múltipla escolha, permitindo a seleção de mais de uma opção por alternativa, com o objetivo de tornar o sistema mais simples para o paciente.   
+  - Perguntas claras e de linguagem simples e objetiva.  
+  - Interface padronizada seguindo o layout do sistema HairCare Pro.
 
 ---
 
