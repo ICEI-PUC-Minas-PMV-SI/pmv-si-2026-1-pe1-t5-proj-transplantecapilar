@@ -19,7 +19,6 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 | RF-11 | Permita que o paciente edite informações registradas no mesmo dia                                               | Gabriel Victor   | ---------         |
 | RF-13 | Tela principal do paciente, contendo acesso e direcionamento para as demais funcionalidades do sistema          | Gabriel Victor   | ---------         |
 | RF-14 | Tela principal do médico, contendo acesso e direcionamento para as demais funcionalidades do sistema            | Gabriel Victor   | PainelMedico.html |
-| RF-15 | Tela de questionários diários destinados aos pacientes, contendo perguntas relacionadas ao tratamento realizado | Thiago de Paulo  | quest-dia-15.html |
 | RF-16 | Tela para registro de dúvidas, comentários e envio de fotos, com o objetivo de auxiliar o paciente durante o tratamento. | Matheus de Souza Pinto | RegistrarDuvidas.html |
 | RF-12 | Permitir envio de comentários ou mensagens entre pacientes e médicos no sistema. | Matheus de Souza Pinto | RegistrarDuvidas.html |
 | RF-03 | Permitir o envio de fotos da área transplantada | Matheus de Souza Pinto | UpLoadFotos.html |
