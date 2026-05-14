@@ -12,6 +12,7 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 |-------|----------------------------------------------------------------------------------------|-----------------|-------------------------|
 | RF-01 | Permitir cadastro de pacientes no sistema                                                                       | Higor Pierri     | cadastro.html     |
 | RF-02 | Permitir que o paciente registre informações diárias sobre o pós-operatório                                     | Thiago de Paulo  | quest-dia-15.html |
+| RF-03 | permitir o envio de fotos da área transplantada |   Matheus de Souza Pinto | UpLoadFotos.html |
 | RF-07 | Permitir cadastro de médicos no sistema                                                                         | Thiago de Paulo  | cad-med.html      |
 | RF-08 | Permitir login de pacientes e médicos no sistema                                                                | Higor Pierri     | login.html        |
 | RF-09 | Permitir que o paciente visualize seu histórico de registros durante o pós-operatório                           | Gabriel Victor   | ---------         |
