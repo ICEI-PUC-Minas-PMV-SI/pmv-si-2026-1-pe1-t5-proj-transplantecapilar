@@ -1,7 +1,6 @@
 const pageTitle = document.querySelector('.page-title');
 
 const painelSection = document.getElementById('painel-section');
-const alertasSection = document.getElementById('alertas-section');
 const mensagensSection = document.getElementById('mensagens-section');
 const configuracoesSection = document.getElementById('configuracoes-section');
 
@@ -12,14 +11,12 @@ const navConfiguracoes = document.getElementById('nav-configuracoes');
 
 function esconderPaginas() {
   painelSection.classList.add('hidden');
-  alertasSection.classList.add('hidden');
   mensagensSection.classList.add('hidden');
   configuracoesSection.classList.add('hidden');
 }
 
 function limparMenu() {
   navPainel.classList.remove('active');
-  navAlertas.classList.remove('active');
   navMensagens.classList.remove('active');
   navConfiguracoes.classList.remove('active');
 }
@@ -31,21 +28,6 @@ function mostrarPainel() {
   painelSection.classList.remove('hidden');
   navPainel.classList.add('active');
   pageTitle.textContent = 'Bom dia, Dr. João!';
-}
-
-function mostrarAlertas() {
-  esconderPaginas();
-  limparMenu();
-
-  alertasSection.classList.remove('hidden');
-  navAlertas.classList.add('active');
-  pageTitle.textContent = 'Alertas dos Pacientes';
-
-  const botaoTodos = document.querySelector('#alertas-section [data-filter="todos"]');
-
-  if (botaoTodos) {
-    botaoTodos.click();
-  }
 }
 
 function mostrarMensagens() {
@@ -77,7 +59,6 @@ navPainel.addEventListener('click', function(event) {
 
 navAlertas.addEventListener('click', function(event) {
   event.preventDefault();
-  mostrarAlertas();
 });
 
 navMensagens.addEventListener('click', function(event) {
@@ -88,38 +69,6 @@ navMensagens.addEventListener('click', function(event) {
 navConfiguracoes.addEventListener('click', function(event) {
   event.preventDefault();
   mostrarConfiguracoes();
-});
-
-const alertFilterButtons = document.querySelectorAll('#alertas-section .filter-btn[data-filter]');
-const alertCards = document.querySelectorAll('#alertas-section .alert-card');
-const emptyAlerts = document.getElementById('empty-alerts');
-
-alertFilterButtons.forEach(function(button) {
-  button.addEventListener('click', function() {
-    const selectedFilter = button.dataset.filter;
-    let visibleCount = 0;
-
-    alertFilterButtons.forEach(function(item) {
-      item.classList.remove('active');
-    });
-
-    button.classList.add('active');
-
-    alertCards.forEach(function(card) {
-      const cardStatus = card.dataset.status;
-      const shouldShow = selectedFilter === 'todos' || cardStatus === selectedFilter;
-
-      card.style.display = shouldShow ? 'grid' : 'none';
-
-      if (shouldShow) {
-        visibleCount++;
-      }
-    });
-
-    if (emptyAlerts) {
-      emptyAlerts.style.display = visibleCount === 0 ? 'block' : 'none';
-    }
-  });
 });
 
 const notificationBtn = document.getElementById('notification-btn');
@@ -413,10 +362,6 @@ notificationItems.forEach(function(item) {
   item.addEventListener('click', function() {
     const section = item.dataset.targetSection;
     const targetId = item.dataset.targetId;
-
-    if (section === 'alertas') {
-      mostrarAlertas();
-    }
 
     if (section === 'duvidas') {
       mostrarMensagens();
