@@ -93,8 +93,15 @@ body {
   font-size:14px;
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  gap:10px;
   transition:all .2s;
+}
+
+.nav-item i {
+  width:18px;
+  text-align:center;
+  font-size:15px;
+  flex-shrink:0;
 }
 
 .nav-item:hover,
@@ -121,6 +128,7 @@ body {
 }
 
 .badge-nav {
+  margin-left:auto;
   background:var(--danger);
   color:#fff;
   font-size:11px;
