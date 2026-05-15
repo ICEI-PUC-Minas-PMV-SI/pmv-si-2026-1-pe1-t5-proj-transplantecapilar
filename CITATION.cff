@@ -12,19 +12,23 @@ authors:
     family-names: de Castro Pereira
     email: higor.pierri@sga.pucminas.br
     affiliation: PUC Minas
-- given-names: 
-    family-names: 
-    email: 
+  - given-names: Thiago
+    family-names: De Paulo Alves Silva
+    email: thiago.silva@sga.pucminas.br
     affiliation: PUC Minas
- - given-names: Gabriel 
+  - given-names: Gabriel 
     family-names: Victor Soares
     email: gabriel.soares.1663783@sga.pucminas.br
     affiliation: PUC Minas
-- given-names: Roberto Felipe
-    family-names: Dias Ferreira da Rocha
-    name-suffix: Prof.
-    email: rocha@pucminas.br
-    affiliation: PUC Minas
+  - given-names: Roberto Felipe
+    family-names: Dias Ferreira da Rocha
+    name-suffix: Prof.
+    email: rocha@pucminas.br
+    affiliation: PUC Minas
+  - given-names: 
+    family-names: 
+    email: 
+    affiliation: PUC Minas
 repository-code: >-
   https://github.com/ICEI-PUC-Minas-PMV-SI/WebApplicationProject-Template
 abstract: >-
