@@ -68,6 +68,7 @@ body {
     color: #fdfff9;
     transition: 0.3s;
     border-radius: 10px;
+    gap: 6px;
 }
 
 #cabecario {
