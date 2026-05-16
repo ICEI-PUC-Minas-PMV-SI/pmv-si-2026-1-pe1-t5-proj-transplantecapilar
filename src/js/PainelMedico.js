@@ -27,7 +27,7 @@ function mostrarPainel() {
 
   painelSection.classList.remove('hidden');
   navPainel.classList.add('active');
-  pageTitle.textContent = 'Bom dia, Dr. João!';
+  pageTitle.textContent = 'Início';
 }
 
 function mostrarMensagens() {
@@ -36,7 +36,7 @@ function mostrarMensagens() {
 
   mensagensSection.classList.remove('hidden');
   navMensagens.classList.add('active');
-  pageTitle.textContent = 'Dúvidas dos Pacientes';
+  pageTitle.textContent = 'Dúvidas';
 
   if (typeof applyQuestionFilter === 'function') {
     applyQuestionFilter('todas');
