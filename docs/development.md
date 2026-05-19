@@ -80,6 +80,38 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 
 ---
 
+### Tela 4B – Upload de Fotos
+
+- **Requisito relacionado:** RF-03  
+- **Descrição:** Tela desenvolvida para permitir o envio de fotos da área transplantada, auxiliando no acompanhamento diário do paciente pela equipe médica.  
+- **Tecnologias utilizadas:** HTML e CSS.  
+- **Funcionalidades implementadas:**
+  - Área para upload de fotos em diferentes ângulos da região transplantada  
+  - Campos organizados para envio de imagens frontal, laterais, vértice e área doadora  
+  - Instruções visuais para orientação do paciente durante a captura das fotos  
+  - Campo opcional para relato ou observações sobre as imagens enviadas  
+  - Botão para envio das fotos ao sistema  
+  - Interface padronizada conforme o template visual da aplicação  
+  - Menu lateral para navegação entre as funcionalidades do sistema  
+
+---
+
+### Tela 4C – Registrar Dúvida
+
+- **Requisitos relacionados:** RF-12 e RF-16  
+- **Descrição:** Tela desenvolvida para permitir o registro de dúvidas, comentários e envio de imagens pelos pacientes, facilitando a comunicação com a equipe médica durante o tratamento.  
+- **Tecnologias utilizadas:** HTML e CSS.  
+- **Funcionalidades implementadas:**
+  - Campo para registro de dúvidas ou comentários  
+  - Área para envio de imagens opcionais  
+  - Listagem dos arquivos selecionados para envio  
+  - Botão para envio da dúvida/comentário ao sistema  
+  - Interface organizada e padronizada conforme o template visual da aplicação  
+  - Menu lateral para navegação entre as funcionalidades do sistema
+
+ ---
+ 
+
 ## Descrição das estruturas
 
 Para esta etapa, foi utilizada uma estrutura simples baseada em formulários HTML para coleta de dados do usuário, com validação e manipulação utilizando JavaScript.
