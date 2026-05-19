@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visão do Paciente</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-logo-circle">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        </svg>
+      </div>
+      <div class="brand-name">NOME SISTEMA</div>
+      <div class="brand-subtitle">Pós-Operatório Capilar</div>
+    </div>
+    
+    <nav class="nav-menu">
+      <a href="#" class="nav-item active">Início</a>
+      <a href="#" class="nav-item">Orientações</a>
+      <a href="#" class="nav-item">Chat com médico</a>
+      <a href="#" class="nav-item">Histórico</a>
+      <a href="#" class="nav-item">Perfil</a>
+      
+      <div class="nav-footer">
+        <div class="nav-divider"></div>
+        <a href="#" class="nav-item">Sair</a>
+      </div>
+    </nav>
+  </aside>
+
+  <main class="main-wrapper">
+    
+    <header class="topbar">
+      <div class="notification-wrapper">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+        <span class="notification-badge">1</span>
+      </div>
+      <div class="user-profile">
+        <div class="avatar">FH</div>
+        <span>Fulano_HML</span>
+      </div>
+    </header>
+
+    <div class="content-area">
+      
+      <div class="hero-panel">
+        <div class="hero-text">
+          <h1>Olá, Funalo! 👋</h1>
+          <p>Hoje é o seu <strong>5º dia</strong> de recuperação. Continue assim!</p>
+        </div>
+        
+        <div class="progress-widget">
+          <div class="progress-header">
+            <span>Fase de Cicatrização Inicial</span>
+            <span>Dia 5/30</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        
+        <div class="main-tasks">
+          <h2 class="section-title">Checklist de Hoje</h2>
+          
+          <div class="task-list">
+            
+            <div class="task-item">
+              <div class="task-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </div>
+              <div class="task-content">
+                <h3>Avaliação de Sintomas</h3>
+                <p>Responda a um breve questionário sobre como você está se sentindo.</p>
+              </div>
+              <span class="status-badge badge-warning">Pendente</span>
+              <button class="btn-action">Iniciar</button>
+            </div>
+
+            <div class="task-item">
+              <div class="task-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+              </div>
+              <div class="task-content">
+                <h3>Envio de Fotos</h3>
+                <p>Faça o upload de fotos da área doadora e receptora.</p>
+              </div>
+              <span class="status-badge badge-warning">Pendente</span>
+              <button class="btn-action">Enviar Fotos</button>
+            </div>
+
+             <div class="task-item" style="opacity: 0.7; border-color: transparent;">
+              <div class="task-icon" style="background: var(--success-bg); color: var(--success);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              </div>
+              <div class="task-content">
+                <h3>Medicação Matinal</h3>
+                <p>Tomar os antibióticos prescritos.</p>
+              </div>
+              <span class="status-badge badge-success">Concluído</span>
+              <button class="btn-action outline" disabled>Feito</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="side-support">
+          <h2 class="section-title">Precisa de ajuda?</h2>
+          
+          <div class="support-card">
+            <div class="icon-wrapper">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3>Registrar dúvida</h3>
+            <p>Surgiu alguma dor incomum ou tem dúvidas sobre a lavagem do cabelo? Fale com a equipe.</p>
+            <a href="#" class="btn-support">Enviar Mensagem</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
