@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pacientes</title>
+    <link rel="stylesheet" href="../css/lista-de-pacientes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div id="menu-principal">
+        <div id="logo">
+            <p class="logo-texto">Haircare Pro</p>
+            <h2>Haircare Pro</h2>
+            <div class="logotipo">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+            </div>
+        </div>
+        <div class="menu-divider"></div>
+        <div id="navegacao">
+            <a href="#" class="botoes"><i class="fa-solid fa-table-cells-large"></i> Inicial</a>
+            <a href="#" class="botoes"><i class="fa-solid fa-users"></i>Meus Pacientes</a>
+            <a href="#" class="botoes"><i class="fa-solid fa-bell"></i>Alertas</a>
+            <a href="#" class="botoes"><i class="fa-solid fa-message"></i>Mensagens</a>
+        </div>
+        <div class="menu-divider bottom"></div>
+        <a href="#" class="logout"><i class="fa-solid fa-arrow-left"></i>Sair</a>
+    </div>
+    <div class="content-wrapper">
+        <div class="page-title">Bom dia , Dr. João!</div>
+    </div>
+    <main class="main-content">
+        <div class="card">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Pesquisar paciente..." class="search-input">
+            </div>
+            <table class="patients-table">
+                <thead>
+                    <tr>
+                        <th>Nome do Paciente</th>
+                        <th>Idade</th>
+                        <th>Última Consulta</th>
+                        <th>Condição / Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Marcos Oliveira Silva</strong><br><small>Convênio: Unimed</small></td>
+                        <td>45 anos</td>
+                        <td>12/10/2023</td>
+                        <td><span class="status stable">Estável</span></td>
+                        <td><button class="btn">Ver detalhes</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>João Pedro Souza</strong><br><small>Particular</small></td>
+                        <td>62 anos</td>
+                        <td>28/10/2023</td>
+                        <td><span class="status urgent">Atenção Necessária</span></td>
+                        <td><button class="btn">Ver detalhes</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Jefferson Costa</strong><br><small>Convênio: SulAmérica</small></td>
+                        <td>29 anos</td>
+                        <td>05/11/2023</td>
+                        <td><span class="status stable">Estável</span></td>
+                        <td><button class="btn">Ver detalhes</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Roberto Almeida</strong><br><small>Convênio: Bradesco</small></td>
+                        <td>55 anos</td>
+                        <td>10/11/2023</td>
+                        <td><span class="status stable">Estável</span></td>
+                        <td><button class="btn">Ver detalhes</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    </div>
+</body>
+
+</html>
