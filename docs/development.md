@@ -80,6 +80,19 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 
 ---
 
+### Tela 3B – Painel do Médico
+
+- **Requisito relacionado:** RF-14
+- **Descrição:** Tela destinada ao acesso as funcionalidades do sistema.  
+- **Tecnologias utilizadas:** HTML, CSS e JavaScript.  
+- **Funcionalidades implementadas:**
+  - Aba de alertas contendo todos os alertas não atendidos  
+  - Aba dúvidas podendo-se responder a dúvidas dos pacientes
+  - Tela principal contendo um resumo das informações
+  - Interface padronizada seguindo o layout do sistema HairCare Pro  
+
+---
+
 ### Tela 4A – Questionário do Paciente dia 15
 
 - **Requisito relacionado:** RF-02 & RF-15 
