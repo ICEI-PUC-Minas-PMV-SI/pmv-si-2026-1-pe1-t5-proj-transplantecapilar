@@ -74,7 +74,7 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 - **Tecnologias utilizadas:** HTML, CSS e JavaScript.  
 - **Funcionalidades implementadas:**
   - Tela principal do paciente tendo acesso as demais funcionalidades do sistema  
-  - Envio de dúvidas referentes ao tratamento pós-operatório
+  - Envio de dúvidas referentes ao tratamento pós-operatório capilar
   - Visualização do histórico de registros e edição das informações registradas
   - Interface padronizada seguindo o layout do sistema HairCare Pro  
 
@@ -87,8 +87,8 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 - **Tecnologias utilizadas:** HTML, CSS e JavaScript.  
 - **Funcionalidades implementadas:**
   - Tela principal contendo um resumo das informações do sistema
-  - Aba de alertas contendo todos os alertas não atendidos  
-  - Aba dúvidas podendo-se responder a dúvidas dos pacientes
+  - Aba de alertas contendo todos os alertas dos pacientes  
+  - Aba de dúvidas permitindo responder às perguntas dos pacientes
   - Interface padronizada seguindo o layout do sistema HairCare Pro  
 
 ---
