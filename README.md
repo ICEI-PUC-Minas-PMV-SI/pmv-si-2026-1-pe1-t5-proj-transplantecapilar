@@ -42,7 +42,8 @@ As atividades foram distribuídas entre os integrantes da equipe, garantindo a c
 | Integrante | Responsabilidades |
 |-----------|------------------|
 | Gabriel Victor Soares | Documentação inicial (Etapa 1) e criação dos wireframes (Etapa 2) |
-| Higor Pierri de Castro Pereira | Definição do problema e referências (Etapa 1) e desenvolvimento do template do site (Etapa 2) | Tela cadastro paciente e login (etapa 3)
+| Higor Pierri de Castro Pereira | Definição do problema e referências (Etapa 1) e desenvolvimento do template do site (Etapa 2) 
+| Tela cadastro paciente e login (etapa 3)
 | Letícia Oliveira Lacerda | Público-alvo e organização do conteúdo (Etapa 1) e elaboração da apresentação (Etapa 2) |
 | Matheus de Souza Pinto | Perfis de usuários (Etapa 1) e construção do fluxograma do sistema (Etapa 2) |
 | Thiago de Paulo Alves Silva | Histórias de usuários (Etapa 1) e criação do layout visual (Etapa 2) |
