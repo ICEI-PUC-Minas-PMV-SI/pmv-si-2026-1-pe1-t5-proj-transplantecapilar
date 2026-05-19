@@ -15,9 +15,9 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 | RF-02 | Permitir que o paciente registre informações diárias sobre o pós-operatório                                     | Thiago de Paulo  | quest-dia-15.html |
 | RF-15 | Tela de questionários diários destinados aos pacientes, contendo perguntas relacionadas ao tratamento realizado | Thiago de Paulo  | quest-dia-15.html |
 | RF-07 | Permitir cadastro de médicos no sistema                                                                         | Thiago de Paulo  | cad-med.html      |
-| RF-09 | Permitir que o paciente visualize seu histórico de registros durante o pós-operatório                           | Gabriel Victor   | ---------         |
-| RF-11 | Permita que o paciente edite informações registradas no mesmo dia                                               | Gabriel Victor   | ---------         |
-| RF-13 | Tela principal do paciente, contendo acesso e direcionamento para as demais funcionalidades do sistema          | Gabriel Victor   | ---------         |
+| RF-09 | Permitir que o paciente visualize seu histórico de registros durante o pós-operatório                           | Gabriel Victor   | PainelPaciente.html         |
+| RF-11 | Permita que o paciente edite informações registradas no mesmo dia                                               | Gabriel Victor   | PainelPaciente.html          |
+| RF-13 | Tela principal do paciente, contendo acesso e direcionamento para as demais funcionalidades do sistema          | Gabriel Victor   | PainelPaciente.html          |
 | RF-14 | Tela principal do médico, contendo acesso e direcionamento para as demais funcionalidades do sistema            | Gabriel Victor   | PainelMedico.html |
 | RF-16 | Tela para registro de dúvidas, comentários e envio de fotos, com o objetivo de auxiliar o paciente durante o tratamento. | Matheus de Souza Pinto | RegistrarDuvidas.html |
 | RF-12 | Permitir envio de comentários ou mensagens entre pacientes e médicos no sistema. | Matheus de Souza Pinto | RegistrarDuvidas.html |
@@ -63,6 +63,32 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
   - Formulário com campos de dados pessoais (nome, idade, sexo, e-mail, senha, CRM UF do CRM e especialização)  
   - Validação básica do campo obrigatório (CRM e UF do CRM)  
   - Estrutura preparada para futura integração com banco de dados  
+  - Interface padronizada seguindo o layout do sistema HairCare Pro  
+
+---
+
+### Tela 3A – Painel do Paciente
+
+- **Requisito relacionado:** RF-09, RF-11 & RF-13
+- **Descrição:** Tela destinada a visualização do histórico de registros durante o pós-operatório, edição das informações registradas e acesso e direcionamento para as demais funcionalidades do sistema.  
+- **Tecnologias utilizadas:** HTML, CSS e JavaScript.  
+- **Funcionalidades implementadas:**
+  - Tela principal do paciente tendo acesso as demais funcionalidades do sistema  
+  - Envio de dúvidas referentes ao tratamento pós-operatório capilar
+  - Visualização do histórico de registros e edição das informações registradas
+  - Interface padronizada seguindo o layout do sistema HairCare Pro  
+
+---
+
+### Tela 3B – Painel do Médico
+
+- **Requisito relacionado:** RF-14
+- **Descrição:** Tela destinada ao acesso as demais funcionalidades do sistema.  
+- **Tecnologias utilizadas:** HTML, CSS e JavaScript.  
+- **Funcionalidades implementadas:**
+  - Tela principal contendo um resumo das informações do sistema
+  - Aba de alertas contendo todos os alertas dos pacientes  
+  - Aba de dúvidas permitindo responder às perguntas dos pacientes
   - Interface padronizada seguindo o layout do sistema HairCare Pro  
 
 ---
