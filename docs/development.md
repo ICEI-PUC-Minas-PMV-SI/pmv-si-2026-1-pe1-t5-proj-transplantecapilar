@@ -86,7 +86,7 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 - **Descrição:** Tela destinada ao acesso as demais funcionalidades do sistema.  
 - **Tecnologias utilizadas:** HTML, CSS e JavaScript.  
 - **Funcionalidades implementadas:**
-  - Tela principal contendo um resumo das informações
+  - Tela principal contendo um resumo das informações do sistema
   - Aba de alertas contendo todos os alertas não atendidos  
   - Aba dúvidas podendo-se responder a dúvidas dos pacientes
   - Interface padronizada seguindo o layout do sistema HairCare Pro  
