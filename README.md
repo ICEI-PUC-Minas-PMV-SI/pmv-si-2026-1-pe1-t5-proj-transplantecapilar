@@ -45,7 +45,7 @@ As atividades foram distribuídas entre os integrantes da equipe, garantindo a c
 | Higor Pierri de Castro Pereira | Definição do problema e referências (Etapa 1), desenvolvimento do template do site (Etapa 2) e programação da tela de cadastro de paciente e tela de login (Etapa 3) |
 | Letícia Oliveira Lacerda | Público-alvo e organização do conteúdo (Etapa 1) e elaboração da apresentação (Etapa 2) |
 | Matheus de Souza Pinto | Perfis de usuários (Etapa 1) e construção do fluxograma do sistema (Etapa 2) |
-| Thiago de Paulo Alves Silva | Histórias de usuários (Etapa 1) e criação do layout visual (Etapa 2) |
+| Thiago de Paulo Alves Silva | Histórias de usuários (Etapa 1) e criação do layout visual (Etapa 2) | e programação das telas de cadastro médico e tela de questionário dia 15 (Etapa 3) |
 | Wesley Henrique dos Santos Silva | Requisitos do sistema (Etapa 1) e apoio na apresentação do projeto (Etapa 2) |
 
 # Planejamento
