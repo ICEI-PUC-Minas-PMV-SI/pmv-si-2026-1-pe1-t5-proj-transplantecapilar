@@ -67,6 +67,19 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 
 ---
 
+### Tela 3A – Painel do Paciente
+
+- **Requisito relacionado:** RF-09, RF-11 & RF-13
+- **Descrição:** Tela destinada a visualização do histórico de registros durante o pós-operatório, edição das informações registradas e acesso e direcionamento para as demais funcionalidades do sistema.  
+- **Tecnologias utilizadas:** HTML, CSS e JavaScript.  
+- **Funcionalidades implementadas:**
+  - Tela principal do paciente tendo acesso as demais funcionalidades do sistema  
+  - Envio de dúvidas referentes ao tratamento pós-operatório
+  - Visualização do histórico de registros e edição das informações registradas
+  - Interface padronizada seguindo o layout do sistema HairCare Pro  
+
+---
+
 ### Tela 4A – Questionário do Paciente dia 15
 
 - **Requisito relacionado:** RF-02 & RF-15 
