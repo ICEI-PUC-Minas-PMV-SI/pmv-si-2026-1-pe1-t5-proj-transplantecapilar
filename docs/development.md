@@ -60,7 +60,7 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 - **Descrição:** Tela destinada ao cadastro de novos médicos no sistema, permitindo o registro de informações pessoais para acesso ao sistema.  
 - **Tecnologias utilizadas:** HTML, CSS e JavaScript.  
 - **Funcionalidades implementadas:**
-  - Formulário com campos de dados pessoais (nome, idade, sexo, e-mail, senha, CRM UF do CRM e especialização)  
+  - Formulário com campos de dados pessoais (nome, idade, sexo, e-mail, senha, CRM, UF do CRM e especialização)  
   - Validação básica do campo obrigatório (CRM e UF do CRM)  
   - Estrutura preparada para futura integração com banco de dados  
   - Interface padronizada seguindo o layout do sistema HairCare Pro  
@@ -222,4 +222,3 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | Título         | Texto             | Título da notícia                         | Sistemas de Informação PUC Minas é o melhor                                   |
 | Conteúdo       | Texto             | Conteúdo da notícia                       | Sistemas de Informação da PUC Minas é eleito o melhor curso do Brasil                            |
 | Id do usuário  | Numero (Inteiro)  | Identificador do usuário autor da notícia | 1                                              |
-
