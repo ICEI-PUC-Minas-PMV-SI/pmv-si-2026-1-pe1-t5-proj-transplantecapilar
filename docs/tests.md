@@ -18,7 +18,7 @@ A documentação dos testes é dividida nas seguintes seções:
 
 # Teste de Software
 
-Nesta seção são apresentados os testes relacionados às funcionalidades desenvolvidas por Higor Pierri de Castro Pereira, envolvendo cadastro de paciente, autenticação de usuários e painel do paciente.
+Nesta seção são apresentados os testes relacionados às funcionalidades desenvolvidas por Higor Pierri, envolvendo cadastro de paciente, autenticação de usuários e painel do paciente.
 
 ## Plano de Testes de Software
 
