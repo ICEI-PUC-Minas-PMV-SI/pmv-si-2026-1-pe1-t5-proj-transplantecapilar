@@ -22,7 +22,7 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 | RF-16 | Tela para registro de dúvidas, comentários e envio de fotos, com o objetivo de auxiliar o paciente durante o tratamento. | Matheus de Souza Pinto | RegistrarDuvidas.html |
 | RF-12 | Permitir envio de comentários ou mensagens entre pacientes e médicos no sistema. | Matheus de Souza Pinto | RegistrarDuvidas.html |
 | RF-03 | Permitir o envio de fotos da área transplantada | Matheus de Souza Pinto | UpLoadFotos.html |
-
+| RF-10 | Permitir que o medico filtre pacientes por dados da cirurgia ou nome. | Wesley Henrique | lista-de-pacientes.html |
 
 ---
 
