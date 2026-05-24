@@ -45,3 +45,14 @@ O sistema será aberto automaticamente no navegador padrão.
 - Funcionalidade de logout;
 - Proteção de rotas do painel;
 - Testes iniciais de software.
+
+ORIENTAÇÕES PREESTABELECIDAS PELO PROFESSOR ABAIXO
+
+Instruções de utilização
+Instalação do Site
+O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em servidores...
+
+Histórico de versões
+[0.1.0] - DD/MM/AAAA
+Adicionado
+Adicionado ...
