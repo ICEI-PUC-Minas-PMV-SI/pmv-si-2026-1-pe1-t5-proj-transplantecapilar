@@ -62,8 +62,6 @@ As atividades foram distribuídas entre os integrantes da equipe, garantindo a c
 
 <li><a href="src/README.md"> Código Fonte</a></li>
 
-A aplicação utiliza HTML, CSS, JavaScript e LocalStorage para simular o funcionamento das funcionalidades principais sem uso de backend.
-
 # Apresentação
 
 <li><a href="presentation/README.md"> Apresentação da solução</a></li>
