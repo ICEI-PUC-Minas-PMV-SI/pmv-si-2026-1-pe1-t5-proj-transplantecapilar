@@ -42,7 +42,7 @@ As atividades foram distribuídas entre os integrantes da equipe, garantindo a c
 | Integrante | Responsabilidades |
 |-----------|------------------|
 | Gabriel Victor Soares | Documentação inicial (Etapa 1), criação dos wireframes (Etapa 2), programação das telas Painel do Médico e apoio na integração das telas do sistema |
-| Higor Pierri de Castro Pereira | Definição do problema e referências (Etapa 1), desenvolvimento do template do site (Etapa 2), programação das telas de Login, Cadastro de Paciente e Painel do Paciente (Etapas 3 e 4), implementação de autenticação, LocalStorage, redirecionamento entre telas, checklist dinâmico e testes das funcionalidades desenvolvidas |
+| Higor Pierri de Castro Pereira | Definição do problema e referências (Etapa 1), desenvolvimento do template do site (Etapa 2), programação das telas de Login, Cadastro de Paciente e Painel do Paciente (Etapa 3), implementação de autenticação, LocalStorage, redirecionamento entre telas, checklist dinâmico e testes das funcionalidades desenvolvidas (Etapa 4) |
 | Letícia Oliveira Lacerda | Público-alvo e organização do conteúdo (Etapa 1), elaboração da apresentação (Etapa 2) e apoio na documentação e revisão da solução |
 | Matheus de Souza Pinto | Perfis de usuários (Etapa 1), construção do fluxograma do sistema (Etapa 2), programação das telas de Registro de Dúvidas e Upload de Fotos |
 | Thiago de Paulo Alves Silva | Histórias de usuários (Etapa 1), criação do layout visual (Etapa 2), programação das telas de Cadastro Médico e Questionário do Dia 15 |
