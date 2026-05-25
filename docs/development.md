@@ -137,7 +137,19 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 
  ---
  
+### Tela 4F – Foto do Paciente
 
+- **Requisito relacionado:** RF-17  
+- **Descrição:** Tela desenvolvida para permitir a visualização das fotos enviadas pelos pacientes durante o acompanhamento pós-operatório, auxiliando a equipe médica no monitoramento da evolução do tratamento capilar.  
+- **Tecnologias utilizadas:** HTML e CSS.  
+- **Funcionalidades implementadas:**
+  - Exibição das fotos enviadas pelo paciente
+  - Organização das imagens por data e dia de acompanhamento
+  - Botão para ampliação das fotos para melhor visualização
+  - Identificação do paciente associado às imagens exibidas
+  - Botão para retorno à tela de detalhes do paciente
+  - Interface organizada e padronizada conforme o template visual da aplicação
+  - Menu lateral para navegação entre as funcionalidades do sistema
 ## Descrição das estruturas
 
 Para esta etapa, foi utilizada uma estrutura simples baseada em formulários HTML para coleta de dados do usuário, com validação e manipulação utilizando JavaScript.
