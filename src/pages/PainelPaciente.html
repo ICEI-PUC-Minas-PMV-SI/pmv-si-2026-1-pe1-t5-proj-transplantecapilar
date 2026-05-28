@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visão do Paciente</title>
+  <link rel="stylesheet" href="../css/PainelPaciente.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-logo-circle">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        </svg>
+      </div>
+      <div class="brand-name">HairCare Pro</div>
+      <div class="brand-subtitle">PÓS-OPERATÓRIO CAPILAR</div>
+    </div>
+
+    <nav class="nav-menu">
+      <a href="#" id="nav-inicio" class="nav-item active">
+        <i class="fa-solid fa-house"></i>
+        Início
+      </a>
+      <a href="#" id="nav-orientacoes" class="nav-item">
+        <i class="fa-solid fa-clipboard-list"></i>
+        Orientações
+      </a>
+      <a href="#" id="nav-chat" class="nav-item">
+        <i class="fa-solid fa-message"></i>
+        Chat com médico
+      </a>
+      <a href="#" id="nav-historico" class="nav-item">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        Histórico
+      </a>
+
+      <div class="nav-footer">
+        <div class="nav-divider"></div>
+        <a href="#" id="nav-configuracoes" class="nav-item">
+          <i class="fa-solid fa-gear"></i>
+          Configurações
+        </a>
+        <a href="#" class="nav-item">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          Sair
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <main class="main-wrapper">
+
+    <header class="topbar">
+      <button class="hamburger" id="hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <div class="page-title">Início</div>
+
+      <div class="topbar-actions">
+        <div class="notification-wrapper">
+          <button class="notification-btn" id="notification-btn" aria-label="Abrir notificações" type="button">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+            <span class="notification-dot" id="notification-dot">2</span>
+          </button>
+
+          <div class="notification-menu" id="notification-menu">
+            <div class="notification-menu-header">Notificações</div>
+
+            <button class="notification-item" type="button" data-target-section="inicio" data-target-id="task-avaliacao">
+              <div class="notification-icon yellow"></div>
+              <div class="notification-text">
+                <strong>Avaliação pendente</strong>
+                <span>Você ainda não respondeu o questionário de hoje.</span>
+              </div>
+            </button>
+
+            <button class="notification-item" type="button" data-target-section="inicio" data-target-id="task-fotos">
+              <div class="notification-icon blue"></div>
+              <div class="notification-text">
+                <strong>Fotos aguardadas</strong>
+                <span>Envie as fotos diárias da área doadora e receptora.</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="user-profile">
+          <span class="user-name">Gabriel Victor</span>
+          <div class="avatar">GV</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-area">
+
+      <section id="inicio-section" class="page-section">
+        <div class="hero-panel">
+          <div class="hero-text">
+            <h1>Olá, Gabriel! 👋</h1>
+            <p>Hoje é o seu <strong>5º dia</strong> de recuperação. Continue assim!</p>
+          </div>
+          <div class="progress-widget">
+            <div class="progress-header">
+              <span>Fase de Cicatrização Inicial</span>
+              <span>Dia 5/30</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="main-tasks">
+            <h2 class="section-title">Checklist de Hoje</h2>
+            <div class="task-list">
+
+              <div class="task-item" id="task-avaliacao">
+                <div class="task-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <div class="task-content">
+                  <h3>Avaliação de Sintomas</h3>
+                  <p>Responda a um breve questionário sobre como você está se sentindo.</p>
+                </div>
+                <span class="status-badge badge-warning">Pendente</span>
+                <button class="btn-action">Iniciar</button>
+              </div>
+
+              <div class="task-item" id="task-fotos">
+                <div class="task-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                </div>
+                <div class="task-content">
+                  <h3>Envio de Fotos</h3>
+                  <p>Faça o upload de fotos da área doadora e receptora.</p>
+                </div>
+                <span class="status-badge badge-warning">Pendente</span>
+                <button class="btn-action">Enviar Fotos</button>
+              </div>
+
+              <div class="task-item" style="opacity: 0.7; border-color: transparent;">
+                <div class="task-icon" style="background: var(--success-bg); color: var(--success);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                </div>
+                <div class="task-content">
+                  <h3>Medicação Matinal</h3>
+                  <p>Tomar os antibióticos prescritos.</p>
+                </div>
+                <span class="status-badge badge-success">Concluído</span>
+                <button class="btn-action outline" disabled>Feito</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="side-support">
+            <h2 class="section-title">Precisa de ajuda?</h2>
+            <div class="support-card">
+              <div class="icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <h3>Registrar dúvida</h3>
+              <p>Surgiu alguma dor incomum ou tem dúvidas sobre a lavagem do cabelo? Fale com a equipe.</p>
+              <a href="#" class="btn-support">Enviar Mensagem</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="orientacoes-section" class="page-section hidden">
+        <div class="placeholder-section">
+          <i class="fa-solid fa-clipboard-list placeholder-icon"></i>
+          <h2>Orientações</h2>
+          <p>Seção em construção.</p>
+        </div>
+      </section>
+
+      <section id="chat-section" class="page-section hidden">
+        <div class="placeholder-section">
+          <i class="fa-solid fa-message placeholder-icon"></i>
+          <h2>Chat com médico</h2>
+          <p>Seção em construção.</p>
+        </div>
+      </section>
+
+      <section id="historico-section" class="page-section hidden">
+
+        <div class="historico-hero">
+          <div>
+            <h1>Histórico de Recuperação</h1>
+            <p>Acompanhe todas as suas atividades, tarefas concluídas, fotos enviadas e mensagens ao longo do pós-operatório.</p>
+          </div>
+          <div class="historico-counter">
+            <strong id="historico-total">12</strong>
+            <span>registros</span>
+          </div>
+        </div>
+
+        <div class="filter-row">
+          <button class="filter-btn hist-filter active" data-hist-filter="todos">Todos</button>
+          <button class="filter-btn hist-filter" data-hist-filter="tarefa">Tarefas</button>
+          <button class="filter-btn hist-filter" data-hist-filter="foto">Fotos</button>
+          <button class="filter-btn hist-filter" data-hist-filter="mensagem">Mensagens</button>
+          <button class="filter-btn hist-filter" data-hist-filter="medicacao">Medicações</button>
+        </div>
+
+        <div class="historico-layout">
+          <section class="historico-main">
+            <div class="section-header">
+              <h2 class="section-title" id="historico-list-title">Todos os registros</h2>
+            </div>
+
+            <div class="historico-timeline" id="historico-timeline">
+
+              <div class="timeline-group" data-day="5">
+                <div class="timeline-day-label">Dia 5 — Hoje</div>
+
+                <div class="timeline-entry" data-tipo="foto">
+                  <div class="timeline-dot dot-foto"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card-header">
+                      <div class="timeline-icon-wrap icon-foto">
+                        <i class="fa-solid fa-camera"></i>
+                      </div>
+                      <div>
+                        <h4>Fotos enviadas</h4>
+                        <span class="timeline-meta">Área doadora e receptora · Há 15 min</span>
+                      </div>
+                      <span class="tl-badge badge-info">Foto</span>
+                    </div>
+                    <p class="timeline-desc">Fotos do dia 5 enviadas para avaliação médica. Aguardando retorno do Dr. João.</p>
+                    <button class="btn-tl-action" type="button" data-open-fotos="Dia 5">Ver fotos enviadas</button>
+                  </div>
+                </div>
+
+                <div class="timeline-entry" data-tipo="medicacao">
+                  <div class="timeline-dot dot-medicacao"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card-header">
+                      <div class="timeline-icon-wrap icon-medicacao">
+                        <i class="fa-solid fa-pills"></i>
+                      </div>
+                      <div>
+                        <h4>Medicação matinal tomada</h4>
+                        <span class="timeline-meta">Antibiótico prescrito · 08h14</span>
+                      </div>
+                      <span class="tl-badge badge-success-tl">Medicação</span>
+                    </div>
+                    <p class="timeline-desc">Antibiótico diário confirmado conforme prescrição médica.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-group" data-day="4">
+                <div class="timeline-day-label">Dia 4</div>
+
+                <div class="timeline-entry" data-tipo="tarefa">
+                  <div class="timeline-dot dot-tarefa"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card-header">
+                      <div class="timeline-icon-wrap icon-tarefa">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                      </div>
+                      <div>
+                        <h4>Avaliação de sintomas concluída</h4>
+                        <span class="timeline-meta">Questionário respondido · 14h30</span>
+                      </div>
+                      <span class="tl-badge badge-success-tl">Tarefa</span>
+                    </div>
+                    <p class="timeline-desc">Respostas: <strong>Dor leve (nível 2)</strong>, sem febre, leve coceira na área doadora.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-entry" data-tipo="foto">
+                  <div class="timeline-dot dot-foto"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card-header">
+                      <div class="timeline-icon-wrap icon-foto">
+                        <i class="fa-solid fa-camera"></i>
+                      </div>
+                      <div>
+                        <h4>Fotos enviadas</h4>
+                        <span class="timeline-meta">Área doadora e receptora · 13h05</span>
+                      </div>
+                      <span class="tl-badge badge-info">Foto</span>
+                    </div>
+                    <p class="timeline-desc">Registro fotográfico do 4º dia. Médico avaliou e aprovou: evolução dentro do esperado.</p>
+                    <button class="btn-tl-action" type="button" data-open-fotos="Dia 4">Ver fotos enviadas</button>
+                  </div>
+                </div>
+
+                <div class="timeline-entry" data-tipo="medicacao">
+                  <div class="timeline-dot dot-medicacao"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card-header">
+                      <div class="timeline-icon-wrap icon-medicacao">
+                        <i class="fa-solid fa-pills"></i>
+                      </div>
+                      <div>
+                        <h4>Medicação matinal tomada</h4>
+                        <span class="timeline-meta">Antibiótico prescrito · 08h02</span>
+                      </div>
+                      <span class="tl-badge badge-success-tl">Medicação</span>
+                    </div>
+                    <p class="timeline-desc">Antibiótico diário confirmado conforme prescrição médica.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-group" data-day="3">
+                <div class="timeline-day-label">Dia 3</div>
+
+                <div class="timeline-entry" data-tipo="mensagem">
+                  <div class="timeline-dot dot-mensagem"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card-header">
+                      <div class="timeline-icon-wrap icon-mensagem">
+                        <i class="fa-solid fa-comment-medical"></i>
+                      </div>
+                      <div>
+                        <h4>Dúvida respondida pelo médico</h4>
+                        <span class="timeline-meta">Dr. João da Silva · 16h45</span>
+                      </div>
+                      <span class="tl-badge badge-mensagem">Mensagem</span>
+                    </div>
+                    <div class="timeline-chat-bubble patient">
+                      <span class="bubble-label">Você perguntou:</span>
+                      "Doutor, posso tomar banho normalmente ou devo evitar molhar a área?"
+                    </div>
+                    <div class="timeline-chat-bubble doctor">
+                      <span class="bubble-label">Dr. João respondeu:</span>
+                      "Pode tomar banho, mas use água morna e evite pressão direta na área. Não esfregue e seque com pano limpo."
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-entry" data-tipo="tarefa">
+                  <div class="timeline-dot dot-tarefa"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card-header">
+                      <div class="timeline-icon-wrap icon-tarefa">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                      </div>
+                      <div>
+                        <h4>Avaliação de sintomas concluída</h4>
+                        <span class="timeline-meta">Questionário respondido · 11h20</span>
+                      </div>
+                      <span class="tl-badge badge-success-tl">Tarefa</span>
+                    </div>
+                    <p class="timeline-desc">Respostas: <strong>Sem dor</strong>, sem febre, leve inchaço na testa relatado.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-entry" data-tipo="foto">
+                  <div class="timeline-dot dot-foto"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card-header">
+                      <div class="timeline-icon-wrap icon-foto">
+                        <i class="fa-solid fa-camera"></i>
+                      </div>
+                      <div>
+                        <h4>Fotos enviadas</h4>
+                        <span class="timeline-meta">Área doadora e receptora · 10h55</span>
+                      </div>
+                      <span class="tl-badge badge-info">Foto</span>
+                    </div>
+                    <p class="timeline-desc">Registro fotográfico do 3º dia enviado com sucesso.</p>
+                    <button class="btn-tl-action" type="button" data-open-fotos="Dia 3">Ver fotos enviadas</button>
+                  </div>
+                </div>
+
+                <div class="timeline-entry" data-tipo="medicacao">
+                  <div class="timeline-dot dot-medicacao"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card-header">
+                      <div class="timeline-icon-wrap icon-medicacao">
+                        <i class="fa-solid fa-pills"></i>
+                      </div>
+                      <div>
+                        <h4>Medicação matinal tomada</h4>
+                        <span class="timeline-meta">Antibiótico prescrito · 08h30</span>
+                      </div>
+                      <span class="tl-badge badge-success-tl">Medicação</span>
+                    </div>
+                    <p class="timeline-desc">Antibiótico diário confirmado conforme prescrição médica.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-group" data-day="2">
+                <div class="timeline-day-label">Dia 2</div>
+
+                <div class="timeline-entry" data-tipo="tarefa">
+                  <div class="timeline-dot dot-tarefa"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card-header">
+                      <div class="timeline-icon-wrap icon-tarefa">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                      </div>
+                      <div>
+                        <h4>Avaliação de sintomas concluída</h4>
+                        <span class="timeline-meta">Questionário respondido · 09h10</span>
+                      </div>
+                      <span class="tl-badge badge-success-tl">Tarefa</span>
+                    </div>
+                    <p class="timeline-desc">Respostas: <strong>Dor leve (nível 3)</strong>, sem febre, inchaço moderado na região frontal.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-entry" data-tipo="foto">
+                  <div class="timeline-dot dot-foto"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card-header">
+                      <div class="timeline-icon-wrap icon-foto">
+                        <i class="fa-solid fa-camera"></i>
+                      </div>
+                      <div>
+                        <h4>Fotos enviadas</h4>
+                        <span class="timeline-meta">Área doadora e receptora · 09h00</span>
+                      </div>
+                      <span class="tl-badge badge-info">Foto</span>
+                    </div>
+                    <p class="timeline-desc">Primeiras fotos de acompanhamento enviadas ao médico.</p>
+                    <button class="btn-tl-action" type="button" data-open-fotos="Dia 2">Ver fotos enviadas</button>
+                  </div>
+                </div>
+
+                <div class="timeline-entry" data-tipo="medicacao">
+                  <div class="timeline-dot dot-medicacao"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card-header">
+                      <div class="timeline-icon-wrap icon-medicacao">
+                        <i class="fa-solid fa-pills"></i>
+                      </div>
+                      <div>
+                        <h4>Medicação matinal tomada</h4>
+                        <span class="timeline-meta">Antibiótico prescrito · 07h50</span>
+                      </div>
+                      <span class="tl-badge badge-success-tl">Medicação</span>
+                    </div>
+                    <p class="timeline-desc">Antibiótico diário confirmado conforme prescrição médica.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-group" data-day="1">
+                <div class="timeline-day-label">Dia 1 — Início da recuperação</div>
+
+                <div class="timeline-entry" data-tipo="tarefa">
+                  <div class="timeline-dot dot-tarefa"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card-header">
+                      <div class="timeline-icon-wrap icon-tarefa">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                      </div>
+                      <div>
+                        <h4>Primeiro questionário respondido</h4>
+                        <span class="timeline-meta">Avaliação inicial · 15h00</span>
+                      </div>
+                      <span class="tl-badge badge-success-tl">Tarefa</span>
+                    </div>
+                    <p class="timeline-desc">Avaliação inicial pós-operatória registrada. Início do protocolo de recuperação.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-entry" data-tipo="medicacao">
+                  <div class="timeline-dot dot-medicacao"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card-header">
+                      <div class="timeline-icon-wrap icon-medicacao">
+                        <i class="fa-solid fa-pills"></i>
+                      </div>
+                      <div>
+                        <h4>Primeira medicação tomada</h4>
+                        <span class="timeline-meta">Antibiótico + Anti-inflamatório · 14h00</span>
+                      </div>
+                      <span class="tl-badge badge-success-tl">Medicação</span>
+                    </div>
+                    <p class="timeline-desc">Início do protocolo medicamentoso pós-operatório conforme prescrição.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="empty-historico" id="empty-historico" style="display:none;">
+                <strong>Nenhum registro encontrado</strong>
+                Não há itens nesta categoria ainda.
+              </div>
+
+            </div>
+          </section>
+
+          <aside class="historico-aside">
+            <div class="section-header">
+              <h2 class="section-title">Resumo</h2>
+            </div>
+
+            <div class="historico-side-panel">
+              <div class="historico-side-card">
+                <h3>Totais por categoria</h3>
+                <div class="hist-summary-list">
+                  <div class="hist-summary-item">
+                    <span><i class="fa-solid fa-clipboard-check" style="color:var(--blue)"></i> Tarefas</span>
+                    <strong id="count-tarefa">4</strong>
+                  </div>
+                  <div class="hist-summary-item">
+                    <span><i class="fa-solid fa-camera" style="color:#0ea5e9"></i> Fotos</span>
+                    <strong id="count-foto">4</strong>
+                  </div>
+                  <div class="hist-summary-item">
+                    <span><i class="fa-solid fa-comment-medical" style="color:#7c3aed"></i> Mensagens</span>
+                    <strong id="count-mensagem">1</strong>
+                  </div>
+                  <div class="hist-summary-item">
+                    <span><i class="fa-solid fa-pills" style="color:var(--success)"></i> Medicações</span>
+                    <strong id="count-medicacao">5</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="historico-side-card">
+                <h3>Progresso da recuperação</h3>
+                <div class="hist-progress-info">
+                  <div class="hist-progress-row">
+                    <span>Dias concluídos</span>
+                    <strong>5 / 30</strong>
+                  </div>
+                  <div class="hist-progress-bar-wrap">
+                    <div class="hist-progress-bar" style="width:16.6%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="configuracoes-section" class="page-section hidden">
+        <div class="placeholder-section">
+          <i class="fa-solid fa-gear placeholder-icon"></i>
+          <h2>Configurações</h2>
+          <p>Seção em construção.</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="photos-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h2 id="photos-modal-title">Fotos enviadas</h2>
+          <span>Área doadora e área receptora</span>
+        </div>
+        <button class="modal-close" type="button" data-close-modal="photos-modal">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="photos-grid">
+          <div class="photo-card">
+            <div class="photo-placeholder" data-photo-label="Área doadora">
+              <svg width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+              </svg>
+            </div>
+            <div class="photo-caption">
+              <strong>Área doadora</strong>
+              <span>Foto enviada pelo paciente para acompanhamento.</span>
+            </div>
+          </div>
+          <div class="photo-card">
+            <div class="photo-placeholder" data-photo-label="Área receptora">
+              <svg width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+              </svg>
+            </div>
+            <div class="photo-caption">
+              <strong>Área receptora</strong>
+              <span>Foto enviada pelo paciente para avaliação médica.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="image-viewer-modal">
+    <div class="modal-card image-viewer-card">
+      <div class="modal-header">
+        <div>
+          <h2 id="image-viewer-title">Imagem ampliada</h2>
+          <span>Visualização em tamanho maior</span>
+        </div>
+        <button class="modal-close" type="button" data-close-modal="image-viewer-modal">×</button>
+      </div>
+      <div class="image-viewer-body">
+        <div class="image-viewer-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+          </svg>
+          <div class="image-viewer-label" id="image-viewer-label">Área doadora</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/PainelPaciente.js" defer></script>
+</body>
+</html>
