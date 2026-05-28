@@ -150,6 +150,21 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
   - Botão para retorno à tela de detalhes do paciente
   - Interface organizada e padronizada conforme o template visual da aplicação
   - Menu lateral para navegação entre as funcionalidades do sistema
+
+    ---
+
+  ### Tela 4D - Lista de Pacientes
+
+ - **Requisito relacionado:** RF-10  
+ - **Descrição:** Tela desenvolvida para exibição e gerenciamento de pacientes, contendo uma tabela com informações organizadas e o status atual de cada paciente. A interface também possui um campo de busca que permite localizar pacientes específicos de forma rápida e prática, facilitando a visualização e o acompanhamento dos dados..  
+   - **Tecnologias utilizadas:** HTML e CSS.  
+   - **Funcionalidades implementadas:**
+   - Vizualização dos dados do paciente por tabela
+   - Exibição de status atual por paciente
+   - Facilidade no acompanhamento da situação de cada paciente
+
+  ---
+
 ## Descrição das estruturas
 
 Para esta etapa, foi utilizada uma estrutura simples baseada em formulários HTML para coleta de dados do usuário, com validação e manipulação utilizando JavaScript.
