@@ -19,11 +19,11 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 | RF-11 | Permita que o paciente edite informações registradas no mesmo dia                                               | Gabriel Victor   | PainelPaciente.html          |
 | RF-13 | Tela principal do paciente, contendo acesso e direcionamento para as demais funcionalidades do sistema          | Gabriel Victor   | PainelPaciente.html          |
 | RF-14 | Tela principal do médico, contendo acesso e direcionamento para as demais funcionalidades do sistema            | Gabriel Victor   | PainelMedico.html |
-| RF-16 | Tela para registro de dúvidas, comentários e envio de fotos, com o objetivo de auxiliar o paciente durante o tratamento. | Matheus de Souza Pinto | RegistrarDuvidas.html |
+| RF-16 | Tela para registro de dúvidas, comentários e envio de fotos, com o objetivo de auxiliar o paciente durante o tratamento. |  Matheus de Souza Pinto | RegistrarDuvidas.html |
 | RF-12 | Permitir envio de comentários ou mensagens entre pacientes e médicos no sistema. | Matheus de Souza Pinto | RegistrarDuvidas.html |
 | RF-03 | Permitir o envio de fotos da área transplantada | Matheus de Souza Pinto | UpLoadFotos.html |
-
-
+| RF-10 | Permitir que o medico filtre pacientes por dados da cirurgia ou nome. | Wesley Henrique | lista-de-pacientes.html |
+| RF-17 | Tela destinada ao registro de fotos do paciente para acompanhamento e avaliação médica contínua | Letícia Lacerda | FotosPaciente.html |
 ---
 
 ## Funcionalidades do Sistema
@@ -137,6 +137,33 @@ As funcionalidades desenvolvidas nesta etapa contemplam principalmente o cadastr
 
  ---
  
+### Tela 4F – Foto do Paciente
+
+- **Requisito relacionado:** RF-17  
+- **Descrição:** Tela desenvolvida para permitir a visualização das fotos enviadas pelos pacientes durante o acompanhamento pós-operatório, auxiliando a equipe médica no monitoramento da evolução do tratamento capilar.  
+- **Tecnologias utilizadas:** HTML e CSS.  
+- **Funcionalidades implementadas:**
+  - Exibição das fotos enviadas pelo paciente
+  - Organização das imagens por data e dia de acompanhamento
+  - Botão para ampliação das fotos para melhor visualização
+  - Identificação do paciente associado às imagens exibidas
+  - Botão para retorno à tela de detalhes do paciente
+  - Interface organizada e padronizada conforme o template visual da aplicação
+  - Menu lateral para navegação entre as funcionalidades do sistema
+
+    ---
+
+  ### Tela 4D - Lista de Pacientes
+
+ - **Requisito relacionado:** RF-10  
+ - **Descrição:** Tela desenvolvida para exibição e gerenciamento de pacientes, contendo uma tabela com informações organizadas e o status atual de cada paciente. A interface também possui um campo de busca que permite localizar pacientes específicos de forma rápida e prática, facilitando a visualização e o acompanhamento dos dados..  
+   - **Tecnologias utilizadas:** HTML e CSS.  
+   - **Funcionalidades implementadas:**
+   - Vizualização dos dados do paciente por tabela
+   - Exibição de status atual por paciente
+   - Facilidade no acompanhamento da situação de cada paciente
+
+  ---
 
 ## Descrição das estruturas
 

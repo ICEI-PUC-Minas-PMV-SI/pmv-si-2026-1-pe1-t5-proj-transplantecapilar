@@ -2,6 +2,173 @@
 
 Neste projeto serão realizados dois tipos de testes:
 
+- O Teste de Software, que utiliza uma abordagem de caixa preta, e tem por objetivo verificar a conformidade do software com os requisitos funcionais e não funcionais do sistema.
+- O Teste de Usabilidade, que busca avaliar a qualidade do uso do sistema por um usuário do público alvo.
+
+Se quiser conhecer um pouco mais sobre os tipos de teste de software, leia o documento Teste de Software: Conceitos e tipos de testes.
+
+A documentação dos testes é dividida nas seguintes seções:
+
+- Plano de Testes de Software
+- Registro dos Testes de Software
+- Avaliação dos Testes de Software
+- Cenários de Teste de Usabilidade
+- Registro dos Testes de Usabilidade
+- Avaliação dos Testes de Usabilidade
+
+# Teste de Software
+
+Nesta seção são apresentados os testes relacionados às funcionalidades desenvolvidas por Higor Pierri, envolvendo cadastro de paciente, autenticação de usuários e painel do paciente.
+
+## Plano de Testes de Software
+
+| Caso de Teste | CT01 - Cadastro de paciente |
+| --- | --- |
+| Responsável | Higor Pierri |
+| Procedimento | 1) Acessar a página `cadastro.html` <br> 2) Preencher todos os campos obrigatórios <br> 3) Clicar em “Criar Conta” |
+| Requisitos associados | RF-01 |
+| Resultado esperado | Paciente cadastrado com sucesso e redirecionamento para login |
+| Dados de entrada | Nome, CPF, telefone, e-mail e senha válidos |
+| Resultado obtido | Sucesso |
+
+| Caso de Teste | CT02 - Validação de CPF duplicado |
+| --- | --- |
+| Responsável | Higor Pierri |
+| Procedimento | 1) Tentar cadastrar paciente utilizando CPF já registrado |
+| Requisitos associados | RF-01 / RNF-12 |
+| Resultado esperado | Sistema impedir cadastro duplicado |
+| Dados de entrada | CPF já existente no LocalStorage |
+| Resultado obtido | Sucesso |
+
+| Caso de Teste | CT03 - Validação de senhas diferentes |
+| --- | --- |
+| Responsável | Higor Pierri |
+| Procedimento | 1) Inserir senha e confirmação diferentes <br> 2) Clicar em “Criar Conta” |
+| Requisitos associados | RF-01 |
+| Resultado esperado | Sistema exibir mensagem de erro |
+| Dados de entrada | Senhas incompatíveis |
+| Resultado obtido | Sucesso |
+
+| Caso de Teste | CT04 - Login de paciente |
+| --- | --- |
+| Responsável | Higor Pierri |
+| Procedimento | 1) Acessar `login.html` <br> 2) Selecionar perfil paciente <br> 3) Inserir login e senha válidos |
+| Requisitos associados | RF-08 |
+| Resultado esperado | Sistema permitir acesso ao painel do paciente |
+| Dados de entrada | E-mail/CPF e senha cadastrados |
+| Resultado obtido | Sucesso |
+
+| Caso de Teste | CT05 - Proteção de rota |
+| --- | --- |
+| Responsável | Higor Pierri |
+| Procedimento | 1) Tentar acessar `PainelPaciente.html` sem login |
+| Requisitos associados | RNF-07 |
+| Resultado esperado | Sistema redirecionar para tela de login |
+| Dados de entrada | Usuário não autenticado |
+| Resultado obtido | Sucesso |
+
+| Caso de Teste | CT06 - Persistência do checklist |
+| --- | --- |
+| Responsável | Higor Pierri |
+| Procedimento | 1) Marcar itens do checklist <br> 2) Atualizar a página |
+| Requisitos associados | RF-13 |
+| Resultado esperado | Sistema manter checklist salvo |
+| Dados de entrada | Seleção dos itens do checklist |
+| Resultado obtido | Sucesso |
+
+| Caso de Teste | CT07 - Logout do paciente |
+| --- | --- |
+| Responsável | Higor Pierri |
+| Procedimento | 1) Clicar no botão “Sair do Sistema” |
+| Requisitos associados | RF-08 / RNF-07 |
+| Resultado esperado | Encerrar sessão e retornar para login |
+| Dados de entrada | Usuário autenticado |
+| Resultado obtido | Sucesso |
+
+## Registro dos Testes de Software
+
+Esta seção apresenta os testes realizados por Higor Pierri nas funcionalidades de autenticação, cadastro e painel do paciente.
+
+| Caso de Teste | CT01 - Cadastro de paciente |
+| --- | --- |
+| Requisito Associado | RF-01 - Cadastro de pacientes |
+| Responsável | Higor Pierri |
+| Link do vídeo do teste realizado | Inserir link do vídeo |
+
+| Caso de Teste | CT04 - Login de paciente |
+| --- | --- |
+| Requisito Associado | RF-08 - Autenticação de usuários |
+| Responsável | Higor Pierri |
+| Link do vídeo do teste realizado | Inserir link do vídeo |
+
+| Caso de Teste | CT06 - Persistência do checklist |
+| --- | --- |
+| Requisito Associado | RF-13 - Checklist diário |
+| Responsável | Higor Pierri |
+| Link do vídeo do teste realizado | Inserir link do vídeo |
+
+## Avaliação dos Testes de Software
+
+Os testes realizados por Higor Pierri demonstraram que as funcionalidades desenvolvidas para cadastro, login e painel do paciente estão funcionando conforme os requisitos definidos no projeto. O sistema realiza validações básicas de formulários, impede cadastros duplicados, autentica usuários corretamente e protege páginas restritas por meio de controle de sessão utilizando LocalStorage.
+
+Além disso, o painel do paciente apresentou funcionamento adequado em relação ao checklist diário, persistência de dados e navegação entre páginas do sistema. Os resultados obtidos indicam que a solução atende satisfatoriamente aos requisitos funcionais implementados nesta etapa.
+
+Como melhorias futuras, pretende-se implementar integração com banco de dados real, autenticação mais robusta, criptografia de senhas e maior controle de permissões entre usuários pacientes e profissionais.
+
+# Testes de Usabilidade
+
+O objetivo do Plano de Testes de Usabilidade é obter informações quanto à expectativa dos usuários em relação à funcionalidade da aplicação de forma geral.
+
+## Cenários de Teste de Usabilidade
+
+| Nº do Cenário | Descrição do cenário |
+| --- | --- |
+| 1 | Realizar cadastro de paciente no sistema |
+| 2 | Efetuar login e acessar o painel do paciente |
+| 3 | Utilizar o checklist diário e validar persistência das tarefas |
+
+## Registro dos Testes de Usabilidade
+
+### Cenário 1: Cadastro de paciente
+
+| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão |
+| --- | --- | --- | --- |
+| 1 | SIM | 5 | 32 segundos |
+| 2 | SIM | 5 | 28 segundos |
+| 3 | SIM | 4 | 35 segundos |
+| Média | 100% | 4.67 | 31.6 segundos |
+
+Comentários dos usuários:
+- Interface intuitiva e organizada.
+- Campos de cadastro fáceis de compreender.
+
+### Cenário 2: Login e acesso ao painel
+
+| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão |
+| --- | --- | --- | --- |
+| 1 | SIM | 5 | 15 segundos |
+| 2 | SIM | 5 | 18 segundos |
+| 3 | SIM | 5 | 14 segundos |
+| Média | 100% | 5 | 15.6 segundos |
+
+Comentários dos usuários:
+- Navegação simples.
+- Painel visualmente agradável.
+
+## Avaliação dos Testes de Usabilidade
+
+Com base nos testes realizados por Higor Pierri, foi possível verificar que a aplicação apresenta boa usabilidade e facilidade de navegação. Os usuários conseguiram concluir os cenários propostos com sucesso, demonstrando que as funcionalidades implementadas possuem fluxo intuitivo e organização adequada.
+
+A satisfação subjetiva apresentou resultados positivos, principalmente relacionados ao visual moderno da aplicação, clareza dos formulários e facilidade de utilização do painel do paciente.
+
+Como oportunidades de melhoria, pretende-se adicionar mais feedbacks visuais, notificações interativas e integração em tempo real com funcionalidades médicas nas próximas etapas do projeto.
+
+ORIENTAÇÕES PREESTABELECIDAS DEIXADAS PELO PROFESSOR ABAIXO
+
+# Testes
+
+Neste projeto serão realizados dois tipos de testes:
+
  - O **Teste de Software**, que utiliza uma abordadem de caixa preta, e tem por objetivo verificar a conformidade do software com os requisitos funcionais e não funcionais do sistema.
  - O **Teste de Usabilidade**, que busca avaliar a qualidade do uso do sistema por um usuário do público alvo. 
 
