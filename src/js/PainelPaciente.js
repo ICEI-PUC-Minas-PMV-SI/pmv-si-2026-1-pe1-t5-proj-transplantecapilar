@@ -1,3 +1,38 @@
+(function() {
+  var dados = localStorage.getItem('usuarioLogado');
+  if (!dados) { window.location.href = 'login.html'; return; }
+  var usuario = JSON.parse(dados);
+  if (usuario.perfil !== 'paciente') { window.location.href = 'login.html'; return; }
+})();
+
+(function() {
+  var usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
+  if (!usuario) return;
+
+  var iniciais = usuario.nome.split(' ').filter(function(p) { return p.length > 0; }).slice(0, 2).map(function(p) { return p[0].toUpperCase(); }).join('');
+  var primeiroNome = usuario.nome.split(' ')[0];
+
+  var userNameEl = document.querySelector('.user-name');
+  var avatarEl   = document.querySelector('.user-profile .avatar');
+  var heroH1     = document.querySelector('.hero-text h1');
+
+  if (userNameEl) userNameEl.textContent = usuario.nome;
+  if (avatarEl)   avatarEl.textContent   = iniciais;
+  if (heroH1)     heroH1.textContent     = 'Olá, ' + primeiroNome + '! 👋';
+})();
+
+(function() {
+  var btn = document.querySelector('.nav-item .fa-right-from-bracket');
+  if (!btn) return;
+  var link = btn.closest('.nav-item');
+  if (!link) return;
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem('usuarioLogado');
+    window.location.href = 'login.html';
+  });
+})();
+
 function toggleSidebar() {
   var sidebar = document.getElementById('sidebar');
   var overlay = document.getElementById('sidebar-overlay');
@@ -39,15 +74,11 @@ var pageTitles = {
 };
 
 function esconderPaginas() {
-  Object.values(sections).forEach(function(s) {
-    if (s) s.classList.add('hidden');
-  });
+  Object.values(sections).forEach(function(s) { if (s) s.classList.add('hidden'); });
 }
 
 function limparMenu() {
-  Object.values(navItems).forEach(function(n) {
-    if (n) n.classList.remove('active');
-  });
+  Object.values(navItems).forEach(function(n) { if (n) n.classList.remove('active'); });
 }
 
 function mostrarSecao(nome) {
@@ -57,10 +88,7 @@ function mostrarSecao(nome) {
   if (navItems[nome]) navItems[nome].classList.add('active');
   if (pageTitle) pageTitle.textContent = pageTitles[nome] || '';
   closeSidebarOnMobile();
-
-  if (nome === 'historico') {
-    applyHistFilter(currentHistFilter);
-  }
+  if (nome === 'historico') applyHistFilter(currentHistFilter);
 }
 
 var abasBloqueadas = ['orientacoes', 'chat', 'configuracoes'];
@@ -70,10 +98,7 @@ Object.keys(navItems).forEach(function(key) {
   if (!el) return;
   el.addEventListener('click', function(e) {
     e.preventDefault();
-    if (abasBloqueadas.indexOf(key) !== -1) {
-      mostrarToast('Seção em construção.');
-      return;
-    }
+    if (abasBloqueadas.indexOf(key) !== -1) { mostrarToast('Seção em construção.'); return; }
     mostrarSecao(key);
   });
 });
@@ -88,9 +113,7 @@ if (notificationMenu) {
   notificationMenu.addEventListener('wheel', function(e) {
     var atTop    = notificationMenu.scrollTop === 0;
     var atBottom = notificationMenu.scrollHeight - notificationMenu.scrollTop <= notificationMenu.clientHeight + 1;
-    if ((e.deltaY < 0 && atTop) || (e.deltaY > 0 && atBottom)) {
-      e.preventDefault();
-    }
+    if ((e.deltaY < 0 && atTop) || (e.deltaY > 0 && atBottom)) e.preventDefault();
     e.stopPropagation();
   }, { passive: false });
 }
@@ -100,45 +123,23 @@ if (notificationBtn && notificationMenu) {
     e.stopPropagation();
     notificationMenu.classList.toggle('open');
   });
-
   document.addEventListener('click', function(e) {
-    if (!notificationMenu.contains(e.target) && !notificationBtn.contains(e.target)) {
-      notificationMenu.classList.remove('open');
-    }
+    if (!notificationMenu.contains(e.target) && !notificationBtn.contains(e.target)) notificationMenu.classList.remove('open');
   });
 }
 
 if (notificationWrapper && notificationMenu) {
-  notificationWrapper.addEventListener('mouseenter', function() {
-    clearTimeout(notificationCloseTimer);
-    notificationMenu.classList.add('open');
-  });
-
-  notificationWrapper.addEventListener('mouseleave', function() {
-    notificationCloseTimer = setTimeout(function() {
-      notificationMenu.classList.remove('open');
-    }, 350);
-  });
-
-  notificationMenu.addEventListener('mouseenter', function() {
-    clearTimeout(notificationCloseTimer);
-  });
-
-  notificationMenu.addEventListener('mouseleave', function() {
-    notificationCloseTimer = setTimeout(function() {
-      notificationMenu.classList.remove('open');
-    }, 250);
-  });
+  notificationWrapper.addEventListener('mouseenter', function() { clearTimeout(notificationCloseTimer); notificationMenu.classList.add('open'); });
+  notificationWrapper.addEventListener('mouseleave', function() { notificationCloseTimer = setTimeout(function() { notificationMenu.classList.remove('open'); }, 350); });
+  notificationMenu.addEventListener('mouseenter', function() { clearTimeout(notificationCloseTimer); });
+  notificationMenu.addEventListener('mouseleave', function() { notificationCloseTimer = setTimeout(function() { notificationMenu.classList.remove('open'); }, 250); });
 }
 
 document.querySelectorAll('.notification-item[data-target-section]').forEach(function(item) {
   item.addEventListener('click', function() {
-    var section  = item.dataset.targetSection;
-    var targetId = item.dataset.targetId;
-
-    mostrarSecao(section);
+    mostrarSecao(item.dataset.targetSection);
     if (notificationMenu) notificationMenu.classList.remove('open');
-    setTimeout(function() { scrollToTarget(targetId); }, 80);
+    setTimeout(function() { scrollToTarget(item.dataset.targetId); }, 80);
   });
 });
 
@@ -157,13 +158,12 @@ function scrollToTarget(targetId) {
   setTimeout(function() { target.classList.remove('focus-highlight'); }, 1400);
 }
 
-var currentHistFilter = 'todos';
-
-var histFilterButtons = document.querySelectorAll('.hist-filter');
-var timelineEntries   = document.querySelectorAll('.timeline-entry');
-var timelineGroups    = document.querySelectorAll('.timeline-group');
-var emptyHistorico    = document.getElementById('empty-historico');
-var historicoTotal    = document.getElementById('historico-total');
+var currentHistFilter  = 'todos';
+var histFilterButtons  = document.querySelectorAll('.hist-filter');
+var timelineEntries    = document.querySelectorAll('.timeline-entry');
+var timelineGroups     = document.querySelectorAll('.timeline-group');
+var emptyHistorico     = document.getElementById('empty-historico');
+var historicoTotal     = document.getElementById('historico-total');
 var historicoListTitle = document.getElementById('historico-list-title');
 
 var filterLabels = {
@@ -178,56 +178,34 @@ function applyHistFilter(filter) {
   currentHistFilter = filter;
   var visibleCount = 0;
 
-  histFilterButtons.forEach(function(btn) {
-    btn.classList.toggle('active', btn.dataset.histFilter === filter);
-  });
+  histFilterButtons.forEach(function(btn) { btn.classList.toggle('active', btn.dataset.histFilter === filter); });
 
   timelineEntries.forEach(function(entry) {
-    var tipo = entry.dataset.tipo;
-    var show = filter === 'todos' || tipo === filter;
+    var show = filter === 'todos' || entry.dataset.tipo === filter;
     entry.style.display = show ? 'grid' : 'none';
     if (show) visibleCount++;
   });
 
   timelineGroups.forEach(function(group) {
-    var visEntries = Array.from(group.querySelectorAll('.timeline-entry')).filter(function(e) {
-      return e.style.display !== 'none';
-    });
-    group.style.display = visEntries.length > 0 ? 'flex' : 'none';
+    var vis = Array.from(group.querySelectorAll('.timeline-entry')).filter(function(e) { return e.style.display !== 'none'; });
+    group.style.display = vis.length > 0 ? 'flex' : 'none';
   });
 
-  /* Estado vazio */
-  if (emptyHistorico) {
-    emptyHistorico.style.display = visibleCount === 0 ? 'block' : 'none';
-  }
-
-  /* Título da lista */
-  if (historicoListTitle) {
-    historicoListTitle.textContent = filterLabels[filter] || 'Todos os registros';
-  }
-
-  /* Contador do hero */
-  if (historicoTotal) {
-    historicoTotal.textContent = visibleCount;
-  }
+  if (emptyHistorico)     emptyHistorico.style.display     = visibleCount === 0 ? 'block' : 'none';
+  if (historicoListTitle) historicoListTitle.textContent   = filterLabels[filter] || 'Todos os registros';
+  if (historicoTotal)     historicoTotal.textContent       = visibleCount;
 }
 
 histFilterButtons.forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    applyHistFilter(btn.dataset.histFilter);
-  });
+  btn.addEventListener('click', function() { applyHistFilter(btn.dataset.histFilter); });
 });
 
 function calcularContadores() {
-  var tipos = ['tarefa', 'foto', 'mensagem', 'medicacao'];
-  tipos.forEach(function(tipo) {
-    var count = document.querySelectorAll('.timeline-entry[data-tipo="' + tipo + '"]').length;
+  ['tarefa', 'foto', 'mensagem', 'medicacao'].forEach(function(tipo) {
     var el = document.getElementById('count-' + tipo);
-    if (el) el.textContent = count;
+    if (el) el.textContent = document.querySelectorAll('.timeline-entry[data-tipo="' + tipo + '"]').length;
   });
-
-  var totalAll = document.querySelectorAll('.timeline-entry').length;
-  if (historicoTotal) historicoTotal.textContent = totalAll;
+  if (historicoTotal) historicoTotal.textContent = document.querySelectorAll('.timeline-entry').length;
 }
 
 var photosModal      = document.getElementById('photos-modal');
@@ -236,20 +214,16 @@ var photosModalTitle = document.getElementById('photos-modal-title');
 var imageViewerTitle = document.getElementById('image-viewer-title');
 var imageViewerLabel = document.getElementById('image-viewer-label');
 
-function openModal(modal) { if (modal) modal.classList.add('open'); }
+function openModal(modal)  { if (modal) modal.classList.add('open'); }
 function closeModal(modal) { if (modal) modal.classList.remove('open'); }
 
 function openPhotosForDay(label) {
-  if (photosModalTitle) {
-    photosModalTitle.textContent = 'Fotos enviadas — ' + (label || 'Paciente');
-  }
+  if (photosModalTitle) photosModalTitle.textContent = 'Fotos enviadas — ' + (label || 'Paciente');
   openModal(photosModal);
 }
 
 document.querySelectorAll('.btn-tl-action[data-open-fotos]').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    openPhotosForDay(btn.dataset.openFotos);
-  });
+  btn.addEventListener('click', function() { openPhotosForDay(btn.dataset.openFotos); });
 });
 
 document.querySelectorAll('.photo-placeholder').forEach(function(photo) {
@@ -262,41 +236,29 @@ document.querySelectorAll('.photo-placeholder').forEach(function(photo) {
 });
 
 document.querySelectorAll('[data-close-modal]').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    closeModal(document.getElementById(btn.dataset.closeModal));
-  });
+  btn.addEventListener('click', function() { closeModal(document.getElementById(btn.dataset.closeModal)); });
 });
 
 document.querySelectorAll('.modal-overlay').forEach(function(modal) {
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) closeModal(modal);
-  });
+  modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(modal); });
 });
 
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
-    document.querySelectorAll('.modal-overlay.open').forEach(function(modal) {
-      closeModal(modal);
-    });
+    document.querySelectorAll('.modal-overlay.open').forEach(function(modal) { closeModal(modal); });
     if (notificationMenu) notificationMenu.classList.remove('open');
   }
 });
 
-var toastEl = null;
+var toastEl    = null;
 var toastTimer = null;
 
 function mostrarToast(msg) {
-  if (!toastEl) {
-    toastEl = document.createElement('div');
-    toastEl.id = 'toast-msg';
-    document.body.appendChild(toastEl);
-  }
+  if (!toastEl) { toastEl = document.createElement('div'); toastEl.id = 'toast-msg'; document.body.appendChild(toastEl); }
   toastEl.textContent = msg;
   toastEl.classList.add('show');
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(function() {
-    toastEl.classList.remove('show');
-  }, 2400);
+  toastTimer = setTimeout(function() { toastEl.classList.remove('show'); }, 2400);
 }
 
 calcularContadores();
