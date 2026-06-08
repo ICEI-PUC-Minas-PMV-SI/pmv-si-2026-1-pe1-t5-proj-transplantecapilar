@@ -17,20 +17,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const ufCrm = document.getElementById('uf-crm').value;
       const especialidade = document.getElementById('especialidade').value;
 
-      // 2. Validação simples de senha
+      // Verifica se as senhas são iguais
       if (senha !== confirma) {
         alert("As senhas não conferem. Por favor, digite novamente.");
-        return; // Interrompe o processo aqui se der erro
+        return; 
       }
 
-      // 3. Busca médicos já cadastrados ou cria array vazio
+      // 3. Verifica se já tem cadasto
       let medicosCadastrados = JSON.parse(localStorage.getItem('medicosCadastrados')) || [];
 
       // 4. Verifica se o e-mail já existe no sistema
       const emailJaExiste = medicosCadastrados.some(medico => medico.email === email);
       if (emailJaExiste) {
         alert("Este e-mail já está em uso por outro médico. Tente fazer login.");
-        return; // Interrompe o cadastro aqui para não duplicar
+        return;
       }
 
       // 5. Monta o objeto do Médico
