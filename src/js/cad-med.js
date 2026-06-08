@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     formCadastroMedico.addEventListener('submit', function(event) {
       event.preventDefault(); // Impede o envio padrão
 
-      // 1. Captura os dados digitados
+      // Salva os dados digitados
       const senha = document.getElementById('senha').value;
       const confirma = document.getElementById('confirma').value;
       const email = document.getElementById('email').value;
@@ -23,17 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
         return; 
       }
 
-      // 3. Verifica se já tem cadasto
+      // Verifica se já tem cadasto
       let medicosCadastrados = JSON.parse(localStorage.getItem('medicosCadastrados')) || [];
 
-      // 4. Verifica se o e-mail já existe no sistema
+      // Verifica se o e-mail já existe no sistema
       const emailJaExiste = medicosCadastrados.some(medico => medico.email === email);
       if (emailJaExiste) {
         alert("Este e-mail já está em uso por outro médico. Tente fazer login.");
         return;
       }
 
-      // 5. Monta o objeto do Médico
+      // Monta o objeto do Médico
       const novoMedico = {
         id: Date.now(),
         tipo: 'medico',
@@ -49,14 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
 
-      // 6. Adiciona o novo médico e salva no localStorage
+      // Adiciona o novo médico e salva no localStorage
       medicosCadastrados.push(novoMedico);
       localStorage.setItem('medicosCadastrados', JSON.stringify(medicosCadastrados));
 
       console.log('Médico cadastrado com sucesso:', novoMedico);
       alert('Cadastro realizado com sucesso!');
 
-      // 7. Redireciona para a tela de login
+      // Redireciona para a tela de login
       window.location.href = 'login.html';
     });
   }
