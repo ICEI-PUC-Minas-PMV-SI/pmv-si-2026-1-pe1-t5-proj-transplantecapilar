@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat com Médico – HairCare Pro</title>
+  <link rel="stylesheet" href="../css/chat-med.css"/>
+</head>
+<body>
+
+  <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-logo-circle">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        </svg>
+      </div>
+      <div class="brand-name">HairCare Pro</div>
+      <div class="brand-subtitle">Pós-Operatório Capilar</div>
+    </div>
+
+    <nav class="nav-menu">
+      <a href="../pages/quest-dia-15.html" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        Início
+      </a>
+      <a href="../pages/orientacaoes.html" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        Orientações
+      </a>
+      <a href="#" class="nav-item active">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Chat com médico
+      </a>
+
+      <div class="nav-footer">
+        <div class="nav-divider"></div>
+        <a href="../pages/login.html" class="nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          Sair
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <main class="main-wrapper">
+
+    <header class="topbar">
+      <button class="hamburger" onclick="toggleSidebar()" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <div class="breadcrumb">
+        <a href="quest-dia-15.html">Início</a>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <span>Chat com médico</span>
+      </div>
+
+      <div class="user-profile">
+        <div class="avatar">FH</div>
+        <span class="user-name">Fulano_HML</span>
+      </div>
+    </header>
+
+    <div class="content-area">
+      <div class="chat-container">
+
+        <!-- Cabeçalho com info do médico -->
+        <div class="chat-header">
+          <div class="medico-avatar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#283d74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <div class="medico-info">
+            <div class="medico-nome">Dr. Carlos Mendes</div>
+            <div class="medico-especialidade">Cirurgia Capilar</div>
+          </div>
+          <div class="status-online">
+            <div class="status-dot"></div>
+            Online
+          </div>
+        </div>
+
+        <!-- Mensagens -->
+        <div class="chat-messages" id="chat-messages">
+          <div class="chat-empty" id="chat-empty">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <p>Nenhuma mensagem ainda.<br>Envie sua dúvida ao médico abaixo.</p>
+          </div>
+        </div>
+
+        <!-- Input de envio -->
+        <div class="chat-input-area">
+          <textarea
+            class="chat-input"
+            id="chat-input"
+            placeholder="Digite sua mensagem..."
+            rows="1"
+          ></textarea>
+          <button class="btn-send" id="btn-send" aria-label="Enviar mensagem">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="#"></script>
+
+</body>
+</html>
