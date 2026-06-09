@@ -6,211 +6,188 @@
     <title>Fotos do Paciente</title>
 
     <link rel="stylesheet" href="../css/FotosPaciente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="../js/FotosPaciente.js" defer></script>
 </head>
 
 <body>
 
+    <div class="overlay-menu" id="overlayMenu"></div>
+
     <div class="layout">
 
-        <div class="menu-lateral">
+        <aside class="menu-lateral" id="menuLateral">
 
             <div class="logo-area">
-
-               <div class="lateral-logo-circulo">
-
-                    <svg 
-                        width="34" 
-                        height="34" 
-                        viewBox="0 0 24 24" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        stroke-width="2.2" 
-                        stroke-linecap="round" 
-                        stroke-linejoin="round"
-                    >
+                <div class="lateral-logo-circulo">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
                     </svg>
-
                 </div>
 
                 <h2>HairCare Pro</h2>
                 <p>Pós-Operatório Capilar</p>
-
             </div>
 
-            <div class="menu-nav">
-
-                <a href="#" class="menu-item ativo">
+            <nav class="menu-nav">
+                <a href="PainelMedico.html" class="menu-item">
                     <i class="fa-solid fa-house"></i>
                     Início
                 </a>
 
-                <a href="#" class="menu-item">
+                <a href="lista-de-pacientes.html" class="menu-item ativo">
                     <i class="fa-solid fa-users"></i>
                     Meus Pacientes
                 </a>
 
-                <a href="#" class="menu-item">
+                <a href="#" class="menu-item" id="btnAlertas">
                     <i class="fa-solid fa-bell"></i>
                     Alertas
                 </a>
 
-                <a href="#" class="menu-item">
+                <a href="#" class="menu-item" id="btnMensagens">
                     <i class="fa-solid fa-message"></i>
                     Mensagens
                 </a>
-
-            </div>
+            </nav>
 
             <div class="menu-rodape">
-
-                <a href="#" class="menu-item">
+                <a href="#" class="menu-item" id="btnConfiguracoes">
                     <i class="fa-solid fa-gear"></i>
                     Configurações
                 </a>
 
-                <a href="#" class="menu-item">
+                <a href="#" class="menu-item" id="btnSair">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     Sair
                 </a>
-
             </div>
 
-        </div>
+        </aside>
 
-        <div class="conteudo">
+        <main class="conteudo">
 
-            <div class="topo">
+            <header class="topo">
+
+                <button class="btn-menu-mobile" id="btnMenuMobile">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
 
                 <div class="caminho">
+                    <a href="PainelMedico.html">Início</a>
+                    <span>></span>
 
-                    <span>Início</span>
-                    >
-                    <span>Lista de Pacientes</span>
-                    >
-                    <span>Detalhes do Paciente</span>
-                    >
+                    <a href="lista-de-pacientes.html">Lista de Pacientes</a>
+                    <span>></span>
+
+                    <a href="#" id="linkDetalhesPaciente">Detalhes do Paciente</a>
+                    <span>></span>
+
                     <span>Fotos do Paciente</span>
-
                 </div>
 
                 <div class="perfil-area">
-
                     <div class="notificacao">
-
                         <i class="fa-regular fa-bell sino"></i>
                         <span class="bolinha"></span>
-
                     </div>
 
                     <div class="perfil">
-
-                        <div class="perfil-circulo">
-                            JS
-                        </div>
-
+                        <div class="perfil-circulo">JS</div>
                         <span>Dr. João da Silva</span>
-
                     </div>
-
                 </div>
 
-            </div>
+            </header>
 
-            <div class="area-principal">
+            <section class="area-principal">
 
                 <div class="cabecalho-paciente">
-
                     <div class="paciente-info">
-
-                        <div class="paciente-circulo">
-                            JC
-                        </div>
+                        <div class="paciente-circulo">JC</div>
 
                         <div>
-
                             <h1>Fotos Enviadas de João Carlos</h1>
                             <p>Visualize as fotos enviadas pelo paciente durante o pós-operatório.</p>
-
                         </div>
-
                     </div>
-
                 </div>
 
-                <div class="cards-fotos">
+                <div class="cards-fotos" id="cardsFotos">
 
                     <div class="card-foto">
-
                         <div class="foto-area">
                             <i class="fa-regular fa-user"></i>
                         </div>
 
                         <div class="card-info">
-
                             <div>
                                 <span class="data">06/04/2026</span>
                                 <h3>DIA 07</h3>
                             </div>
 
                             <button class="botao-ampliar">Ampliar</button>
-
                         </div>
-
                     </div>
 
                     <div class="card-foto">
-
                         <div class="foto-area">
                             <i class="fa-regular fa-user"></i>
                         </div>
 
                         <div class="card-info">
-
                             <div>
                                 <span class="data">05/04/2026</span>
                                 <h3>DIA 06</h3>
                             </div>
 
                             <button class="botao-ampliar">Ampliar</button>
-
                         </div>
-
                     </div>
 
                     <div class="card-foto">
-
                         <div class="foto-area">
                             <i class="fa-regular fa-user"></i>
                         </div>
 
                         <div class="card-info">
-
                             <div>
                                 <span class="data">04/04/2026</span>
                                 <h3>DIA 05</h3>
                             </div>
 
                             <button class="botao-ampliar">Ampliar</button>
-
                         </div>
-
                     </div>
 
                 </div>
 
-                <button class="botao-voltar">
+                <button class="botao-voltar" id="btnVoltar">
                     <i class="fa-solid fa-arrow-left"></i>
                     Voltar para Detalhes
                 </button>
 
+            </section>
+
+        </main>
+
+    </div>
+
+    <div class="modal-foto" id="modalFoto">
+        <div class="modal-conteudo">
+            <button class="fechar-modal" id="fecharModal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-imagem-area" id="modalImagemArea">
+                <i class="fa-regular fa-user imagem-modal-icone"></i>
             </div>
 
+            <p>Visualização ampliada da foto</p>
         </div>
-
     </div>
 
 </body>
