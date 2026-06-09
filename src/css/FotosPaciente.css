@@ -1,34 +1,39 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #edf1f7;
 }
 
-.layout{
+.layout {
     display: flex;
     min-height: 100vh;
 }
 
-.menu-lateral{
+.menu-lateral {
     width: 260px;
     background-color: #283d74;
     display: flex;
     flex-direction: column;
     padding: 24px;
     color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
 }
 
-.logo-area{
+.logo-area {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.lateral-logo-circulo{
+.lateral-logo-circulo {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -37,35 +42,31 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
 }
 
-.logo-area h2{
+.logo-area h2 {
     margin-bottom: 8px;
 }
 
-.logo-area p{
+.logo-area p {
     font-size: 11px;
     opacity: 0.7;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.menu-nav{
+.menu-nav,
+.menu-rodape {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 10px;
 }
 
-.menu-rodape{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.menu-rodape {
     margin-top: auto;
 }
 
-.menu-item{
+.menu-item {
     text-decoration: none;
     color: white;
     padding: 14px;
@@ -75,23 +76,21 @@ body{
     font-weight: 600;
 }
 
-.menu-item:hover{
-    background-color: rgba(255,255,255,0.08);
+.menu-item:hover,
+.ativo {
+    background-color: rgba(255, 255, 255, 0.12);
 }
 
-.ativo{
-    background-color: rgba(255,255,255,0.08);
-}
-
-.menu-item i{
+.menu-item i {
     margin-right: 10px;
 }
 
-.conteudo{
+.conteudo {
     flex: 1;
+    margin-left: 260px;
 }
 
-.topo{
+.topo {
     height: 80px;
     background-color: white;
     display: flex;
@@ -101,30 +100,50 @@ body{
     border-bottom: 1px solid #dbe3ec;
 }
 
-.caminho{
+.btn-menu-mobile {
+    display: none;
+    border: none;
+    background-color: transparent;
+    color: #283d74;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.caminho {
     display: flex;
     align-items: center;
     gap: 8px;
     color: #4a6070;
     font-size: 14px;
+    flex-wrap: wrap;
 }
 
-.perfil-area{
+.caminho a {
+    color: #283d74;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.caminho a:hover {
+    text-decoration: underline;
+}
+
+.perfil-area {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.notificacao{
+.notificacao {
     position: relative;
 }
 
-.sino{
+.sino {
     font-size: 20px;
     color: #283d74;
 }
 
-.bolinha{
+.bolinha {
     width: 10px;
     height: 10px;
     background-color: #ff3b30;
@@ -135,13 +154,14 @@ body{
     border: 2px solid white;
 }
 
-.perfil{
+.perfil {
     display: flex;
     align-items: center;
     gap: 12px;
+    font-weight: 600;
 }
 
-.perfil-circulo{
+.perfil-circulo {
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -150,26 +170,27 @@ body{
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    flex-shrink: 0;
 }
 
-.area-principal{
+.area-principal {
     padding: 40px;
 }
 
-.cabecalho-paciente{
+.cabecalho-paciente {
     background-color: white;
     border-radius: 16px;
     padding: 30px;
     margin-bottom: 30px;
 }
 
-.paciente-info{
+.paciente-info {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.paciente-circulo{
+.paciente-circulo {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -179,24 +200,26 @@ body{
     justify-content: center;
     font-weight: bold;
     color: #283d74;
+    flex-shrink: 0;
 }
 
-.paciente-info h1{
+.paciente-info h1 {
     margin-bottom: 8px;
     color: #1a2a40;
+    font-size: 30px;
 }
 
-.paciente-info p{
+.paciente-info p {
     color: #4a6070;
 }
 
-.cards-fotos{
+.cards-fotos {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
 }
 
-.card-foto{
+.card-foto {
     width: 320px;
     background-color: white;
     border-radius: 16px;
@@ -204,11 +227,11 @@ body{
     transition: 0.3s;
 }
 
-.card-foto:hover{
+.card-foto:hover {
     transform: translateY(-5px);
 }
 
-.foto-area{
+.foto-area {
     height: 250px;
     background-color: #f4f7fb;
     display: flex;
@@ -218,19 +241,30 @@ body{
     color: #c4c4c4;
 }
 
-.card-info{
+.foto-paciente {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 }
 
-.data{
+.data {
     font-size: 13px;
     color: #7a8a99;
 }
 
-.botao-ampliar{
+.card-info h3 {
+    color: #1a2a40;
+}
+
+.botao-ampliar {
     background-color: #283d74;
     color: white;
     border: none;
@@ -240,11 +274,11 @@ body{
     font-weight: 600;
 }
 
-.botao-ampliar:hover{
+.botao-ampliar:hover {
     background-color: #35519a;
 }
 
-.botao-voltar{
+.botao-voltar {
     margin-top: 40px;
     border: 1px solid #c9d6e3;
     background-color: white;
@@ -252,4 +286,342 @@ body{
     border-radius: 10px;
     cursor: pointer;
     font-weight: 600;
+}
+
+.botao-voltar:hover {
+    background-color: #f4f7fb;
+}
+
+.modal-foto {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal-foto.abrir {
+    display: flex;
+}
+
+.modal-conteudo {
+    background-color: white;
+    width: 900px;
+    max-width: 95vw;
+    min-height: 650px;
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: #edf1f7;
+    color: #283d74;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.fechar-modal:hover {
+    background-color: #dbe3ec;
+}
+
+.modal-imagem-area {
+    width: 100%;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem-modal-icone {
+    font-size: 280px;
+    color: #c4c4c4;
+}
+
+.imagem-modal-foto {
+    max-width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+    border-radius: 14px;
+}
+
+.overlay-menu {
+    display: none;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .menu-lateral {
+        width: 220px;
+        padding: 20px;
+    }
+
+    .conteudo {
+        margin-left: 220px;
+    }
+
+    .topo {
+        padding: 0 24px;
+    }
+
+    .area-principal {
+        padding: 28px;
+    }
+
+    .card-foto {
+        width: 300px;
+    }
+
+    .paciente-info h1 {
+        font-size: 24px;
+    }
+
+    .modal-conteudo {
+        width: 760px;
+        min-height: 560px;
+    }
+
+    .modal-imagem-area {
+        height: 430px;
+    }
+
+    .imagem-modal-icone {
+        font-size: 230px;
+    }
+
+    .imagem-modal-foto {
+        max-height: 430px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+    .layout {
+        display: block;
+    }
+
+    .conteudo {
+        margin-left: 0;
+    }
+
+    .menu-lateral {
+        width: 270px;
+        transform: translateX(-100%);
+        transition: 0.3s ease;
+        padding: 24px;
+    }
+
+    .menu-lateral.aberto {
+        transform: translateX(0);
+    }
+
+    .overlay-menu {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.55);
+        z-index: 900;
+    }
+
+    .overlay-menu.ativo {
+        display: block;
+    }
+
+    .btn-menu-mobile {
+        display: block;
+    }
+
+    .topo {
+        min-height: 82px;
+        height: auto;
+        padding: 14px 16px;
+        display: grid;
+        grid-template-columns: 30px 1fr auto;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn-menu-mobile {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .caminho {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 12px;
+        gap: 5px;
+        line-height: 1.5;
+    }
+
+    .perfil-area {
+        grid-column: 3;
+        grid-row: 1;
+        gap: 10px;
+    }
+
+    .perfil span {
+        display: none;
+    }
+
+    .perfil-circulo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .area-principal {
+        padding: 20px;
+    }
+
+    .cabecalho-paciente {
+        padding: 22px;
+    }
+
+    .paciente-info {
+        align-items: flex-start;
+    }
+
+    .paciente-circulo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .paciente-info h1 {
+        font-size: 21px;
+    }
+
+    .paciente-info p {
+        font-size: 14px;
+    }
+
+    .cards-fotos {
+        gap: 20px;
+    }
+
+    .card-foto {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .foto-area {
+        height: 220px;
+    }
+
+    .botao-voltar {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .modal-conteudo {
+        width: 95vw;
+        min-height: 430px;
+        padding: 25px;
+    }
+
+    .modal-imagem-area {
+        height: 300px;
+    }
+
+    .imagem-modal-icone {
+        font-size: 170px;
+    }
+
+    .imagem-modal-foto {
+        max-height: 300px;
+    }
+
+    .fechar-modal {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* CELULAR PEQUENO */
+@media (max-width: 480px) {
+    .topo {
+        padding: 14px;
+        grid-template-columns: 28px 1fr auto;
+    }
+
+    .caminho {
+        font-size: 11px;
+        gap: 4px;
+    }
+
+    .notificacao {
+        display: none;
+    }
+
+    .perfil-circulo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .area-principal {
+        padding: 14px;
+    }
+
+    .cabecalho-paciente {
+        padding: 18px;
+    }
+
+    .paciente-info {
+        flex-direction: column;
+    }
+
+    .paciente-info h1 {
+        font-size: 20px;
+    }
+
+    .card-foto {
+        max-width: 100%;
+    }
+
+    .foto-area {
+        height: 190px;
+        font-size: 60px;
+    }
+
+    .card-info {
+        padding: 16px;
+    }
+
+    .botao-ampliar {
+        padding: 10px 14px;
+    }
+
+    .modal-conteudo {
+        width: 95vw;
+        min-height: 400px;
+        padding: 25px;
+    }
+
+    .modal-imagem-area {
+        height: 270px;
+    }
+
+    .imagem-modal-icone {
+        font-size: 150px;
+    }
+
+    .imagem-modal-foto {
+        max-height: 270px;
+    }
 }
