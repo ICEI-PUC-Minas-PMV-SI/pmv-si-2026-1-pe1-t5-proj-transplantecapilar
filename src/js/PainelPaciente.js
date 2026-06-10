@@ -1,43 +1,24 @@
-(function() {
-  var dados = localStorage.getItem('usuarioLogado');
-  if (!dados) { window.location.href = 'login.html'; return; }
-  var usuario = JSON.parse(dados);
-  if (usuario.perfil !== 'paciente') { window.location.href = 'login.html'; return; }
-})();
+var usuario = JSON.parse(localStorage.getItem('usuarioLogado')) || {};
 
-(function() {
-  var usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
-  if (!usuario) return;
+if (!usuario.nome || usuario.perfil !== 'paciente') {
+  window.location.href = 'login.html';
+}
 
-  var iniciais = usuario.nome.split(' ').filter(function(p) { return p.length > 0; }).slice(0, 2).map(function(p) { return p[0].toUpperCase(); }).join('');
-  var primeiroNome = usuario.nome.split(' ')[0];
+var _iniciais    = (usuario.nome || 'PA').split(' ').filter(function(p){return p.length>0;}).slice(0,2).map(function(p){return p[0].toUpperCase();}).join('');
+var _primeiroNome = (usuario.nome || '').split(' ')[0];
 
-  var userNameEl = document.querySelector('.user-name');
-  var avatarEl   = document.querySelector('.user-profile .avatar');
-  var heroH1     = document.querySelector('.hero-text h1');
+var topbarNome   = document.querySelector('.user-name');
+var topbarAvatar = document.querySelector('.user-profile .avatar');
+var heroH1       = document.querySelector('.hero-text h1');
 
-  if (userNameEl) userNameEl.textContent = usuario.nome;
-  if (avatarEl)   avatarEl.textContent   = iniciais;
-  if (heroH1)     heroH1.textContent     = 'Olá, ' + primeiroNome + '! 👋';
-})();
+if (topbarNome)   topbarNome.textContent   = usuario.nome;
+if (topbarAvatar) topbarAvatar.textContent = _iniciais;
+if (heroH1)       heroH1.textContent       = 'Olá, ' + _primeiroNome + '! 👋';
 
-(function() {
-  var btn = document.querySelector('.nav-item .fa-right-from-bracket');
-  if (!btn) return;
-  var link = btn.closest('.nav-item');
-  if (!link) return;
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem('usuarioLogado');
-    window.location.href = 'login.html';
-  });
-})();
-
+/* ── NAVEGAÇÃO ── */
 function toggleSidebar() {
-  var sidebar = document.getElementById('sidebar');
-  var overlay = document.getElementById('sidebar-overlay');
-  sidebar.classList.toggle('open');
-  overlay.classList.toggle('active');
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('sidebar-overlay').classList.toggle('active');
 }
 
 function closeSidebarOnMobile() {
@@ -50,11 +31,11 @@ function closeSidebarOnMobile() {
 var pageTitle = document.querySelector('.page-title');
 
 var sections = {
-  inicio:         document.getElementById('inicio-section'),
-  orientacoes:    document.getElementById('orientacoes-section'),
-  chat:           document.getElementById('chat-section'),
-  historico:      document.getElementById('historico-section'),
-  configuracoes:  document.getElementById('configuracoes-section')
+  inicio:        document.getElementById('inicio-section'),
+  orientacoes:   document.getElementById('orientacoes-section'),
+  chat:          document.getElementById('chat-section'),
+  historico:     document.getElementById('historico-section'),
+  configuracoes: document.getElementById('configuracoes-section')
 };
 
 var navItems = {
@@ -74,16 +55,15 @@ var pageTitles = {
 };
 
 function esconderPaginas() {
-  Object.values(sections).forEach(function(s) { if (s) s.classList.add('hidden'); });
+  Object.values(sections).forEach(function(s){ if(s) s.classList.add('hidden'); });
 }
 
 function limparMenu() {
-  Object.values(navItems).forEach(function(n) { if (n) n.classList.remove('active'); });
+  Object.values(navItems).forEach(function(n){ if(n) n.classList.remove('active'); });
 }
 
 function mostrarSecao(nome) {
-  esconderPaginas();
-  limparMenu();
+  esconderPaginas(); limparMenu();
   if (sections[nome]) sections[nome].classList.remove('hidden');
   if (navItems[nome]) navItems[nome].classList.add('active');
   if (pageTitle) pageTitle.textContent = pageTitles[nome] || '';
@@ -91,7 +71,7 @@ function mostrarSecao(nome) {
   if (nome === 'historico') applyHistFilter(currentHistFilter);
 }
 
-var abasBloqueadas = ['orientacoes', 'chat', 'configuracoes'];
+var abasBloqueadas = ['orientacoes', 'chat'];
 
 Object.keys(navItems).forEach(function(key) {
   var el = navItems[key];
@@ -103,6 +83,17 @@ Object.keys(navItems).forEach(function(key) {
   });
 });
 
+/* ── LOGOUT ── */
+var btnSairIcon = document.querySelector('.nav-item .fa-right-from-bracket');
+if (btnSairIcon) {
+  btnSairIcon.closest('.nav-item').addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem('usuarioLogado');
+    window.location.href = 'login.html';
+  });
+}
+
+/* ── NOTIFICAÇÕES ── */
 var notificationBtn     = document.getElementById('notification-btn');
 var notificationMenu    = document.getElementById('notification-menu');
 var notificationDot     = document.getElementById('notification-dot');
@@ -119,27 +110,24 @@ if (notificationMenu) {
 }
 
 if (notificationBtn && notificationMenu) {
-  notificationBtn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    notificationMenu.classList.toggle('open');
-  });
+  notificationBtn.addEventListener('click', function(e) { e.stopPropagation(); notificationMenu.classList.toggle('open'); });
   document.addEventListener('click', function(e) {
     if (!notificationMenu.contains(e.target) && !notificationBtn.contains(e.target)) notificationMenu.classList.remove('open');
   });
 }
 
 if (notificationWrapper && notificationMenu) {
-  notificationWrapper.addEventListener('mouseenter', function() { clearTimeout(notificationCloseTimer); notificationMenu.classList.add('open'); });
-  notificationWrapper.addEventListener('mouseleave', function() { notificationCloseTimer = setTimeout(function() { notificationMenu.classList.remove('open'); }, 350); });
-  notificationMenu.addEventListener('mouseenter', function() { clearTimeout(notificationCloseTimer); });
-  notificationMenu.addEventListener('mouseleave', function() { notificationCloseTimer = setTimeout(function() { notificationMenu.classList.remove('open'); }, 250); });
+  notificationWrapper.addEventListener('mouseenter', function(){ clearTimeout(notificationCloseTimer); notificationMenu.classList.add('open'); });
+  notificationWrapper.addEventListener('mouseleave', function(){ notificationCloseTimer = setTimeout(function(){notificationMenu.classList.remove('open');}, 350); });
+  notificationMenu.addEventListener('mouseenter',   function(){ clearTimeout(notificationCloseTimer); });
+  notificationMenu.addEventListener('mouseleave',   function(){ notificationCloseTimer = setTimeout(function(){notificationMenu.classList.remove('open');}, 250); });
 }
 
 document.querySelectorAll('.notification-item[data-target-section]').forEach(function(item) {
   item.addEventListener('click', function() {
     mostrarSecao(item.dataset.targetSection);
     if (notificationMenu) notificationMenu.classList.remove('open');
-    setTimeout(function() { scrollToTarget(item.dataset.targetId); }, 80);
+    setTimeout(function(){scrollToTarget(item.dataset.targetId);}, 80);
   });
 });
 
@@ -153,11 +141,12 @@ function atualizarNotificationDot() {
 function scrollToTarget(targetId) {
   var target = document.getElementById(targetId);
   if (!target) return;
-  target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  target.scrollIntoView({behavior:'smooth', block:'center'});
   target.classList.add('focus-highlight');
-  setTimeout(function() { target.classList.remove('focus-highlight'); }, 1400);
+  setTimeout(function(){target.classList.remove('focus-highlight');}, 1400);
 }
 
+/* ── HISTÓRICO ── */
 var currentHistFilter  = 'todos';
 var histFilterButtons  = document.querySelectorAll('.hist-filter');
 var timelineEntries    = document.querySelectorAll('.timeline-entry');
@@ -177,37 +166,34 @@ var filterLabels = {
 function applyHistFilter(filter) {
   currentHistFilter = filter;
   var visibleCount = 0;
-
-  histFilterButtons.forEach(function(btn) { btn.classList.toggle('active', btn.dataset.histFilter === filter); });
-
+  histFilterButtons.forEach(function(btn){ btn.classList.toggle('active', btn.dataset.histFilter === filter); });
   timelineEntries.forEach(function(entry) {
     var show = filter === 'todos' || entry.dataset.tipo === filter;
     entry.style.display = show ? 'grid' : 'none';
     if (show) visibleCount++;
   });
-
   timelineGroups.forEach(function(group) {
-    var vis = Array.from(group.querySelectorAll('.timeline-entry')).filter(function(e) { return e.style.display !== 'none'; });
+    var vis = Array.from(group.querySelectorAll('.timeline-entry')).filter(function(e){return e.style.display !== 'none';});
     group.style.display = vis.length > 0 ? 'flex' : 'none';
   });
-
-  if (emptyHistorico)     emptyHistorico.style.display     = visibleCount === 0 ? 'block' : 'none';
-  if (historicoListTitle) historicoListTitle.textContent   = filterLabels[filter] || 'Todos os registros';
-  if (historicoTotal)     historicoTotal.textContent       = visibleCount;
+  if (emptyHistorico)     emptyHistorico.style.display   = visibleCount === 0 ? 'block' : 'none';
+  if (historicoListTitle) historicoListTitle.textContent  = filterLabels[filter] || 'Todos os registros';
+  if (historicoTotal)     historicoTotal.textContent      = visibleCount;
 }
 
 histFilterButtons.forEach(function(btn) {
-  btn.addEventListener('click', function() { applyHistFilter(btn.dataset.histFilter); });
+  btn.addEventListener('click', function(){ applyHistFilter(btn.dataset.histFilter); });
 });
 
 function calcularContadores() {
-  ['tarefa', 'foto', 'mensagem', 'medicacao'].forEach(function(tipo) {
+  ['tarefa','foto','mensagem','medicacao'].forEach(function(tipo) {
     var el = document.getElementById('count-' + tipo);
     if (el) el.textContent = document.querySelectorAll('.timeline-entry[data-tipo="' + tipo + '"]').length;
   });
   if (historicoTotal) historicoTotal.textContent = document.querySelectorAll('.timeline-entry').length;
 }
 
+/* ── MODAIS ── */
 var photosModal      = document.getElementById('photos-modal');
 var imageViewerModal = document.getElementById('image-viewer-modal');
 var photosModalTitle = document.getElementById('photos-modal-title');
@@ -223,7 +209,7 @@ function openPhotosForDay(label) {
 }
 
 document.querySelectorAll('.btn-tl-action[data-open-fotos]').forEach(function(btn) {
-  btn.addEventListener('click', function() { openPhotosForDay(btn.dataset.openFotos); });
+  btn.addEventListener('click', function(){ openPhotosForDay(btn.dataset.openFotos); });
 });
 
 document.querySelectorAll('.photo-placeholder').forEach(function(photo) {
@@ -236,20 +222,21 @@ document.querySelectorAll('.photo-placeholder').forEach(function(photo) {
 });
 
 document.querySelectorAll('[data-close-modal]').forEach(function(btn) {
-  btn.addEventListener('click', function() { closeModal(document.getElementById(btn.dataset.closeModal)); });
+  btn.addEventListener('click', function(){ closeModal(document.getElementById(btn.dataset.closeModal)); });
 });
 
 document.querySelectorAll('.modal-overlay').forEach(function(modal) {
-  modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(modal); });
+  modal.addEventListener('click', function(e){ if (e.target === modal) closeModal(modal); });
 });
 
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
-    document.querySelectorAll('.modal-overlay.open').forEach(function(modal) { closeModal(modal); });
+    document.querySelectorAll('.modal-overlay.open').forEach(function(m){ closeModal(m); });
     if (notificationMenu) notificationMenu.classList.remove('open');
   }
 });
 
+/* ── TOAST ── */
 var toastEl    = null;
 var toastTimer = null;
 
@@ -258,9 +245,10 @@ function mostrarToast(msg) {
   toastEl.textContent = msg;
   toastEl.classList.add('show');
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(function() { toastEl.classList.remove('show'); }, 2400);
+  toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2400);
 }
 
+/* ── INIT ── */
 calcularContadores();
 applyHistFilter('todos');
 atualizarNotificationDot();

@@ -1,49 +1,36 @@
-(function() {
-  var dados = localStorage.getItem('usuarioLogado');
-  if (!dados) { window.location.href = 'login.html'; return; }
-  var usuario = JSON.parse(dados);
-  if (usuario.perfil !== 'profissional') { window.location.href = 'login.html'; return; }
-})();
+var usuario = JSON.parse(localStorage.getItem('usuarioLogado')) || {};
 
-(function() {
-  var usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
-  if (!usuario) return;
+if (!usuario.nome || usuario.perfil !== 'profissional') {
+  window.location.href = 'login.html';
+}
 
-  var iniciais = usuario.nome.split(' ').filter(function(p) { return p.length > 0; }).slice(0, 2).map(function(p) { return p[0].toUpperCase(); }).join('');
+var medicosCadastrados = JSON.parse(localStorage.getItem('medicosCadastrados')) || [];
+var medicoCompleto = medicosCadastrados.find(function(m) { return m.email === usuario.email; }) || {};
 
-  var userNameEl = document.querySelector('.user-name');
-  var avatarEl   = document.querySelector('.user-profile .avatar');
-  if (userNameEl) userNameEl.textContent = usuario.nome;
-  if (avatarEl)   avatarEl.textContent   = iniciais;
+var _iniciais = (usuario.nome || 'MD').split(' ').filter(function(p){return p.length>0;}).slice(0,2).map(function(p){return p[0].toUpperCase();}).join('');
 
-  var configNome       = document.getElementById('config-nome');
-  var configCrm        = document.getElementById('config-crm');
-  var configFoto       = document.getElementById('profile-photo-preview');
-  var configAssinatura = document.getElementById('config-assinatura');
+var topbarNome   = document.querySelector('.user-name');
+var topbarAvatar = document.querySelector('.user-profile .avatar');
 
-  if (configNome)       configNome.value       = usuario.nome;
-  if (configCrm)        configCrm.value        = usuario.crm || '';
-  if (configFoto)       configFoto.textContent = iniciais;
-  if (configAssinatura) configAssinatura.value = 'Atenciosamente, ' + usuario.nome + ' - HairCare Pro';
-})();
+if (topbarNome)   topbarNome.textContent   = usuario.nome;
+if (topbarAvatar) topbarAvatar.textContent = _iniciais;
 
-(function() {
-  var btn = document.querySelector('.nav-item .fa-right-from-bracket');
-  if (!btn) return;
-  var link = btn.closest('.nav-item');
-  if (!link) return;
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem('usuarioLogado');
-    window.location.href = 'login.html';
-  });
-})();
+var savedProfileImageUrl = localStorage.getItem('medico_foto_perfil') || null;
+if (savedProfileImageUrl && topbarAvatar) {
+  topbarAvatar.innerHTML = '<img class="avatar-img" src="' + savedProfileImageUrl + '" alt="Foto de perfil"/>';
+}
 
+/* ── NAVEGAÇÃO ── */
 function toggleSidebar() {
-  var sidebar = document.getElementById('sidebar');
-  var overlay = document.getElementById('sidebar-overlay');
-  sidebar.classList.toggle('open');
-  overlay.classList.toggle('active');
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('sidebar-overlay').classList.toggle('active');
+}
+
+function closeSidebarOnMobile() {
+  if (window.innerWidth <= 1000) {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('sidebar-overlay').classList.remove('active');
+  }
 }
 
 var pageTitle            = document.querySelector('.page-title');
@@ -56,25 +43,12 @@ var navAlertas           = document.getElementById('nav-alertas');
 var navMensagens         = document.getElementById('nav-mensagens');
 var navConfiguracoes     = document.getElementById('nav-configuracoes');
 
-function closeSidebarOnMobile() {
-  if (window.innerWidth <= 1000) {
-    document.getElementById('sidebar').classList.remove('open');
-    document.getElementById('sidebar-overlay').classList.remove('active');
-  }
-}
-
 function esconderPaginas() {
-  painelSection.classList.add('hidden');
-  if (alertasSection) alertasSection.classList.add('hidden');
-  mensagensSection.classList.add('hidden');
-  configuracoesSection.classList.add('hidden');
+  [painelSection, alertasSection, mensagensSection, configuracoesSection].forEach(function(s){ if(s) s.classList.add('hidden'); });
 }
 
 function limparMenu() {
-  navPainel.classList.remove('active');
-  if (navAlertas) navAlertas.classList.remove('active');
-  navMensagens.classList.remove('active');
-  navConfiguracoes.classList.remove('active');
+  [navPainel, navAlertas, navMensagens, navConfiguracoes].forEach(function(n){ if(n) n.classList.remove('active'); });
 }
 
 function mostrarPainel() {
@@ -100,7 +74,7 @@ function mostrarMensagens() {
   navMensagens.classList.add('active');
   pageTitle.textContent = 'Dúvidas';
   closeSidebarOnMobile();
-  if (typeof applyQuestionFilter === 'function') applyQuestionFilter('todas');
+  applyQuestionFilter('todas');
 }
 
 function mostrarConfiguracoes() {
@@ -108,14 +82,26 @@ function mostrarConfiguracoes() {
   configuracoesSection.classList.remove('hidden');
   navConfiguracoes.classList.add('active');
   pageTitle.textContent = 'Configurações';
+  carregarConfiguracoes();
   closeSidebarOnMobile();
 }
 
-navPainel.addEventListener('click',        function(e) { e.preventDefault(); mostrarPainel(); });
-navAlertas.addEventListener('click',       function(e) { e.preventDefault(); mostrarAlertas(); });
-navMensagens.addEventListener('click',     function(e) { e.preventDefault(); mostrarMensagens(); });
-navConfiguracoes.addEventListener('click', function(e) { e.preventDefault(); mostrarConfiguracoes(); });
+navPainel.addEventListener('click',        function(e){e.preventDefault();mostrarPainel();});
+navAlertas.addEventListener('click',       function(e){e.preventDefault();mostrarAlertas();});
+navMensagens.addEventListener('click',     function(e){e.preventDefault();mostrarMensagens();});
+navConfiguracoes.addEventListener('click', function(e){e.preventDefault();mostrarConfiguracoes();});
 
+/* ── LOGOUT ── */
+var btnSairIcon = document.querySelector('.nav-item .fa-right-from-bracket');
+if (btnSairIcon) {
+  btnSairIcon.closest('.nav-item').addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem('usuarioLogado');
+    window.location.href = 'login.html';
+  });
+}
+
+/* ── NOTIFICAÇÕES ── */
 var notificationBtn     = document.getElementById('notification-btn');
 var notificationMenu    = document.getElementById('notification-menu');
 var notificationWrapper = document.querySelector('.notification-wrapper');
@@ -140,11 +126,12 @@ if (notificationBtn && notificationMenu) {
 
 if (notificationWrapper && notificationMenu) {
   notificationWrapper.addEventListener('mouseenter', function() { clearTimeout(notificationCloseTimer); notificationMenu.classList.add('open'); });
-  notificationWrapper.addEventListener('mouseleave', function() { notificationCloseTimer = setTimeout(function() { notificationMenu.classList.remove('open'); }, 350); });
+  notificationWrapper.addEventListener('mouseleave', function() { notificationCloseTimer = setTimeout(function(){notificationMenu.classList.remove('open');}, 350); });
   notificationMenu.addEventListener('mouseenter',   function() { clearTimeout(notificationCloseTimer); notificationMenu.classList.add('open'); });
-  notificationMenu.addEventListener('mouseleave',   function() { notificationCloseTimer = setTimeout(function() { notificationMenu.classList.remove('open'); }, 250); });
+  notificationMenu.addEventListener('mouseleave',   function() { notificationCloseTimer = setTimeout(function(){notificationMenu.classList.remove('open');}, 250); });
 }
 
+/* ── MODAIS ── */
 var photosModal      = document.getElementById('photos-modal');
 var imageViewerModal = document.getElementById('image-viewer-modal');
 var imageViewerTitle = document.getElementById('image-viewer-title');
@@ -157,14 +144,14 @@ function openModal(modal)  { if (modal) modal.classList.add('open'); }
 function closeModal(modal) { if (modal) modal.classList.remove('open'); }
 
 function openPhotosForPatient(name) {
-  if (photosModalTitle) photosModalTitle.textContent = 'Fotos enviadas - ' + name;
+  if (photosModalTitle) photosModalTitle.textContent = 'Fotos enviadas — ' + name;
   openModal(photosModal);
 }
 
 document.querySelectorAll('.photo-placeholder').forEach(function(photo) {
   photo.addEventListener('click', function() {
     var label = photo.dataset.photoLabel || 'Foto enviada';
-    if (imageViewerTitle) imageViewerTitle.textContent = 'Imagem ampliada - ' + label;
+    if (imageViewerTitle) imageViewerTitle.textContent = 'Imagem ampliada — ' + label;
     if (imageViewerLabel) imageViewerLabel.textContent = label;
     openModal(imageViewerModal);
   });
@@ -178,13 +165,21 @@ document.querySelectorAll('.modal-overlay').forEach(function(modal) {
   modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(modal); });
 });
 
-if (btnAvaliarFotos)     btnAvaliarFotos.addEventListener('click',     function() { openPhotosForPatient('Gabriel Victor'); });
-if (btnResponderMensagem) btnResponderMensagem.addEventListener('click', function() { mostrarMensagens(); setTimeout(function() { scrollToTarget('duvida-andre'); }, 80); });
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(function(m){ closeModal(m); });
+    if (notificationMenu) notificationMenu.classList.remove('open');
+  }
+});
+
+if (btnAvaliarFotos)      btnAvaliarFotos.addEventListener('click',      function() { openPhotosForPatient('Paciente'); });
+if (btnResponderMensagem) btnResponderMensagem.addEventListener('click', function() { mostrarMensagens(); setTimeout(function(){scrollToTarget('duvida-andre');}, 80); });
 
 document.querySelectorAll('.btn-view-photos').forEach(function(btn) {
   btn.addEventListener('click', function() { openPhotosForPatient(btn.dataset.patient || 'Paciente'); });
 });
 
+/* ── DÚVIDAS ── */
 var quickAnswers          = document.querySelectorAll('.quick-answer');
 var answerBoxes           = document.querySelectorAll('.answer-box');
 var sendAnswerButtons     = document.querySelectorAll('.send-answer');
@@ -197,45 +192,66 @@ var questionsListTitle    = document.getElementById('questions-list-title');
 var duvidasBadge          = document.querySelector('#nav-mensagens .badge-nav');
 var messagesCounterNumber = document.querySelector('.messages-counter strong');
 
-var pendingSummary  = Array.from(document.querySelectorAll('.questions-summary-item')).find(function(i) { return i.textContent.includes('Dúvidas pendentes'); });
-var answeredSummary = Array.from(document.querySelectorAll('.questions-summary-item')).find(function(i) { return i.textContent.includes('Respondidas hoje'); });
+var pendingSummary  = Array.from(document.querySelectorAll('.questions-summary-item')).find(function(i){return i.textContent.includes('Dúvidas pendentes');});
+var answeredSummary = Array.from(document.querySelectorAll('.questions-summary-item')).find(function(i){return i.textContent.includes('Respondidas hoje');});
 
-var pendingQuestionsCount = document.querySelectorAll('.question-card[data-question-status="pending"]').length;
-var answeredTodayCount    = 3;
-var currentQuestionFilter = 'todas';
-var savedNotificationPreferences = { criticos: true, duvidas: true, atrasos: true };
+var _duvidaState              = JSON.parse(localStorage.getItem('medico_duvidas_state')) || {};
+var pendingQuestionsCount     = 0;
+var answeredTodayCount        = parseInt(localStorage.getItem('medico_respondidas_hoje')) || 0;
+var currentQuestionFilter     = 'todas';
+var savedNotificationPreferences = JSON.parse(localStorage.getItem('medico_notif_prefs')) || { criticos: true, duvidas: true, atrasos: true };
+
+questionCards.forEach(function(card) {
+  var id = card.id;
+  if (_duvidaState[id]) {
+    var s        = _duvidaState[id];
+    card.dataset.questionStatus = s.status;
+    var textarea = card.querySelector('.answer-box');
+    var badge    = card.querySelector('.question-badge');
+    var sendBtn  = card.querySelector('.send-answer');
+    if (s.resposta && textarea) textarea.value = s.resposta;
+    if (s.status === 'answered') {
+      card.classList.add('is-answered');
+      if (badge)   { badge.textContent = 'Respondida'; badge.style.background = 'var(--success-bg)'; badge.style.color = 'var(--success)'; }
+      if (textarea)  textarea.disabled = true;
+      if (sendBtn) { sendBtn.textContent = 'Resposta enviada'; sendBtn.disabled = true; }
+    }
+  }
+  if (card.dataset.questionStatus === 'pending') pendingQuestionsCount++;
+});
+
+function salvarDuvidaState(card) {
+  var id       = card.id;
+  var textarea = card.querySelector('.answer-box');
+  _duvidaState[id] = { status: card.dataset.questionStatus, resposta: textarea ? textarea.value : '' };
+  localStorage.setItem('medico_duvidas_state', JSON.stringify(_duvidaState));
+}
 
 function applyQuestionFilter(filter) {
   currentQuestionFilter = filter;
   var visibleCount = 0;
-
   questionFilterButtons.forEach(function(btn) { btn.classList.toggle('active', btn.dataset.questionFilter === filter); });
-
   questionCards.forEach(function(card) {
     var show = filter === 'todas' || card.dataset.questionStatus === filter;
     card.style.display = show ? 'block' : 'none';
     if (show) visibleCount++;
   });
-
   if (emptyQuestions) emptyQuestions.style.display = visibleCount === 0 ? 'block' : 'none';
-
   if (questionsListTitle) {
-    if (filter === 'pending')  questionsListTitle.textContent = 'Dúvidas pendentes';
+    if (filter === 'pending')       questionsListTitle.textContent = 'Dúvidas pendentes';
     else if (filter === 'answered') questionsListTitle.textContent = 'Dúvidas respondidas';
-    else questionsListTitle.textContent = 'Todas as dúvidas';
+    else                            questionsListTitle.textContent = 'Todas as dúvidas';
   }
 }
 
 function updateQuestionCounters() {
-  if (duvidasBadge) { duvidasBadge.textContent = pendingQuestionsCount; duvidasBadge.style.display = pendingQuestionsCount > 0 ? 'inline-flex' : 'none'; }
-  if (messagesCounterNumber) messagesCounterNumber.textContent = pendingQuestionsCount;
+  if (duvidasBadge)          { duvidasBadge.textContent = pendingQuestionsCount; duvidasBadge.style.display = pendingQuestionsCount > 0 ? 'inline-flex' : 'none'; }
+  if (messagesCounterNumber)   messagesCounterNumber.textContent = pendingQuestionsCount;
   if (pendingSummary)  { var v  = pendingSummary.querySelector('strong');  if (v)  v.textContent = pendingQuestionsCount; }
   if (answeredSummary) { var v2 = answeredSummary.querySelector('strong'); if (v2) v2.textContent = answeredTodayCount; }
-
   document.querySelectorAll('[data-question-notification="true"]').forEach(function(item) {
     item.classList.toggle('is-hidden', pendingQuestionsCount === 0 || savedNotificationPreferences.duvidas === false);
   });
-
   if (notificationDot) {
     var vis = document.querySelectorAll('.notification-item:not(.is-hidden)').length;
     notificationDot.textContent = vis;
@@ -243,8 +259,48 @@ function updateQuestionCounters() {
   }
 }
 
+function scrollToTarget(targetId) {
+  var target = document.getElementById(targetId);
+  if (!target) return;
+  target.scrollIntoView({behavior:'smooth', block:'center'});
+  target.classList.add('focus-highlight');
+  setTimeout(function(){target.classList.remove('focus-highlight');}, 1400);
+}
+
+notificationItems.forEach(function(item) {
+  item.addEventListener('click', function() {
+    if (item.dataset.targetSection === 'duvidas') mostrarMensagens();
+    if (item.dataset.targetSection === 'alertas') mostrarAlertas();
+    if (notificationMenu) notificationMenu.classList.remove('open');
+    setTimeout(function(){scrollToTarget(item.dataset.targetId);}, 80);
+  });
+});
+
+quickAnswers.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var box = Array.from(answerBoxes).find(function(b){return !b.disabled && b.value.trim()==='';})
+           || Array.from(answerBoxes).find(function(b){return !b.disabled;});
+    if (!box) return;
+    box.value = btn.textContent.trim();
+    box.focus();
+    var card = box.closest('.question-card');
+    if (card) salvarDuvidaState(card);
+  });
+});
+
+answerBoxes.forEach(function(box) {
+  box.addEventListener('input', function() {
+    var card = box.closest('.question-card');
+    if (card) salvarDuvidaState(card);
+  });
+});
+
+questionFilterButtons.forEach(function(btn) {
+  btn.addEventListener('click', function() { applyQuestionFilter(btn.dataset.questionFilter); });
+});
+
 function downloadTextFile(filename, content) {
-  var blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+  var blob = new Blob([content], {type:'text/plain;charset=utf-8'});
   var url  = URL.createObjectURL(blob);
   var link = document.createElement('a');
   link.href = url; link.download = filename;
@@ -253,49 +309,19 @@ function downloadTextFile(filename, content) {
 }
 
 function sanitizeFilename(text) {
-  return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9]+/g, '-').replace(/^-+|-+$/g, '').toLowerCase();
+  return text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9]+/g,'-').replace(/^-+|-+$/g,'').toLowerCase();
 }
-
-function scrollToTarget(targetId) {
-  var target = document.getElementById(targetId);
-  if (!target) return;
-  target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  target.classList.add('focus-highlight');
-  setTimeout(function() { target.classList.remove('focus-highlight'); }, 1400);
-}
-
-notificationItems.forEach(function(item) {
-  item.addEventListener('click', function() {
-    if (item.dataset.targetSection === 'duvidas') mostrarMensagens();
-    if (item.dataset.targetSection === 'alertas') mostrarAlertas();
-    if (notificationMenu) notificationMenu.classList.remove('open');
-    setTimeout(function() { scrollToTarget(item.dataset.targetId); }, 80);
-  });
-});
-
-quickAnswers.forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    var box = Array.from(answerBoxes).find(function(b) { return !b.disabled && b.value.trim() === ''; })
-           || Array.from(answerBoxes).find(function(b) { return !b.disabled; });
-    if (!box) return;
-    box.value = btn.textContent.trim();
-    box.focus();
-  });
-});
-
-questionFilterButtons.forEach(function(btn) {
-  btn.addEventListener('click', function() { applyQuestionFilter(btn.dataset.questionFilter); });
-});
 
 draftButtons.forEach(function(btn) {
   btn.addEventListener('click', function() {
-    var card       = btn.closest('.question-card');
-    var name       = card.querySelector('.question-patient h3').textContent.trim();
-    var question   = card.querySelector('.question-text').textContent.trim();
-    var textarea   = card.querySelector('.answer-box');
-    var answer     = textarea.value.trim();
+    var card     = btn.closest('.question-card');
+    var name     = card.querySelector('.question-patient h3').textContent.trim();
+    var question = card.querySelector('.question-text').textContent.trim();
+    var textarea = card.querySelector('.answer-box');
+    var answer   = textarea.value.trim();
     if (!answer) { textarea.focus(); return; }
-    downloadTextFile('rascunho-' + sanitizeFilename(name) + '.txt', 'Paciente: ' + name + '\n\nDúvida do paciente:\n' + question + '\n\nRascunho da resposta:\n' + answer + '\n');
+    salvarDuvidaState(card);
+    downloadTextFile('rascunho-' + sanitizeFilename(name) + '.txt', 'Paciente: ' + name + '\n\nDúvida:\n' + question + '\n\nRascunho:\n' + answer + '\n');
   });
 });
 
@@ -308,36 +334,60 @@ sendAnswerButtons.forEach(function(btn) {
     if (!textarea.value.trim()) { textarea.focus(); return; }
     card.dataset.questionStatus = 'answered';
     card.classList.add('is-answered');
-    badge.textContent       = 'Respondida';
-    badge.style.background  = 'var(--success-bg)';
-    badge.style.color       = 'var(--success)';
-    textarea.disabled       = true;
-    btn.textContent         = 'Resposta enviada';
-    btn.disabled            = true;
-    pendingQuestionsCount   = Math.max(0, pendingQuestionsCount - 1);
-    answeredTodayCount      = answeredTodayCount + 1;
+    badge.textContent      = 'Respondida';
+    badge.style.background = 'var(--success-bg)';
+    badge.style.color      = 'var(--success)';
+    textarea.disabled      = true;
+    btn.textContent        = 'Resposta enviada';
+    btn.disabled           = true;
+    pendingQuestionsCount  = Math.max(0, pendingQuestionsCount - 1);
+    answeredTodayCount++;
+    localStorage.setItem('medico_respondidas_hoje', answeredTodayCount);
+    salvarDuvidaState(card);
     updateQuestionCounters();
     updateNotificationPreferences();
     applyQuestionFilter(currentQuestionFilter);
   });
 });
 
+/* ── CONFIGURAÇÕES ── */
 var saveProfileSettings  = document.getElementById('save-profile-settings');
 var settingsSaveMessage  = document.getElementById('settings-save-message');
 var profilePhotoInput    = document.getElementById('config-foto');
 var resetProfilePhoto    = document.getElementById('reset-profile-photo');
 var profilePhotoPreview  = document.getElementById('profile-photo-preview');
-var topbarAvatar         = document.querySelector('.user-profile .avatar');
 var notificationToggles  = document.querySelectorAll('[data-notification-toggle]');
 
 var pendingProfileImageUrl   = null;
-var savedProfileImageUrl     = null;
 var pendingProfilePhotoReset = false;
 
-var _u = JSON.parse(localStorage.getItem('usuarioLogado')) || {};
-var _iniciais = (_u.nome || 'MD').split(' ').filter(function(p) { return p.length > 0; }).slice(0, 2).map(function(p) { return p[0].toUpperCase(); }).join('');
+notificationToggles.forEach(function(t) {
+  var key = t.dataset.notificationToggle;
+  t.checked = savedNotificationPreferences[key] !== false;
+  savedNotificationPreferences[key] = t.checked;
+});
 
-notificationToggles.forEach(function(t) { savedNotificationPreferences[t.dataset.notificationToggle] = t.checked; });
+function carregarConfiguracoes() {
+  var configNome          = document.getElementById('config-nome');
+  var configCrm           = document.getElementById('config-crm');
+  var configEspecialidade = document.getElementById('config-especialidade');
+  var configAssinatura    = document.getElementById('config-assinatura');
+  var fotoPreview         = document.getElementById('profile-photo-preview');
+
+  if (configNome)          configNome.value          = usuario.nome || '';
+  if (configCrm)           configCrm.value           = usuario.crm  || (medicoCompleto.dadosProfissionais && medicoCompleto.dadosProfissionais.crm) || '';
+  if (configEspecialidade) configEspecialidade.value = (medicoCompleto.dadosProfissionais && medicoCompleto.dadosProfissionais.especialidade) || '';
+
+  var assinaturaSalva = localStorage.getItem('medico_assinatura');
+  if (configAssinatura) configAssinatura.value = assinaturaSalva || ('Atenciosamente, ' + (usuario.nome || '') + ' - HairCare Pro');
+
+  if (savedProfileImageUrl && fotoPreview) {
+    fotoPreview.innerHTML = '<img src="' + savedProfileImageUrl + '" alt="Foto de perfil"/>';
+    if (topbarAvatar) topbarAvatar.innerHTML = '<img class="avatar-img" src="' + savedProfileImageUrl + '" alt="Foto de perfil"/>';
+  } else if (fotoPreview) {
+    fotoPreview.textContent = _iniciais;
+  }
+}
 
 function showSettingsMessage(text, type) {
   if (!settingsSaveMessage) return;
@@ -345,16 +395,21 @@ function showSettingsMessage(text, type) {
   settingsSaveMessage.classList.remove('warning');
   if (type === 'warning') settingsSaveMessage.classList.add('warning');
   settingsSaveMessage.classList.add('show');
-  setTimeout(function() { settingsSaveMessage.classList.remove('show'); }, 2400);
+  setTimeout(function(){settingsSaveMessage.classList.remove('show');}, 2400);
 }
 
-if (profilePhotoInput && profilePhotoPreview && topbarAvatar) {
+if (profilePhotoInput && profilePhotoPreview) {
   profilePhotoInput.addEventListener('change', function() {
     var file = profilePhotoInput.files && profilePhotoInput.files[0];
     if (!file) return;
-    if (!file.type.startsWith('image/')) { showSettingsMessage('Selecione um arquivo de imagem válido.', 'warning'); profilePhotoInput.value = ''; pendingProfileImageUrl = null; return; }
+    if (!file.type.startsWith('image/')) { showSettingsMessage('Selecione um arquivo de imagem válido.', 'warning'); profilePhotoInput.value=''; pendingProfileImageUrl=null; return; }
     var reader = new FileReader();
-    reader.onload = function(e) { pendingProfileImageUrl = e.target.result; pendingProfilePhotoReset = false; profilePhotoPreview.innerHTML = '<img src="' + pendingProfileImageUrl + '" alt="Prévia"/>'; showSettingsMessage('Foto carregada. Salve para aplicar.', 'success'); };
+    reader.onload = function(e) {
+      pendingProfileImageUrl   = e.target.result;
+      pendingProfilePhotoReset = false;
+      profilePhotoPreview.innerHTML = '<img src="' + pendingProfileImageUrl + '" alt="Prévia"/>';
+      showSettingsMessage('Foto carregada. Salve para aplicar.', 'success');
+    };
     reader.readAsDataURL(file);
   });
 }
@@ -370,16 +425,13 @@ if (resetProfilePhoto && profilePhotoPreview && profilePhotoInput) {
 function updateNotificationPreferences() {
   var disabled = new Set();
   notificationToggles.forEach(function(t) { if (!savedNotificationPreferences[t.dataset.notificationToggle]) disabled.add(t.dataset.notificationToggle); });
-
   document.querySelectorAll('[data-notification-category]').forEach(function(item) {
     item.classList.toggle('is-hidden', disabled.has(item.dataset.notificationCategory));
   });
-
   document.querySelectorAll('.settings-toggle').forEach(function(row) {
     var t = row.querySelector('[data-notification-toggle]');
     if (t) row.classList.toggle('notification-disabled', !savedNotificationPreferences[t.dataset.notificationToggle]);
   });
-
   updateQuestionCounters();
 }
 
@@ -391,17 +443,24 @@ notificationToggles.forEach(function(t) {
   });
 });
 
-if (saveProfileSettings && settingsSaveMessage) {
+if (saveProfileSettings) {
   saveProfileSettings.addEventListener('click', function() {
     notificationToggles.forEach(function(t) { savedNotificationPreferences[t.dataset.notificationToggle] = t.checked; });
+    localStorage.setItem('medico_notif_prefs', JSON.stringify(savedNotificationPreferences));
 
-    if (pendingProfilePhotoReset && topbarAvatar && profilePhotoPreview) {
+    var configAssinatura = document.getElementById('config-assinatura');
+    if (configAssinatura) localStorage.setItem('medico_assinatura', configAssinatura.value);
+
+    if (pendingProfilePhotoReset) {
       savedProfileImageUrl = null; pendingProfileImageUrl = null; pendingProfilePhotoReset = false; profilePhotoInput.value = '';
-      topbarAvatar.textContent = _iniciais; profilePhotoPreview.textContent = _iniciais;
-    } else if (pendingProfileImageUrl && topbarAvatar && profilePhotoPreview) {
+      localStorage.removeItem('medico_foto_perfil');
+      if (topbarAvatar)       topbarAvatar.textContent       = _iniciais;
+      if (profilePhotoPreview) profilePhotoPreview.textContent = _iniciais;
+    } else if (pendingProfileImageUrl) {
       savedProfileImageUrl = pendingProfileImageUrl;
-      topbarAvatar.innerHTML       = '<img class="avatar-img" src="' + savedProfileImageUrl + '" alt="Foto de perfil"/>';
-      profilePhotoPreview.innerHTML = '<img src="' + savedProfileImageUrl + '" alt="Foto de perfil"/>';
+      localStorage.setItem('medico_foto_perfil', savedProfileImageUrl);
+      if (topbarAvatar)        topbarAvatar.innerHTML        = '<img class="avatar-img" src="' + savedProfileImageUrl + '" alt="Foto de perfil"/>';
+      if (profilePhotoPreview) profilePhotoPreview.innerHTML = '<img src="' + savedProfileImageUrl + '" alt="Foto de perfil"/>';
       pendingProfileImageUrl = null;
     }
 
@@ -410,6 +469,7 @@ if (saveProfileSettings && settingsSaveMessage) {
   });
 }
 
+/* ── ALERTAS ── */
 var alertasBadge       = document.querySelector('#nav-alertas .badge-nav');
 var alertFilterButtons = document.querySelectorAll('.alert-filter-btn');
 var alertCards         = document.querySelectorAll('#alertas-section .alert-card');
@@ -420,14 +480,12 @@ var activeAlertsCount  = document.querySelectorAll('.alert-card[data-alert-statu
 
 function updateAlertBadge() {
   if (alertasBadge) { alertasBadge.textContent = activeAlertsCount; alertasBadge.style.display = activeAlertsCount > 0 ? 'inline-flex' : 'none'; }
-
   document.querySelectorAll('.notification-item[data-notification-category="criticos"], .notification-item[data-notification-category="atrasos"]').forEach(function(item) {
-    var cat     = item.dataset.notificationCategory;
-    var isOff   = savedNotificationPreferences[cat] === false;
+    var cat       = item.dataset.notificationCategory;
+    var isOff     = savedNotificationPreferences[cat] === false;
     var remaining = document.querySelectorAll('.alert-card[data-alert-status="active"][data-alert-type="' + cat + '"]').length;
     item.classList.toggle('is-hidden', remaining === 0 || isOff);
   });
-
   if (notificationDot) {
     var vis = document.querySelectorAll('.notification-item:not(.is-hidden)').length;
     notificationDot.textContent = vis;
@@ -438,19 +496,15 @@ function updateAlertBadge() {
 function applyAlertFilter(filter) {
   currentAlertFilter = filter;
   var visibleCount = 0;
-
   alertFilterButtons.forEach(function(btn) { btn.classList.toggle('active', btn.dataset.alertFilter === filter); });
-
   alertCards.forEach(function(card) {
     var show = filter === 'todos' || card.dataset.alertType === filter;
     card.style.display = show ? 'block' : 'none';
     if (show) visibleCount++;
   });
-
   if (emptyAlerts) emptyAlerts.style.display = visibleCount === 0 ? 'block' : 'none';
-
   if (alertsListTitle) {
-    if (filter === 'criticos')    alertsListTitle.textContent = 'Alertas críticos';
+    if (filter === 'criticos')     alertsListTitle.textContent = 'Alertas críticos';
     else if (filter === 'atrasos') alertsListTitle.textContent = 'Atrasos de envio';
     else                           alertsListTitle.textContent = 'Todos os alertas';
   }
@@ -468,6 +522,7 @@ document.querySelectorAll('.btn-view-alert-photos').forEach(function(btn) {
   });
 });
 
+/* ── INIT ── */
 updateQuestionCounters();
 updateNotificationPreferences();
 applyQuestionFilter('todas');
