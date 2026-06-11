@@ -12,22 +12,63 @@ document.addEventListener('DOMContentLoaded', function () {
 
         ids.forEach(function (id) {
             const arquivo = document.getElementById(id).files[0];
+
             if (arquivo) {
                 pendentes++;
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    dados.fotos[id] = e.target.result;
+
+                comprimirImagem(arquivo, function (imagemComprimida) {
+                    dados.fotos[id] = imagemComprimida;
                     pendentes--;
+
                     if (pendentes === 0) {
-                        localStorage.setItem('uploadFotos', JSON.stringify(dados));
+                        salvarFotos(dados);
                     }
-                };
-                reader.readAsDataURL(arquivo);
+                });
             }
         });
-
-        if (pendentes === 0) {
-            localStorage.setItem('uploadFotos', JSON.stringify(dados));
-        }
     });
+
+    function comprimirImagem(arquivo, callback) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const img = new Image();
+
+            img.onload = function () {
+                const canvas = document.createElement("canvas");
+                const larguraMaxima = 500;
+
+                const proporcao = larguraMaxima / img.width;
+
+                canvas.width = larguraMaxima;
+                canvas.height = img.height * proporcao;
+
+                const ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+                const imagemComprimida = canvas.toDataURL("image/jpeg", 0.45);
+
+                callback(imagemComprimida);
+            };
+
+            img.src = e.target.result;
+        };
+
+        reader.readAsDataURL(arquivo);
+    }
+
+    function salvarFotos(dados) {
+        try {
+            const historico = JSON.parse(localStorage.getItem("historicoUploadFotos")) || [];
+
+            historico.push(dados);
+
+            localStorage.setItem("historicoUploadFotos", JSON.stringify(historico));
+            localStorage.setItem("uploadFotos", JSON.stringify(dados));
+
+        } catch (erro) {
+            alert("As fotos estão muito grandes para salvar. Tente enviar menos fotos.");
+            console.error(erro);
+        }
+    }
 });
