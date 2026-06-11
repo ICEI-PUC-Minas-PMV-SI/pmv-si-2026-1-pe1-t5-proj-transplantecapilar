@@ -15,7 +15,6 @@ if (topbarNome)   topbarNome.textContent   = usuario.nome;
 if (topbarAvatar) topbarAvatar.textContent = _iniciais;
 if (heroH1)       heroH1.textContent       = 'Olá, ' + _primeiroNome + '! 👋';
 
-/* ── NAVEGAÇÃO ── */
 function toggleSidebar() {
   document.getElementById('sidebar').classList.toggle('open');
   document.getElementById('sidebar-overlay').classList.toggle('active');
@@ -83,7 +82,6 @@ Object.keys(navItems).forEach(function(key) {
   });
 });
 
-/* ── LOGOUT ── */
 var btnSairIcon = document.querySelector('.nav-item .fa-right-from-bracket');
 if (btnSairIcon) {
   btnSairIcon.closest('.nav-item').addEventListener('click', function(e) {
@@ -93,7 +91,6 @@ if (btnSairIcon) {
   });
 }
 
-/* ── NOTIFICAÇÕES ── */
 var notificationBtn     = document.getElementById('notification-btn');
 var notificationMenu    = document.getElementById('notification-menu');
 var notificationDot     = document.getElementById('notification-dot');
@@ -146,7 +143,6 @@ function scrollToTarget(targetId) {
   setTimeout(function(){target.classList.remove('focus-highlight');}, 1400);
 }
 
-/* ── HISTÓRICO ── */
 var currentHistFilter  = 'todos';
 var histFilterButtons  = document.querySelectorAll('.hist-filter');
 var timelineEntries    = document.querySelectorAll('.timeline-entry');
@@ -193,7 +189,6 @@ function calcularContadores() {
   if (historicoTotal) historicoTotal.textContent = document.querySelectorAll('.timeline-entry').length;
 }
 
-/* ── MODAIS ── */
 var photosModal      = document.getElementById('photos-modal');
 var imageViewerModal = document.getElementById('image-viewer-modal');
 var photosModalTitle = document.getElementById('photos-modal-title');
@@ -236,7 +231,6 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-/* ── TOAST ── */
 var toastEl    = null;
 var toastTimer = null;
 
@@ -248,7 +242,6 @@ function mostrarToast(msg) {
   toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2400);
 }
 
-/* ── INIT ── */
 calcularContadores();
 applyHistFilter('todos');
 atualizarNotificationDot();

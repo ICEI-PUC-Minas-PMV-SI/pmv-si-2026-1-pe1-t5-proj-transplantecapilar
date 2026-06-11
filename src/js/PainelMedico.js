@@ -20,7 +20,6 @@ if (savedProfileImageUrl && topbarAvatar) {
   topbarAvatar.innerHTML = '<img class="avatar-img" src="' + savedProfileImageUrl + '" alt="Foto de perfil"/>';
 }
 
-/* ── NAVEGAÇÃO ── */
 function toggleSidebar() {
   document.getElementById('sidebar').classList.toggle('open');
   document.getElementById('sidebar-overlay').classList.toggle('active');
@@ -91,7 +90,6 @@ navAlertas.addEventListener('click',       function(e){e.preventDefault();mostra
 navMensagens.addEventListener('click',     function(e){e.preventDefault();mostrarMensagens();});
 navConfiguracoes.addEventListener('click', function(e){e.preventDefault();mostrarConfiguracoes();});
 
-/* ── LOGOUT ── */
 var btnSairIcon = document.querySelector('.nav-item .fa-right-from-bracket');
 if (btnSairIcon) {
   btnSairIcon.closest('.nav-item').addEventListener('click', function(e) {
@@ -101,7 +99,6 @@ if (btnSairIcon) {
   });
 }
 
-/* ── NOTIFICAÇÕES ── */
 var notificationBtn     = document.getElementById('notification-btn');
 var notificationMenu    = document.getElementById('notification-menu');
 var notificationWrapper = document.querySelector('.notification-wrapper');
@@ -131,7 +128,6 @@ if (notificationWrapper && notificationMenu) {
   notificationMenu.addEventListener('mouseleave',   function() { notificationCloseTimer = setTimeout(function(){notificationMenu.classList.remove('open');}, 250); });
 }
 
-/* ── MODAIS ── */
 var photosModal      = document.getElementById('photos-modal');
 var imageViewerModal = document.getElementById('image-viewer-modal');
 var imageViewerTitle = document.getElementById('image-viewer-title');
@@ -179,7 +175,6 @@ document.querySelectorAll('.btn-view-photos').forEach(function(btn) {
   btn.addEventListener('click', function() { openPhotosForPatient(btn.dataset.patient || 'Paciente'); });
 });
 
-/* ── DÚVIDAS ── */
 var quickAnswers          = document.querySelectorAll('.quick-answer');
 var answerBoxes           = document.querySelectorAll('.answer-box');
 var sendAnswerButtons     = document.querySelectorAll('.send-answer');
@@ -350,7 +345,6 @@ sendAnswerButtons.forEach(function(btn) {
   });
 });
 
-/* ── CONFIGURAÇÕES ── */
 var saveProfileSettings  = document.getElementById('save-profile-settings');
 var settingsSaveMessage  = document.getElementById('settings-save-message');
 var profilePhotoInput    = document.getElementById('config-foto');
@@ -469,7 +463,6 @@ if (saveProfileSettings) {
   });
 }
 
-/* ── ALERTAS ── */
 var alertasBadge       = document.querySelector('#nav-alertas .badge-nav');
 var alertFilterButtons = document.querySelectorAll('.alert-filter-btn');
 var alertCards         = document.querySelectorAll('#alertas-section .alert-card');
@@ -522,7 +515,6 @@ document.querySelectorAll('.btn-view-alert-photos').forEach(function(btn) {
   });
 });
 
-/* ── INIT ── */
 updateQuestionCounters();
 updateNotificationPreferences();
 applyQuestionFilter('todas');
