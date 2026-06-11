@@ -81,16 +81,18 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     return;
   }
 
-  /* LOGIN MÉDICO */
+    /* LOGIN MÉDICO */
 
   if (perfilSelecionado === "profissional") {
-    const medicos = JSON.parse(localStorage.getItem("medicos")) || [];
+    const medicos = JSON.parse(localStorage.getItem("medicosCadastrados")) || [];
 
     const medicoEncontrado = medicos.find(function (medico) {
       return (
-        (medico.email === loginDigitado ||
-          medico.crm === loginDigitado ||
-          medico.cpf === loginDigitado) &&
+        (
+          medico.email === loginDigitado ||
+          medico.cpf === loginDigitado ||
+          medico.dadosProfissionais?.crm === loginDigitado
+        ) &&
         medico.senha === senhaDigitada
       );
     });
@@ -104,7 +106,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
       id: medicoEncontrado.id,
       nome: medicoEncontrado.nome,
       email: medicoEncontrado.email,
-      crm: medicoEncontrado.crm,
+      crm: medicoEncontrado.dadosProfissionais?.crm,
       perfil: "profissional",
       manterConectado: manterConectado
     };
