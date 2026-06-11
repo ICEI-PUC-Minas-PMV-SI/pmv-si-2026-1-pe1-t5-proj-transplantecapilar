@@ -112,7 +112,7 @@
 .preview-duvida {
     max-width: 100%;
     max-height: 150px;
-    border-radius: 8px;
+    border-radius: 4px;
     object-fit: contain;
 }
 
