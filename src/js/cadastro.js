@@ -93,3 +93,30 @@ document.getElementById("cadastroForm").addEventListener("submit", function (eve
     window.location.href = "login.html";
   }, 1500);
 });
+/* SUPORTE */
+
+const suporteLink = document.getElementById("suporteLink");
+
+if (suporteLink) {
+  suporteLink.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    alert(
+      "Suporte HairCare Pro\n\nE-mail: suporte@haircarepro.com"
+    );
+  });
+}
+
+/* CONTATO */
+
+const contatoLink = document.getElementById("contatoLink");
+
+if (contatoLink) {
+  contatoLink.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    alert(
+      "Contato HairCare Pro\n\nTelefone: (31) 99999-9999\nE-mail: contato@haircarepro.com\nHorário: Segunda a sexta • 08h às 18h"
+    );
+  });
+}
