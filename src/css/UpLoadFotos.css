@@ -302,6 +302,11 @@ body {
     background-color: #e8edf5;
 }
 
+.envio-de-foto.com-foto {
+    border: 2px solid #2e7d32;
+    background-color: #f4faf4;
+}
+
 .envio-titulo {
     font-size: 13px;
     font-weight: 700;
@@ -334,6 +339,20 @@ body {
 
 .input-arquivo {
     display: none;
+}
+
+.preview-foto {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+.trocar-foto {
+    font-size: 11px;
+    color: #4a6070;
+    margin-top: 4px;
 }
 
 .area-relatos {
@@ -401,4 +420,20 @@ body {
     color: #4a6070;
     text-align: center;
     padding-bottom: 16px;
+}
+
+.aviso-toast {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background: #2e7d32;
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.4s;
 }

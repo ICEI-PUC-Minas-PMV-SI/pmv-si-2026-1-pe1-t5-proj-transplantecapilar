@@ -138,20 +138,122 @@ body {
     position: relative;
 }
 
+.notification-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    color: #283d74;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.notification-btn:hover {
+    background-color: #e8edf5;
+}
+
 .sino {
     font-size: 20px;
     color: #283d74;
 }
 
 .bolinha {
-    width: 10px;
-    height: 10px;
+    width: 17px;
+    height: 17px;
     background-color: #ff3b30;
+    color: white;
     border-radius: 50%;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 1px;
+    right: 1px;
     border: 2px solid white;
+    font-size: 9px;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    line-height: 1;
+}
+
+.notification-menu {
+    position: absolute;
+    top: 44px;
+    right: 0;
+    width: 300px;
+    max-height: 285px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #c9d6e3;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(40, 61, 116, 0.18);
+    display: none;
+    z-index: 3000;
+}
+
+.notification-menu.open {
+    display: block;
+}
+
+.notification-menu-header {
+    padding: 14px 16px;
+    border-bottom: 1px solid #dbe3ec;
+    font-weight: 700;
+    color: #1a2a40;
+    font-size: 14px;
+}
+
+.notification-item {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid #dbe3ec;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.notification-item:hover {
+    background-color: #f4f7fb;
+}
+
+.notification-icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.notification-icon.red {
+    background-color: #ef4444;
+}
+
+.notification-icon.yellow {
+    background-color: #f59e0b;
+}
+
+.notification-icon.blue {
+    background-color: #3a5aaa;
+}
+
+.notification-text strong {
+    display: block;
+    color: #1a2a40;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.notification-text span {
+    color: #4a6070;
+    font-size: 12px;
+    line-height: 1.4;
 }
 
 .perfil {
@@ -171,6 +273,8 @@ body {
     justify-content: center;
     font-weight: bold;
     flex-shrink: 0;
+    color: #283d74;
+    background-color: white;
 }
 
 .area-principal {
@@ -308,34 +412,31 @@ body {
 }
 
 .modal-conteudo {
-    background-color: white;
-    width: 900px;
-    max-width: 95vw;
-    min-height: 650px;
-    border-radius: 20px;
-    padding: 40px;
     position: relative;
-    text-align: center;
+    background: transparent;
+    padding: 0;
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 18px;
 }
 
 .fechar-modal {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    border: none;
-    background-color: #edf1f7;
-    color: #283d74;
+    top: -20px;
+    right: -20px;
     width: 45px;
     height: 45px;
+    border: none;
     border-radius: 50%;
+    background-color: white;
+    color: #283d74;
     cursor: pointer;
     font-size: 18px;
-    transition: 0.3s;
+    z-index: 10;
 }
 
 .fechar-modal:hover {
@@ -343,11 +444,11 @@ body {
 }
 
 .modal-imagem-area {
-    width: 100%;
-    height: 520px;
+    width: auto;
+    height: auto;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .imagem-modal-icone {
@@ -356,17 +457,23 @@ body {
 }
 
 .imagem-modal-foto {
-    max-width: 100%;
-    max-height: 520px;
-    object-fit: contain;
-    border-radius: 14px;
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 18px;
+    display: block;
+}
+
+.relato-card {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #4a6070;
+    line-height: 1.5;
 }
 
 .overlay-menu {
     display: none;
 }
 
-/* TABLET */
 @media (max-width: 1024px) {
     .menu-lateral {
         width: 220px;
@@ -411,7 +518,6 @@ body {
     }
 }
 
-/* CELULAR */
 @media (max-width: 768px) {
     .layout {
         display: block;
@@ -486,6 +592,11 @@ body {
         height: 42px;
     }
 
+    .notification-menu {
+        right: -70px;
+        width: 270px;
+    }
+
     .area-principal {
         padding: 20px;
     }
@@ -553,7 +664,6 @@ body {
     }
 }
 
-/* CELULAR PEQUENO */
 @media (max-width: 480px) {
     .topo {
         padding: 14px;
@@ -566,7 +676,12 @@ body {
     }
 
     .notificacao {
-        display: none;
+        display: block;
+    }
+
+    .notification-menu {
+        right: -95px;
+        width: 250px;
     }
 
     .perfil-circulo {

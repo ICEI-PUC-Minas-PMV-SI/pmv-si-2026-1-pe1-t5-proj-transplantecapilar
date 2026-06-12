@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const confirma = document.getElementById('confirma').value;
       const email = document.getElementById('email').value;
       const nome = document.getElementById('nome').value;
-      const idade = document.getElementById('idade').value;
+      const dataNascimento = document.getElementById('dataNascimento').value;
       const sexo = document.getElementById('sexo').value;
       const crm = document.getElementById('crm').value;
       const ufCrm = document.getElementById('uf-crm').value;
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         id: Date.now(),
         tipo: 'medico',
         nome: nome,
-        idade: idade,
+        dataNascimento: dataNascimento,
         sexo: sexo,
         email: email,
         senha: senha,
