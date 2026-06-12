@@ -70,14 +70,19 @@ function mostrarSecao(nome) {
   if (nome === 'historico') applyHistFilter(currentHistFilter);
 }
 
-var abasBloqueadas = ['orientacoes', 'chat'];
 
 Object.keys(navItems).forEach(function(key) {
   var el = navItems[key];
   if (!el) return;
+
   el.addEventListener('click', function(e) {
     e.preventDefault();
-    if (abasBloqueadas.indexOf(key) !== -1) { mostrarToast('Seção em construção.'); return; }
+
+    if (key === 'orientacoes') {
+      window.location.href = 'orientacaoes.html';
+      return;
+    }
+
     mostrarSecao(key);
   });
 });
