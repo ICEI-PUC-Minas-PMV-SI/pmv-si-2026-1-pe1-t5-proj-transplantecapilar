@@ -32,7 +32,7 @@ var pageTitle = document.querySelector('.page-title');
 var sections = {
   inicio:        document.getElementById('inicio-section'),
   orientacoes:   document.getElementById('orientacoes-section'),
-  chat:          document.getElementById('chat-section'),
+  duvidas:          document.getElementById('duvidas-section'),
   historico:     document.getElementById('historico-section'),
   configuracoes: document.getElementById('configuracoes-section')
 };
@@ -40,7 +40,7 @@ var sections = {
 var navItems = {
   inicio:        document.getElementById('nav-inicio'),
   orientacoes:   document.getElementById('nav-orientacoes'),
-  chat:          document.getElementById('nav-chat'),
+  duvidas:          document.getElementById('nav-duvidas'),
   historico:     document.getElementById('nav-historico'),
   configuracoes: document.getElementById('nav-configuracoes')
 };
@@ -48,7 +48,7 @@ var navItems = {
 var pageTitles = {
   inicio:        'Início',
   orientacoes:   'Orientações',
-  chat:          'Chat com médico',
+  duvidas:          'Registrar dúvidas',
   historico:     'Histórico',
   configuracoes: 'Configurações'
 };
@@ -82,7 +82,10 @@ Object.keys(navItems).forEach(function(key) {
       window.location.href = 'orientacaoes.html';
       return;
     }
-
+    if (key === 'duvidas') {
+      window.location.href = 'RegistrarDuvidas.html';
+      return;
+    }
     mostrarSecao(key);
   });
 });
