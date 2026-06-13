@@ -24,15 +24,26 @@
 
     <nav class="nav-menu">
       <a href="#" id="nav-inicio" class="nav-item active">
-        <i class="fa-solid fa-house"></i>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
         Início
       </a>
       <a href="#" id="nav-orientacoes" class="nav-item">
-        <i class="fa-solid fa-clipboard-list"></i>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
         Orientações
       </a>
-      <a href="#" id="nav-chat" class="nav-item">
-        <i class="fa-solid fa-message"></i>
+      <a href="#" id="nav-duvidas" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
         Registrar dúvidas
       </a>
       <a href="#" id="nav-historico" class="nav-item">
@@ -43,11 +54,18 @@
       <div class="nav-footer">
         <div class="nav-divider"></div>
         <a href="#" id="nav-configuracoes" class="nav-item">
-          <i class="fa-solid fa-gear"></i>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
           Configurações
         </a>
         <a href="#" class="nav-item">
-          <i class="fa-solid fa-right-from-bracket"></i>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
           Sair
         </a>
       </div>
@@ -107,6 +125,7 @@
 
     <div class="content-area">
 
+      <!-- ═══════════ INÍCIO ═══════════ -->
       <section id="inicio-section" class="page-section">
         <div class="hero-panel">
           <div class="hero-text">
@@ -182,22 +201,7 @@
         </div>
       </section>
 
-      <section id="orientacoes-section" class="page-section hidden">
-        <div class="placeholder-section">
-          <i class="fa-solid fa-clipboard-list placeholder-icon"></i>
-          <h2>Orientações</h2>
-          <p>Seção em construção.</p>
-        </div>
-      </section>
-
-      <section id="chat-section" class="page-section hidden">
-        <div class="placeholder-section">
-          <i class="fa-solid fa-message placeholder-icon"></i>
-          <h2>Registrar dúvidas</h2>
-          <p>Seção em construção.</p>
-        </div>
-      </section>
-
+      <!-- ═══════════ HISTÓRICO ═══════════ -->
       <section id="historico-section" class="page-section hidden">
 
         <div class="historico-hero">
@@ -231,7 +235,6 @@
                 <div class="timeline-day-label">Dia 5 — Hoje</div>
 
                 <div class="timeline-entry" data-tipo="foto">
-                  <div class="timeline-dot dot-foto"></div>
                   <div class="timeline-card">
                     <div class="timeline-card-header">
                       <div class="timeline-icon-wrap icon-foto">
@@ -249,7 +252,6 @@
                 </div>
 
                 <div class="timeline-entry" data-tipo="medicacao">
-                  <div class="timeline-dot dot-medicacao"></div>
                   <div class="timeline-card">
                     <div class="timeline-card-header">
                       <div class="timeline-icon-wrap icon-medicacao">
@@ -270,7 +272,6 @@
                 <div class="timeline-day-label">Dia 4</div>
 
                 <div class="timeline-entry" data-tipo="tarefa">
-                  <div class="timeline-dot dot-tarefa"></div>
                   <div class="timeline-card">
                     <div class="timeline-card-header">
                       <div class="timeline-icon-wrap icon-tarefa">
@@ -287,7 +288,6 @@
                 </div>
 
                 <div class="timeline-entry" data-tipo="foto">
-                  <div class="timeline-dot dot-foto"></div>
                   <div class="timeline-card">
                     <div class="timeline-card-header">
                       <div class="timeline-icon-wrap icon-foto">
@@ -305,7 +305,6 @@
                 </div>
 
                 <div class="timeline-entry" data-tipo="medicacao">
-                  <div class="timeline-dot dot-medicacao"></div>
                   <div class="timeline-card">
                     <div class="timeline-card-header">
                       <div class="timeline-icon-wrap icon-medicacao">
@@ -326,7 +325,6 @@
                 <div class="timeline-day-label">Dia 3</div>
 
                 <div class="timeline-entry" data-tipo="mensagem">
-                  <div class="timeline-dot dot-mensagem"></div>
                   <div class="timeline-card">
                     <div class="timeline-card-header">
                       <div class="timeline-icon-wrap icon-mensagem">
@@ -350,7 +348,6 @@
                 </div>
 
                 <div class="timeline-entry" data-tipo="tarefa">
-                  <div class="timeline-dot dot-tarefa"></div>
                   <div class="timeline-card">
                     <div class="timeline-card-header">
                       <div class="timeline-icon-wrap icon-tarefa">
@@ -367,7 +364,6 @@
                 </div>
 
                 <div class="timeline-entry" data-tipo="foto">
-                  <div class="timeline-dot dot-foto"></div>
                   <div class="timeline-card">
                     <div class="timeline-card-header">
                       <div class="timeline-icon-wrap icon-foto">
@@ -385,7 +381,6 @@
                 </div>
 
                 <div class="timeline-entry" data-tipo="medicacao">
-                  <div class="timeline-dot dot-medicacao"></div>
                   <div class="timeline-card">
                     <div class="timeline-card-header">
                       <div class="timeline-icon-wrap icon-medicacao">
@@ -406,7 +401,6 @@
                 <div class="timeline-day-label">Dia 2</div>
 
                 <div class="timeline-entry" data-tipo="tarefa">
-                  <div class="timeline-dot dot-tarefa"></div>
                   <div class="timeline-card">
                     <div class="timeline-card-header">
                       <div class="timeline-icon-wrap icon-tarefa">
@@ -423,7 +417,6 @@
                 </div>
 
                 <div class="timeline-entry" data-tipo="foto">
-                  <div class="timeline-dot dot-foto"></div>
                   <div class="timeline-card">
                     <div class="timeline-card-header">
                       <div class="timeline-icon-wrap icon-foto">
@@ -441,7 +434,6 @@
                 </div>
 
                 <div class="timeline-entry" data-tipo="medicacao">
-                  <div class="timeline-dot dot-medicacao"></div>
                   <div class="timeline-card">
                     <div class="timeline-card-header">
                       <div class="timeline-icon-wrap icon-medicacao">
@@ -462,7 +454,6 @@
                 <div class="timeline-day-label">Dia 1 — Início da recuperação</div>
 
                 <div class="timeline-entry" data-tipo="tarefa">
-                  <div class="timeline-dot dot-tarefa"></div>
                   <div class="timeline-card">
                     <div class="timeline-card-header">
                       <div class="timeline-icon-wrap icon-tarefa">
@@ -479,7 +470,6 @@
                 </div>
 
                 <div class="timeline-entry" data-tipo="medicacao">
-                  <div class="timeline-dot dot-medicacao"></div>
                   <div class="timeline-card">
                     <div class="timeline-card-header">
                       <div class="timeline-icon-wrap icon-medicacao">
@@ -549,6 +539,7 @@
         </div>
       </section>
 
+      <!-- ═══════════ CONFIGURAÇÕES ═══════════ -->
       <section id="configuracoes-section" class="page-section hidden">
         <div class="placeholder-section">
           <i class="fa-solid fa-gear placeholder-icon"></i>
@@ -560,6 +551,7 @@
     </div>
   </main>
 
+  <!-- Modal Fotos -->
   <div class="modal-overlay" id="photos-modal">
     <div class="modal-card">
       <div class="modal-header">
@@ -598,6 +590,7 @@
     </div>
   </div>
 
+  <!-- Modal Visualizador de Imagem -->
   <div class="modal-overlay" id="image-viewer-modal">
     <div class="modal-card image-viewer-card">
       <div class="modal-header">
