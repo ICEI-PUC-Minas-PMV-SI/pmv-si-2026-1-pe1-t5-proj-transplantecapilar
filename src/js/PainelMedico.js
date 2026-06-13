@@ -1,7 +1,7 @@
 var usuario = JSON.parse(localStorage.getItem('usuarioLogado')) || {};
 
 if (!usuario.nome || usuario.perfil !== 'profissional') {
-  window.location.href = 'login.html';
+  window.location.href = "../../index.html";
 }
 
 var medicosCadastrados = JSON.parse(localStorage.getItem('medicosCadastrados')) || [];
@@ -95,7 +95,7 @@ if (btnSairIcon) {
   btnSairIcon.closest('.nav-item').addEventListener('click', function(e) {
     e.preventDefault();
     localStorage.removeItem('usuarioLogado');
-    window.location.href = 'login.html';
+    window.location.href = "../../index.html";
   });
 }
 

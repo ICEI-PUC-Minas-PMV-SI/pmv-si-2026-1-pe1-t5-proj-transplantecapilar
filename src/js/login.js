@@ -6,9 +6,9 @@ const forgotPasswordLink = document.getElementById("forgotPasswordLink");
 
 function atualizarLinkCadastro() {
   if (perfilSelecionado === "paciente") {
-    criarContaLink.href = "cadastro.html";
+    criarContaLink.href = "src/pages/cadastro.html";
   } else {
-    criarContaLink.href = "cad-med.html";
+    criarContaLink.href = "src/pages/cad-med.html";
   }
 }
 
@@ -75,7 +75,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     mensagem.textContent = "Login realizado com sucesso! Redirecionando...";
 
     setTimeout(function () {
-      window.location.href = "PainelPaciente.html";
+      window.location.href = "src/pages/PainelPaciente.html";
     }, 1000);
 
     return;
@@ -117,7 +117,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     mensagem.textContent = "Login realizado com sucesso! Redirecionando...";
 
     setTimeout(function () {
-      window.location.href = "PainelMedico.html";
+      window.location.href = "src/pages/PainelMedico.html";
     }, 1000);
   }
 });

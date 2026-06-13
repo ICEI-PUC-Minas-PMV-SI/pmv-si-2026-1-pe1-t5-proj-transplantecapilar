@@ -1,7 +1,7 @@
 var usuario = JSON.parse(localStorage.getItem('usuarioLogado')) || {};
 
 if (!usuario.nome || usuario.perfil !== 'paciente') {
-  window.location.href = 'login.html';
+  window.location.href = "../../index.html";
 }
 
 var _iniciais    = (usuario.nome || 'PA').split(' ').filter(function(p){return p.length>0;}).slice(0,2).map(function(p){return p[0].toUpperCase();}).join('');
@@ -95,7 +95,7 @@ if (btnSairIcon) {
   btnSairIcon.closest('.nav-item').addEventListener('click', function(e) {
     e.preventDefault();
     localStorage.removeItem('usuarioLogado');
-    window.location.href = 'login.html';
+    window.location.href = "../../index.html";
   });
 }
 

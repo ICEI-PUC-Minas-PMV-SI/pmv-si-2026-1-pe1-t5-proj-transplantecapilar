@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btnSair.addEventListener("click", function (event) {
             event.preventDefault();
             localStorage.removeItem("usuarioLogado");
-            window.location.href = "login.html";
+            window.location.href = "../../index.html";
         });
     }
 
