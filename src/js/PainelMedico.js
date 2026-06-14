@@ -52,7 +52,7 @@ var alertasAbertos        = alertasLS.filter(function(a){ return a.status === 'a
 
   var comAtualizacao = pacientes
     .filter(function(p){ return p.atualizacaoHoje && p.ultimaAtualizacao; })
-    .slice(0, 5); /* máximo 5 itens no feed */
+    .slice(0, 5); 
 
   if (comAtualizacao.length === 0) {
     feedList.innerHTML = '<div class="feed-item"><div class="feed-content"><p class="feed-text">Nenhuma atualização registrada hoje.</p></div></div>';
@@ -281,7 +281,6 @@ var alertasAbertos        = alertasLS.filter(function(a){ return a.status === 'a
   var menu = document.getElementById('notification-menu');
   if (!menu) return;
 
-  /* Remove notificações estáticas existentes */
   menu.querySelectorAll('.notification-item').forEach(function(n){ n.remove(); });
 
   var alertasAtivos = alertasLS.filter(function(a){ return a.status === 'active'; });
@@ -363,6 +362,7 @@ var navPainel            = document.getElementById('nav-painel');
 var navAlertas           = document.getElementById('nav-alertas');
 var navMensagens         = document.getElementById('nav-mensagens');
 var navConfiguracoes     = document.getElementById('nav-configuracoes');
+var navPacientes         = document.getElementById('nav-pacientes');
 
 function esconderPaginas() {
   [painelSection, alertasSection, mensagensSection, configuracoesSection].forEach(function(s){ if(s) s.classList.add('hidden'); });
@@ -410,13 +410,14 @@ function mostrarConfiguracoes() {
   carregarConfiguracoes();
   closeSidebarOnMobile();
 }
+var navPacientes = document.getElementById('nav-pacientes');
 
 if (navPainel)        navPainel.addEventListener('click',        function(e){ e.preventDefault(); mostrarPainel(); });
 if (navAlertas)       navAlertas.addEventListener('click',       function(e){ e.preventDefault(); mostrarAlertas(); });
 if (navMensagens)     navMensagens.addEventListener('click',     function(e){ e.preventDefault(); mostrarMensagens(); });
 if (navConfiguracoes) navConfiguracoes.addEventListener('click', function(e){ e.preventDefault(); mostrarConfiguracoes(); });
+if (navPacientes)    {navPacientes.addEventListener('click', function(e) {e.preventDefault();window.location.href = 'lista-de-pacientes.html';});}
 
-/* Sair */
 var btnSairEl = Array.from(document.querySelectorAll('.nav-item')).find(function(el){ return el.textContent.trim().startsWith('Sair'); });
 if (btnSairEl) {
   btnSairEl.addEventListener('click', function(e) {
