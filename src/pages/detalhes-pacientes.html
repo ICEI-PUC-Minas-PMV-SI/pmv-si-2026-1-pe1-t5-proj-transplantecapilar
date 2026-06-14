@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Paciente</title>
+    <link rel="stylesheet" href="/src/css/detalhes-pacientes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <aside id="menu-principal">
+        <div id="logo">
+            <div class="logotipo">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+            </div>
+            <p class="logo-nome">HairCare Pro</p>
+            <p class="logo-sub">Pós-Operatório Capila</p>
+        </div>
+
+        <div class="menu-divider"></div>
+
+        <nav id="navegacao">
+            <a href="#" class="botoes"><i class="fa-solid fa-table-cells-large"></i> Painel Inicial</a>
+            <a href="#" class="botoes active" aria-current="page"><i class="fa-solid fa-user"></i> Meus Pacientes</a>
+            <a href="#" class="botoes">
+                <i class="fa-solid fa-triangle-exclamation"></i> Alertas
+                <span class="badge">1</span>
+            </a>
+            <a href="#" class="botoes"><i class="fa-solid fa-message"></i> Mensagens</a>
+        </nav>
+
+        <div class="menu-divider bottom"></div>
+        <a href="#" class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="top-header">
+            <div class="header-user">
+                <div class="notif-icon" aria-label="1 notificação">
+                    <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                    <span class="notif-badge">1</span>
+                </div>
+                <div class="user-avatar">JS</div>
+                <span class="user-name">Dr. João da Silva</span>
+            </div>
+        </header>
+        <div class="return">
+            <a href="#" class="voltar"><i class="fa-solid fa-arrow-left"></i>Voltar para lista</a>
+        </div>
+        <div class="main-content">
+            <div class="cabecario-medico">
+                <div class="dr-avatar">JS</div>
+                <div class="main-text">
+                    <h2 class="dr-name">João da Silva</h2>
+                    <p class="sub-title">Data da cirurgia: 30/03/2026</p>
+                </div>
+            </div>
+
+            <div class="main-grid">
+                <div class="history">
+                    <h3>Histórico de Respostas</h3>
+                    <div class="registros">
+                        <div class="day-card card">
+                            <h3>Dia 07</h3>
+                            <p class="sub-title date">07/04/2026</p>
+                            <button class="open-day">Abrir</button>
+                            <div class="details">
+                                <div class="day-header">DIA 07</div>
+                                <p><strong>Como você está se sentindo hoje?</strong></p>
+                                <div class="tags">
+                                    <button class="bottom-sintomas">Sentindo-se Bem</button>
+                                    <button class="bottom-sintomas">Leve incômodo</button>
+                                    <button class="bottom-sintomas">Sem vermelhidão</button>
+                                </div>
+                                <strong>Está sentindo algum desconforto na área transplantada?</strong>
+                                <button class="bottom-respostas">Não, sem desconforto</button>
+                                <button class="bottom-respostas">Sim, com desconforto</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                        <div class="day-card card">
+                            <h3>Dia 06</h3>
+                            <p class="sub-title date">06/04/2026</p>
+                            <button class="open-day">Abrir</button>
+                            <div class="details">
+                                <h3>Dia 06</h3>
+                                <p class="sub-title">06/04/2026</p>
+                                <p><strong>Como você está se sentindo hoje?</strong></p>
+                                <div class="tags">
+                                    <button>Sentindo-se Bem</button>
+                                    <button>Leve incômodo</button>
+                                    <button>Sem vermelhidão</button>
+                                </div>
+                                <strong>Está sentindo algum desconforto na área transplantada?</strong>
+                                <button class="bottom-respostas">Não, sem desconforto</button>
+                                <button class="bottom-respostas">Sim, com desconforto</button>
+                            </div>
+                        </div>
+                        <div class="day-card card">
+                            <h3>Dia 05</h3>
+                            <p class="sub-title date">05/04/2026</p>
+                            <button class="open-day">Abrir</button>
+                            <div class="details">
+                                <h3>Dia 05</h3>
+                                <p class="sub-title">05/04/2026</p>
+                                <p><strong>Como você está se sentindo hoje?</strong></p>
+                                <div class="tags">
+                                    <button>Sentindo-se Bem</button>
+                                    <button>Leve incômodo</button>
+                                    <button>Sem vermelhidão</button>
+                                </div>
+                                <strong>Está sentindo algum desconforto na área transplantada?</strong>
+                                <button class="bottom-respostas">Não, sem desconforto</button>
+                                <button class="bottom-respostas">Sim, com desconforto</button>
+                            </div>
+                        </div>
+                        <div class="day-card card">
+                            <h3>Dia 04</h3>
+                            <p class="sub-title date">04/04/2026</p>
+                            <button class="open-day">Abrir</button>
+                            <div class="details">
+                                <h3>Dia 04</h3>
+                                <p class="sub-title">04/04/2026</p>
+                                <p><strong>Como você está se sentindo hoje?</strong></p>
+                                <div class="tags">
+                                    <button>Sentindo-se Bem</button>
+                                    <button>Leve incômodo</button>
+                                    <button>Sem vermelhidão</button>
+                                </div>
+                                <strong>Está sentindo algum desconforto na área transplantada?</strong>
+                                <button class="bottom-respostas">Não, sem desconforto</button>
+                                <button class="bottom-respostas">Sim, com desconforto</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary">
+                        <h3>Resumo das informações</h3>
+                        <button>Ver fotos enviadas</button>
+                        <button>Ver comentários do paciente</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/src/js/detalhes-pacientes.js"></script>
+
+</body>
+
+</html>
