@@ -46,7 +46,7 @@ document.getElementById("cadastroForm").addEventListener("submit", function (eve
     return;
   }
 
-  let pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
+  let pacientes = JSON.parse(localStorage.getItem("pacientesCadastrados")) || [];
 
   const cpfJaCadastrado = pacientes.some(function (paciente) {
     return paciente.cpf === cpf;
@@ -82,7 +82,7 @@ document.getElementById("cadastroForm").addEventListener("submit", function (eve
 
   pacientes.push(novoPaciente);
 
-  localStorage.setItem("pacientes", JSON.stringify(pacientes));
+  localStorage.setItem("pacientesCadastrados", JSON.stringify(pacientes));
 
   mensagem.style.color = "#21A134";
   mensagem.textContent = "Cadastro realizado com sucesso! Redirecionando para o login...";

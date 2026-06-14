@@ -46,7 +46,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
   /* LOGIN PACIENTE */
 
   if (perfilSelecionado === "paciente") {
-    const pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
+    const pacientes = JSON.parse(localStorage.getItem("pacientesCadastrados")) || [];
 
     const pacienteEncontrado = pacientes.find(function (paciente) {
       return (
