@@ -10,7 +10,6 @@
 <body>
   <div class="login-wrapper">
 
-    <!-- LEFT -->
     <div class="login-left">
       <div class="brand">
         <div class="brand-icon">
@@ -33,146 +32,151 @@
       </div>
     </div>
 
-    <!-- RIGHT -->
     <div class="login-right">
       <div class="form-title">Criar conta — Médico</div>
       <div class="form-subtitle">Preencha seus dados para solicitar acesso ao sistema.</div>
 
-      <!-- Dados Pessoais -->
-      <div class="section-label">Dados Pessoais</div>
+      <form id="formCadastroMedico">
 
-      <div class="fields-grid">
+        <div class="section-label">Dados Pessoais</div>
 
-        <div class="form-group full">
-          <label for="nome">Nome Completo</label>
-          <input type="text" id="nome" placeholder="ex: Dr. João da Silva"/>
-        </div>
+        <div class="fields-grid">
 
-        <div class="form-group">
-          <label for="idade">Idade</label>
-          <input type="number" id="idade" placeholder="ex: 35" min="18" max="100"/>
-        </div>
-
-        <div class="form-group">
-          <label for="sexo">Sexo</label>
-          <div class="select-wrap">
-            <select id="sexo">
-              <option value="" disabled selected>Selecione</option>
-              <option>Masculino</option>
-              <option>Feminino</option>
-              <option>Prefiro não informar</option>
-            </select>
+          <div class="form-group full">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" placeholder="ex: Dr. João da Silva" required/>
           </div>
-        </div>
 
-        <div class="form-group full">
-          <label for="email">E-mail</label>
-          <input type="email" id="email" placeholder="ex: dr.joao@clinica.com.br"/>
-        </div>
-
-        <div class="form-group">
-          <label for="senha">Senha</label>
-          <input type="password" id="senha" placeholder="••••••••"/>
-          <span class="field-hint">Mínimo 8 caracteres</span>
-        </div>
-
-        <div class="form-group">
-          <label for="confirma">Confirmar Senha</label>
-          <input type="password" id="confirma" placeholder="••••••••"/>
-        </div>
-
-      </div>
-
-      <!-- Dados Profissionais -->
-      <div class="section-label">Dados Profissionais</div>
-
-      <div class="fields-grid">
-
-        <div class="form-group">
-          <label for="crm">CRM</label>
-          <input type="text" id="crm" placeholder="ex: 123456"/>
-        </div>
-
-        <div class="form-group">
-          <label for="uf-crm">UF do CRM</label>
-          <div class="select-wrap">
-            <select id="uf-crm">
-              <option value="" disabled selected>Estado</option>
-              <option>AC</option><option>AL</option><option>AM</option><option>AP</option>
-              <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
-              <option>GO</option><option>MA</option><option>MG</option><option>MS</option>
-              <option>MT</option><option>PA</option><option>PB</option><option>PE</option>
-              <option>PI</option><option>PR</option><option>RJ</option><option>RN</option>
-              <option>RO</option><option>RR</option><option>RS</option><option>SC</option>
-              <option>SE</option><option>SP</option><option>TO</option>
-            </select>
+          <div class="form-group">
+            <label for="dataNascimento">Data de Nascimento</label>
+            <input type="date" id="dataNascimento" required/>
           </div>
-        </div>
 
-        <div class="form-group full">
-          <label for="especialidade">Especialidade</label>
-          <div class="select-wrap">
-            <select id="especialidade">
-              <option value="" disabled selected>Selecione a especialidade</option>
-              <optgroup label="Clínicas">
-                <option>Clínica Geral</option>
-                <option>Clínica Médica</option>
-                <option>Geriatria</option>
-                <option>Medicina de Família e Comunidade</option>
-                <option>Medicina Intensiva</option>
-                <option>Medicina Interna</option>
-              </optgroup>
-              <optgroup label="Cirúrgicas">
-                <option>Cirurgia Geral</option>
-                <option>Cirurgia Cardiovascular</option>
-                <option>Cirurgia do Aparelho Digestivo</option>
-                <option>Cirurgia Plástica</option>
-                <option>Cirurgia Torácica</option>
-                <option>Cirurgia Vascular</option>
-                <option>Neurocirurgia</option>
-                <option>Ortopedia e Traumatologia</option>
-                <option>Urologia</option>
-              </optgroup>
-              <optgroup label="Especialidades Médicas">
-                <option>Anestesiologia</option>
-                <option>Cardiologia</option>
-                <option>Dermatologia</option>
-                <option>Endocrinologia</option>
-                <option>Gastroenterologia</option>
-                <option>Ginecologia e Obstetrícia</option>
-                <option>Hematologia</option>
-                <option>Infectologia</option>
-                <option>Nefrologia</option>
-                <option>Neurologia</option>
-                <option>Oftalmologia</option>
-                <option>Oncologia Clínica</option>
-                <option>Otorrinolaringologia</option>
-                <option>Pediatria</option>
-                <option>Pneumologia</option>
-                <option>Psiquiatria</option>
-                <option>Reumatologia</option>
-              </optgroup>
-              <optgroup label="Diagnóstico e Imagem">
-                <option>Medicina Nuclear</option>
-                <option>Patologia</option>
-                <option>Radiologia e Diagnóstico por Imagem</option>
-              </optgroup>
-            </select>
+        <!--  <div class="form-group">
+            <label for="idade">Idade</label>
+            <input type="number" id="idade" placeholder="ex: 35" min="18" max="100" required/>
+          </div> -->
+
+          <div class="form-group">
+            <label for="sexo">Sexo</label>
+            <div class="select-wrap">
+              <select id="sexo" required>
+                <option value="" disabled selected>Selecione</option>
+                <option>Masculino</option>
+                <option>Feminino</option>
+                <option>Prefiro não informar</option>
+              </select>
+            </div>
           </div>
+
+          <div class="form-group full">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="ex: dr.joao@clinica.com.br" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="••••••••" required minlength="8"/>
+            <span class="field-hint">Mínimo 8 caracteres</span>
+          </div>
+
+          <div class="form-group">
+            <label for="confirma">Confirmar Senha</label>
+            <input type="password" id="confirma" placeholder="••••••••" required/>
+          </div>
+
         </div>
 
-      </div>
+        <div class="section-label">Dados Profissionais</div>
 
-      <!-- Termos -->
-      <div class="terms-row">
-        <input type="checkbox" id="termos"/>
-        <label for="termos">
-          Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a> do sistema.
-        </label>
-      </div>
+        <div class="fields-grid">
 
-      <button class="btn-login">Criar Conta</button>
-      <a href="login.html" class="back-link">← Já tenho conta, voltar ao login</a>
+          <div class="form-group">
+            <label for="crm">CRM</label>
+            <input type="text" id="crm" placeholder="ex: 123456" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="uf-crm">UF do CRM</label>
+            <div class="select-wrap">
+              <select id="uf-crm" required>
+                <option value="" disabled selected>Estado</option>
+                <option>AC</option><option>AL</option><option>AM</option><option>AP</option>
+                <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+                <option>GO</option><option>MA</option><option>MG</option><option>MS</option>
+                <option>MT</option><option>PA</option><option>PB</option><option>PE</option>
+                <option>PI</option><option>PR</option><option>RJ</option><option>RN</option>
+                <option>RO</option><option>RR</option><option>RS</option><option>SC</option>
+                <option>SE</option><option>SP</option><option>TO</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label for="especialidade">Especialidade</label>
+            <div class="select-wrap">
+              <select id="especialidade" required>
+                <option value="" disabled selected>Selecione a especialidade</option>
+                <optgroup label="Clínicas">
+                  <option>Clínica Geral</option>
+                  <option>Clínica Médica</option>
+                  <option>Geriatria</option>
+                  <option>Medicina de Família e Comunidade</option>
+                  <option>Medicina Intensiva</option>
+                  <option>Medicina Interna</option>
+                </optgroup>
+                <optgroup label="Cirúrgicas">
+                  <option>Cirurgia Geral</option>
+                  <option>Cirurgia Cardiovascular</option>
+                  <option>Cirurgia do Aparelho Digestivo</option>
+                  <option>Cirurgia Plástica</option>
+                  <option>Cirurgia Torácica</option>
+                  <option>Cirurgia Vascular</option>
+                  <option>Neurocirurgia</option>
+                  <option>Ortopedia e Traumatologia</option>
+                  <option>Urologia</option>
+                </optgroup>
+                <optgroup label="Especialidades Médicas">
+                  <option>Anestesiologia</option>
+                  <option>Cardiologia</option>
+                  <option>Dermatologia</option>
+                  <option>Endocrinologia</option>
+                  <option>Gastroenterologia</option>
+                  <option>Ginecologia e Obstetrícia</option>
+                  <option>Hematologia</option>
+                  <option>Infectologia</option>
+                  <option>Nefrologia</option>
+                  <option>Neurologia</option>
+                  <option>Oftalmologia</option>
+                  <option>Oncologia Clínica</option>
+                  <option>Otorrinolaringologia</option>
+                  <option>Pediatria</option>
+                  <option>Pneumologia</option>
+                  <option>Psiquiatria</option>
+                  <option>Reumatologia</option>
+                </optgroup>
+                <optgroup label="Diagnóstico e Imagem">
+                  <option>Medicina Nuclear</option>
+                  <option>Patologia</option>
+                  <option>Radiologia e Diagnóstico por Imagem</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="terms-row">
+          <input type="checkbox" id="termos" required/>
+          <label for="termos">
+            Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a> do sistema.
+          </label>
+        </div>
+
+        <button type="submit" class="btn-login">Criar Conta</button>
+
+      </form>
+      <a href="../../index.html" class="back-link">
 
       <div class="form-footer">
         <a href="#">Suporte</a>

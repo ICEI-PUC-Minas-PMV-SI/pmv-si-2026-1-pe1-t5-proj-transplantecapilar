@@ -6,211 +6,209 @@
     <title>Fotos do Paciente</title>
 
     <link rel="stylesheet" href="../css/FotosPaciente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="../js/FotosPaciente.js" defer></script>
 </head>
 
 <body>
 
+    <div class="overlay-menu" id="overlayMenu"></div>
+
     <div class="layout">
 
-        <div class="menu-lateral">
+        <aside class="menu-lateral" id="menuLateral">
 
             <div class="logo-area">
-
-               <div class="lateral-logo-circulo">
-
-                    <svg 
-                        width="34" 
-                        height="34" 
-                        viewBox="0 0 24 24" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        stroke-width="2.2" 
-                        stroke-linecap="round" 
-                        stroke-linejoin="round"
-                    >
+                <div class="lateral-logo-circulo">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
                     </svg>
-
                 </div>
 
                 <h2>HairCare Pro</h2>
                 <p>Pós-Operatório Capilar</p>
-
             </div>
 
-            <div class="menu-nav">
-
-                <a href="#" class="menu-item ativo">
-                    <i class="fa-solid fa-house"></i>
+            <nav class="menu-nav">
+                <a href="PainelMedico.html" class="menu-item" id="btnInicio">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
                     Início
                 </a>
 
-                <a href="#" class="menu-item">
-                    <i class="fa-solid fa-users"></i>
+                <a href="lista-de-pacientes.html" class="menu-item ativo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+    <circle cx="9" cy="7" r="4"/>
+    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+</svg>
                     Meus Pacientes
                 </a>
 
-                <a href="#" class="menu-item">
-                    <i class="fa-solid fa-bell"></i>
+                <a href="#" class="menu-item" id="btnAlertas">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+</svg>
                     Alertas
                 </a>
 
-                <a href="#" class="menu-item">
-                    <i class="fa-solid fa-message"></i>
-                    Mensagens
+                <a href="#" class="menu-item" id="btnMensagens">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+                    Dúvidas
                 </a>
-
-            </div>
+            </nav>
 
             <div class="menu-rodape">
-
-                <a href="#" class="menu-item">
-                    <i class="fa-solid fa-gear"></i>
+                <a href="#" class="menu-item" id="btnConfiguracoes">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
                     Configurações
                 </a>
 
-                <a href="#" class="menu-item">
-                    <i class="fa-solid fa-right-from-bracket"></i>
+                <a href="#" class="menu-item" id="btnSair">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg></i>
                     Sair
                 </a>
-
             </div>
 
-        </div>
+        </aside>
 
-        <div class="conteudo">
+        <main class="conteudo">
 
-            <div class="topo">
+            <header class="topo">
+
+                <button class="btn-menu-mobile" id="btnMenuMobile">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
 
                 <div class="caminho">
+                    <a href="PainelMedico.html">Início</a>
+                    <span>></span>
 
-                    <span>Início</span>
-                    >
-                    <span>Lista de Pacientes</span>
-                    >
-                    <span>Detalhes do Paciente</span>
-                    >
+                    <a href="lista-de-pacientes.html">Lista de Pacientes</a>
+                    <span>></span>
+
+                    <a href="#" id="linkDetalhesPaciente">Detalhes do Paciente</a>
+                    <span>></span>
+
                     <span>Fotos do Paciente</span>
-
                 </div>
 
                 <div class="perfil-area">
+                    <div class="notificacao" id="notificationWrapper">
+                        <button class="notification-btn" id="notificationBtn" type="button">
+                            <i class="fa-regular fa-bell sino"></i>
+                            <span class="bolinha" id="notificationDot">4</span>
+                        </button>
 
-                    <div class="notificacao">
+                        <div class="notification-menu" id="notificationMenu">
+                            <div class="notification-menu-header">Notificações</div>
 
-                        <i class="fa-regular fa-bell sino"></i>
-                        <span class="bolinha"></span>
+                            <button class="notification-item" type="button"
+                                data-target-section="alertas"
+                                data-target-id="alerta-rafael"
+                                data-notification-category="criticos">
+                                <div class="notification-icon red"></div>
+                                <div class="notification-text">
+                                    <strong>Alerta crítico</strong>
+                                    <span>Rafael Souza relatou dor nível 8.</span>
+                                </div>
+                            </button>
 
+                            <button class="notification-item" type="button"
+                                data-target-section="alertas"
+                                data-target-id="alerta-lucas"
+                                data-notification-category="atrasos">
+                                <div class="notification-icon yellow"></div>
+                                <div class="notification-text">
+                                    <strong>Fotos atrasadas</strong>
+                                    <span>Lucas Fernandes está há 2 dias sem envio.</span>
+                                </div>
+                            </button>
+
+                            <button class="notification-item" type="button"
+                                data-target-section="mensagens"
+                                data-target-id="duvida-andre"
+                                data-notification-category="duvidas">
+                                <div class="notification-icon blue"></div>
+                                <div class="notification-text">
+                                    <strong>Dúvida pendente</strong>
+                                    <span>André Lima enviou uma dúvida.</span>
+                                </div>
+                            </button>
+
+                            <button class="notification-item" type="button"
+                                data-target-section="mensagens"
+                                data-target-id="duvida-gabriel"
+                                data-notification-category="duvidas">
+                                <div class="notification-icon blue"></div>
+                                <div class="notification-text">
+                                    <strong>Nova dúvida</strong>
+                                    <span>Gabriel Victor perguntou sobre vermelhidão.</span>
+                                </div>
+                            </button>
+                        </div>
                     </div>
 
                     <div class="perfil">
-
-                        <div class="perfil-circulo">
-                            JS
-                        </div>
-
-                        <span>Dr. João da Silva</span>
-
+                        <div class="perfil-circulo" id="perfilCirculo">JS</div>
+                        <span id="nomeUsuarioTopo">Dr. João da Silva</span>
                     </div>
-
                 </div>
 
-            </div>
+            </header>
 
-            <div class="area-principal">
+            <section class="area-principal">
 
                 <div class="cabecalho-paciente">
-
                     <div class="paciente-info">
-
-                        <div class="paciente-circulo">
-                            JC
-                        </div>
+                        <div class="paciente-circulo">JC</div>
 
                         <div>
-
                             <h1>Fotos Enviadas de João Carlos</h1>
                             <p>Visualize as fotos enviadas pelo paciente durante o pós-operatório.</p>
-
                         </div>
-
                     </div>
-
                 </div>
 
-                <div class="cards-fotos">
+                <div class="cards-fotos" id="cardsFotos"></div>
 
-                    <div class="card-foto">
-
-                        <div class="foto-area">
-                            <i class="fa-regular fa-user"></i>
-                        </div>
-
-                        <div class="card-info">
-
-                            <div>
-                                <span class="data">06/04/2026</span>
-                                <h3>DIA 07</h3>
-                            </div>
-
-                            <button class="botao-ampliar">Ampliar</button>
-
-                        </div>
-
-                    </div>
-
-                    <div class="card-foto">
-
-                        <div class="foto-area">
-                            <i class="fa-regular fa-user"></i>
-                        </div>
-
-                        <div class="card-info">
-
-                            <div>
-                                <span class="data">05/04/2026</span>
-                                <h3>DIA 06</h3>
-                            </div>
-
-                            <button class="botao-ampliar">Ampliar</button>
-
-                        </div>
-
-                    </div>
-
-                    <div class="card-foto">
-
-                        <div class="foto-area">
-                            <i class="fa-regular fa-user"></i>
-                        </div>
-
-                        <div class="card-info">
-
-                            <div>
-                                <span class="data">04/04/2026</span>
-                                <h3>DIA 05</h3>
-                            </div>
-
-                            <button class="botao-ampliar">Ampliar</button>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <button class="botao-voltar">
+                <button class="botao-voltar" id="btnVoltar">
                     <i class="fa-solid fa-arrow-left"></i>
                     Voltar para Detalhes
                 </button>
 
-            </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <div class="modal-foto" id="modalFoto">
+        <div class="modal-conteudo">
+
+            <button class="fechar-modal" id="fecharModal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-imagem-area" id="modalImagemArea"></div>
 
         </div>
-
     </div>
 
 </body>

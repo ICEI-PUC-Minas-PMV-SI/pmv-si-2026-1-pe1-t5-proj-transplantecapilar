@@ -1,5 +1,50 @@
 # Apresentação
 
+Esta pasta contém os materiais relacionados à apresentação do projeto “Aplicação Web para Acompanhamento Pós-Operatório de Transplante Capilar”.
+
+O sistema foi desenvolvido com foco no acompanhamento da recuperação de pacientes submetidos ao transplante capilar, permitindo interação entre pacientes e profissionais de saúde por meio de uma aplicação web moderna, intuitiva e responsiva.
+
+## Arquivos da apresentação
+
+| Arquivo | Descrição |
+| --- | --- |
+| presentation/README.md | Documento com descrição da apresentação do projeto |
+| presentation/apresentacao-final.pdf | Slides da apresentação final do projeto |
+| presentation/video-demonstracao.mp4 | Vídeo demonstrando o funcionamento do sistema |
+
+## Conteúdo da apresentação
+
+A apresentação final do projeto deverá abordar:
+
+- Contextualização do problema;
+- Objetivos da aplicação;
+- Público-alvo;
+- Funcionalidades implementadas;
+- Tecnologias utilizadas;
+- Protótipos e wireframes;
+- Desenvolvimento das telas;
+- Demonstração do sistema funcionando;
+- Testes realizados;
+- Melhorias futuras.
+
+## Vídeo de demonstração
+
+O vídeo de demonstração apresentará o funcionamento das principais funcionalidades do sistema, incluindo:
+
+- Cadastro de pacientes;
+- Login de usuários;
+- Painel do paciente;
+- Checklist diário;
+- Navegação entre páginas;
+- Registro de dúvidas;
+- Fluxo geral da aplicação.
+
+O vídeo será narrado e terá duração máxima de 5 minutos, conforme orientações da disciplina.
+
+ORIENTAÇÕES PREESTABELECIDAS PELO PROFESSOR ABAIXO
+
+# Apresentação
+
 Faça uma apresentação de um resumo de todos o processo de desenvolvimento e no final apresente a solução desenvolvida, usando um pequeno vídeo.
 
 Liste os arquivos produzidos e postados nesta pasta, com suas localizaçãoes e descrição do conteúdo neste arquivo Readme.md.
