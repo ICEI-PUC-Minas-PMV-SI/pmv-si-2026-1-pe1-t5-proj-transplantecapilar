@@ -81,11 +81,22 @@ tarefasLS.forEach(function(t) {
       + '</div>';
   }).join('');
 
-  taskList.querySelectorAll('.btn-action:not([disabled])').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      concluirTarefa(btn.dataset.taskId, btn);
-    });
+taskList.querySelectorAll('.btn-action:not([disabled])').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+
+    if (btn.dataset.taskId === 'task-avaliacao') {
+      window.location.href = 'quest-dia-15.html';
+      return;
+    }
+
+    if (btn.dataset.taskId === 'task-fotos') {
+      window.location.href = 'UpLoadFotos.html';
+      return;
+    }
+
+    concluirTarefa(btn.dataset.taskId, btn);
   });
+});
 
   atualizarNotifPendentes();
 })();
