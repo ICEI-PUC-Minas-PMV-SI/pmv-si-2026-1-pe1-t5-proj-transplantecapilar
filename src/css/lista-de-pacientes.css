@@ -51,14 +51,14 @@ body {
 }
 
 .logo-nome {
-  font-size: 11px;
+  font-size: 1.5em;
   font-weight: 700;
   letter-spacing: 0.8px;
   text-align: center;
 }
 
 .logo-sub {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 1.2px;
   color: rgba(255, 255, 255, 0.6);
   text-align: center;

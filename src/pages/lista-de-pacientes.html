@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Pacientes</title>
+    <script src="../js/lista-de-pacientes.js"></script>
     <link rel="stylesheet" href="/src/css/lista-de-pacientes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -77,10 +78,10 @@
             <div class="patients-card">
                 <div class="card-header">
                     <select class="filter-select">
-                        <option>Todos</option>
-                        <option>Estável</option>
-                        <option>Pendente</option>
-                        <option>Atenção</option>
+                        <option value="todos">Todos</option>
+                        <option value="estavel">Estável</option>
+                        <option value="pendente">Pendente</option>
+                        <option value="atencao">Atenção</option>
                     </select>
                     <div class="search-box">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -97,7 +98,7 @@
                 </div>
                 <div class="patient-row">
                     <div class="patient-avatar">JU</div>
-                    <span class="patient-name">Julia</span>
+                    <span class="patient-name">Jean</span>
                     <span class="patient-date">15/03/2026</span>
                     <span class="patient-day">DIA 21</span>
                     <span class="status estavel">ESTÁVEL</span>
@@ -120,8 +121,8 @@
                     <a href="#" class="ver-detalhes">Ver detalhes <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="patient-row">
-                    <div class="patient-avatar">EM</div>
-                    <span class="patient-name">Emily</span>
+                    <div class="patient-avatar">MA</div>
+                    <span class="patient-name">Marcos</span>
                     <span class="patient-date">18/03/2026</span>
                     <span class="patient-day">DIA 18</span>
                     <span class="status estavel">ESTÁVEL</span>
@@ -147,10 +148,10 @@
 
             <div class="pagination">
                 <span class="pag-info">1 / 1</span>
-            </div>
+                        </div>
 
-        </main>
-    </div>
+                </main>
+        </div>
 
 </body>
 
