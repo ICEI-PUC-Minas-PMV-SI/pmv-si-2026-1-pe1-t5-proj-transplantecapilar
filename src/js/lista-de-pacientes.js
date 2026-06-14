@@ -25,4 +25,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
     select.addEventListener('change', filterRows);
     searchInput.addEventListener('input', filterRows);
+    
+    const listMedic = localStorage.getItem('medicosCadastrados');
+    const userLogin = localStorage.getItem('usuarioLogado');
+
+    const user = JSON.parse(userLogin)
+
+    const campoUsuario = document.getElementById('user')
+    const avatarUsuario = document.getElementById('user-avatar')
+
+    function normalizeAvatarName(name) {
+        const parts = name.trim().split(/\s+/); //  user.name =  [['Wesley' 'Henrique'], 'pedro'] => 
+
+        if (parts.length > 1) {
+            const firstName = parts[0][0];
+            const lastName = parts[parts.length - 1][0];
+
+            return (firstName + lastName).toUpperCase();
+        }
+
+        return parts[0].slice(0, 2).toUpperCase();
+    }
+    
+
+    campoUsuario.textContent = user.nome;
+    avatarUsuario.textContent = normalizeAvatarName(user.nome);
+
+    console.log(`usuario => ${user.nome}, lista de medicos: ${listMedic}`);
+
+    
+     
 });
