@@ -1,3 +1,8 @@
+function toggleSidebar() {
+    document.getElementById('menu-lateral').classList.toggle('open');
+    document.getElementById('sidebar-overlay').classList.toggle('active');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const zonaUpload = document.querySelector('.zona-upload-duvida');
     let arquivoSelecionado = null;
