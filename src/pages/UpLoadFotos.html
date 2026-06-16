@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload de Fotos</title>
-    <link rel="stylesheet" href="../css/UpLoadFotos.css">
-    <script src="../js/UpLoadFotos.js"></script>
+    <link rel="stylesheet" href="UpLoadFotos.css">
+    <script src="UpLoadFotos.js"></script>
 </head>
 <body>
-    <nav class="menus-principais">s
-        <div class="menu-lateral">
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <nav class="menus-principais">
+        <div class="menu-lateral" id="menu-lateral">
             <div class="lateral-header">
                 <div class="lateral-logo-circulo">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -47,6 +49,13 @@
         </div>
         <div class="conteudo">
             <div class="menu-caminho-perfil">
+                <button class="hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
                 <div class="caminho">
                     <a href="#" class="caminho-link">Início</a>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
