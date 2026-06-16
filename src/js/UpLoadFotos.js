@@ -1,3 +1,8 @@
+function toggleSidebar() {
+    document.getElementById('menu-lateral').classList.toggle('open');
+    document.getElementById('sidebar-overlay').classList.toggle('active');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const ids = ['foto-1', 'foto-2', 'foto-3', 'foto-4', 'foto-5'];
     const arquivosSelecionados = {};
