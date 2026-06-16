@@ -539,7 +539,6 @@ body {
 .icon-foto      { background: #e0f2fe; color: #0284c7; }
 .icon-tarefa    { background: var(--blue-pale); color: var(--blue); }
 .icon-mensagem  { background: #ede9fe; color: #7c3aed; }
-.icon-medicacao { background: var(--success-bg); color: var(--success); }
 
 /* desc alinhado com orientacao-item (14px 1.6) */
 .timeline-desc {
