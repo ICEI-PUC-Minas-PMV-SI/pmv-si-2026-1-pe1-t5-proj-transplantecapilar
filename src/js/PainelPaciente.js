@@ -26,6 +26,30 @@ var tarefasLS   = JSON.parse(localStorage.getItem('paciente_tarefas'))   || [];
 var historicoLS = JSON.parse(localStorage.getItem('paciente_historico'))  || [];
 var notifLS     = JSON.parse(localStorage.getItem('paciente_notif'))      || [];
 
+if (!tarefasLS.some(t => t.id === "task-avaliacao")) {
+  tarefasLS.unshift({
+    id: "task-avaliacao",
+    titulo: "Avaliação de Sintomas",
+    descricao: "Responda a um breve questionário sobre como você está se sentindo.",
+    tipo: "avaliacao",
+    status: "pending",
+    btnLabel: "Iniciar"
+  });
+}
+
+if (!tarefasLS.some(t => t.id === "task-fotos")) {
+  tarefasLS.splice(1, 0, {
+    id: "task-fotos",
+    titulo: "Envio de Fotos",
+    descricao: "Faça o upload de fotos da área doadora e receptora.",
+    tipo: "foto",
+    status: "pending",
+    btnLabel: "Enviar Fotos"
+  });
+}
+
+localStorage.setItem("paciente_tarefas", JSON.stringify(tarefasLS));
+
 var _tarefaState = JSON.parse(localStorage.getItem('paciente_tarefa_state')) || {};
 tarefasLS.forEach(function(t) {
   if (_tarefaState[t.id]) t.status = _tarefaState[t.id];
