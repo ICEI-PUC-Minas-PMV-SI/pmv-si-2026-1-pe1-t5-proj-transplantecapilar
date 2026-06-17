@@ -1357,11 +1357,15 @@ body {
 
   .user-name { display:none; }
 
-  .notification-menu {
-    right:auto;
-    left:-60px;
-    width:270px;
-  }
+.notification-menu {
+  position:fixed;
+  top:60px;
+  left:16px;
+  right:16px;
+  width:auto;
+  transform:none;
+  max-height:220px;
+}
 
   .content-area { padding:16px; }
 
