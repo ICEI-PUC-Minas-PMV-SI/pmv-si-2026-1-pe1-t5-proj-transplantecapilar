@@ -161,6 +161,7 @@ body {
   border-bottom:1px solid var(--neutral);
   flex-shrink:0;
   gap:12px;
+  overflow:visible;
 }
 
 .hamburger {
@@ -713,7 +714,7 @@ body {
   box-shadow:0 8px 30px rgba(40,61,116,.14);
   overflow-y:auto;
   display:none;
-  z-index:20;
+  z-index:200;
   max-height:285px;
   overscroll-behavior:contain;
   scrollbar-gutter:stable;
@@ -1353,19 +1354,19 @@ body {
 @media (max-width:600px) {
   body { overflow:auto; height:auto; min-height:100vh; }
 
-  .topbar { height:60px; padding:0 16px; }
+  .topbar { height:60px; padding:0 16px; overflow:visible; }
 
   .user-name { display:none; }
 
-.notification-menu {
-  position:fixed;
-  top:60px;
-  left:16px;
-  right:16px;
-  width:auto;
-  transform:none;
-  max-height:220px;
-}
+  .notification-menu {
+    position:fixed;
+    top:60px;
+    left:16px;
+    right:16px;
+    width:auto;
+    max-height:220px;
+    z-index:200;
+  }
 
   .content-area { padding:16px; }
 
