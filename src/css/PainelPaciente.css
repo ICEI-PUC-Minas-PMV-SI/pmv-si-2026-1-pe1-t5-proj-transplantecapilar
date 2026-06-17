@@ -816,3 +816,6 @@ body {
   .historico-hero h1 { font-size: 18px; }
   .page-title { font-size: 13px; }
 }
+#nav-configuracoes {
+    display: none;
+}

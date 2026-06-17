@@ -1402,3 +1402,6 @@ body {
   .kpi-info h3 { font-size:22px; }
   .topbar-actions { gap:10px; }
 }
+#nav-configuracoes {
+    display: none;
+}
