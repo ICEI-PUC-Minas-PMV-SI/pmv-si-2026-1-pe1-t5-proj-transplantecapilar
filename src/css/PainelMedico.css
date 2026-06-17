@@ -102,7 +102,7 @@ body {
   font-size:14px;
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:12px;
   transition:all .2s;
 }
 
@@ -163,7 +163,6 @@ body {
   gap:12px;
 }
 
-/* Hamburger — oculto no desktop */
 .hamburger {
   display:none;
   background:none;
@@ -175,7 +174,7 @@ body {
 }
 
 .page-title {
-  font-size:18px;
+  font-size:14px;
   font-weight:700;
   color:var(--blue);
   flex:1;
@@ -433,7 +432,7 @@ body {
 
 .alerts-hero h1,
 .messages-hero h1 {
-  font-size:26px;
+  font-size:22px;
   margin-bottom:8px;
   line-height:1.2;
 }
@@ -1390,7 +1389,7 @@ body {
   .alerts-hero h1,
   .messages-hero h1 { font-size:20px; }
 
-  .page-title { font-size:16px; }
+  .page-title { font-size:13px; }
 
   .settings-actions { flex-direction:column; }
   .settings-actions .btn-secondary,
