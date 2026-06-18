@@ -1,11 +1,25 @@
 function toggleSidebar() {
-    document.getElementById('menu-lateral').classList.toggle('open');
-    document.getElementById('sidebar-overlay').classList.toggle('active');
+    var sidebar = document.getElementById('sidebar');
+    var overlay = document.getElementById('sidebar-overlay');
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('active');
 }
 
 document.addEventListener('DOMContentLoaded', function () {
     const ids = ['foto-1', 'foto-2', 'foto-3', 'foto-4', 'foto-5'];
     const arquivosSelecionados = {};
+
+    var notifBtn = document.getElementById('notification-btn');
+    var notifMenu = document.getElementById('notification-menu');
+    if (notifBtn && notifMenu) {
+        notifBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            notifMenu.classList.toggle('open');
+        });
+        document.addEventListener('click', function () {
+            notifMenu.classList.remove('open');
+        });
+    }
 
     function mostrarAviso(mensagem) {
         const aviso = document.createElement('div');
