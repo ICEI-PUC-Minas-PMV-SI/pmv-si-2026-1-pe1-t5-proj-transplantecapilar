@@ -14,77 +14,94 @@ body {
     min-height: 100vh;
 }
 
-.menu-lateral {
+/* ── SIDEBAR ── */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 99;
+}
+.sidebar-overlay.active { display: block; }
+
+.sidebar {
     width: 260px;
-    background-color: #283d74;
+    background: #283d74;
+    color: #fdfff9;
     display: flex;
     flex-direction: column;
-    padding: 24px;
-    color: white;
+    flex-shrink: 0;
     position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
-    z-index: 1000;
+    z-index: 100;
+    transition: transform 0.3s ease;
 }
 
-.logo-area {
+.sidebar-header {
+    padding: 32px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-bottom: 30px;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.lateral-logo-circulo {
-    width: 70px;
-    height: 70px;
+.brand-logo-circle {
+    width: 64px;
+    height: 64px;
+    border: 2px solid #fdfff9;
     border-radius: 50%;
-    border: 2px solid white;
-    margin: 0 auto 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.logo-area h2 {
     margin-bottom: 8px;
 }
 
-.logo-area p {
-    font-size: 11px;
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+.brand-name     { font-size: 20px; font-weight: 700; letter-spacing: 0.5px; }
+.brand-subtitle { font-size: 11px; color: #c9d6e3; text-transform: uppercase; letter-spacing: 1px; }
 
-.menu-nav,
-.menu-rodape {
+.nav-menu {
+    padding: 24px 16px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
+    flex: 1;
 }
 
-.menu-rodape {
-    margin-top: auto;
-}
-
-.menu-item {
+.nav-item {
+    padding: 14px 16px;
+    color: rgba(253,255,249,0.8);
     text-decoration: none;
-    color: white;
-    padding: 14px;
-    border-radius: 10px;
-    transition: 0.3s;
+    border-radius: 8px;
+    font-weight: 700;
     font-size: 14px;
-    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s;
+}
+.nav-item:hover,
+.nav-item.active {
+    background: rgba(255,255,255,0.1);
+    color: #fdfff9;
 }
 
-.menu-item:hover,
-.ativo {
-    background-color: rgba(255, 255, 255, 0.12);
+.nav-divider { margin: 16px 0; height: 1px; background: rgba(255,255,255,0.1); }
+.nav-footer  { margin-top: auto; display: flex; flex-direction: column; gap: 8px; }
+
+.badge-nav {
+    margin-left: auto;
+    background: #ef4444;
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 20px;
 }
 
-.menu-item i {
-    margin-right: 10px;
-}
-
+/* ── CONTEÚDO PRINCIPAL ── */
 .conteudo {
     flex: 1;
     margin-left: 260px;
@@ -231,17 +248,9 @@ body {
     flex-shrink: 0;
 }
 
-.notification-icon.red {
-    background-color: #ef4444;
-}
-
-.notification-icon.yellow {
-    background-color: #f59e0b;
-}
-
-.notification-icon.blue {
-    background-color: #3a5aaa;
-}
+.notification-icon.red    { background-color: #ef4444; }
+.notification-icon.yellow { background-color: #f59e0b; }
+.notification-icon.blue   { background-color: #3a5aaa; }
 
 .notification-text strong {
     display: block;
@@ -277,6 +286,7 @@ body {
     background-color: white;
 }
 
+/* ── ÁREA PRINCIPAL ── */
 .area-principal {
     padding: 40px;
 }
@@ -396,6 +406,7 @@ body {
     background-color: #f4f7fb;
 }
 
+/* ── MODAL ── */
 .modal-foto {
     display: none;
     position: fixed;
@@ -470,89 +481,33 @@ body {
     line-height: 1.5;
 }
 
-.overlay-menu {
-    display: none;
-}
-
+/* ── RESPONSIVO ── */
 @media (max-width: 1024px) {
-    .menu-lateral {
-        width: 220px;
-        padding: 20px;
-    }
-
-    .conteudo {
-        margin-left: 220px;
-    }
-
-    .topo {
-        padding: 0 24px;
-    }
-
-    .area-principal {
-        padding: 28px;
-    }
-
-    .card-foto {
-        width: 300px;
-    }
-
-    .paciente-info h1 {
-        font-size: 24px;
-    }
-
-    .modal-conteudo {
-        width: 760px;
-        min-height: 560px;
-    }
-
-    .modal-imagem-area {
-        height: 430px;
-    }
-
-    .imagem-modal-icone {
-        font-size: 230px;
-    }
-
-    .imagem-modal-foto {
-        max-height: 430px;
-    }
+    .sidebar { width: 220px; }
+    .conteudo { margin-left: 220px; }
+    .topo { padding: 0 24px; }
+    .area-principal { padding: 28px; }
+    .card-foto { width: 300px; }
+    .paciente-info h1 { font-size: 24px; }
+    .modal-conteudo { width: 760px; min-height: 560px; }
+    .modal-imagem-area { height: 430px; }
+    .imagem-modal-icone { font-size: 230px; }
+    .imagem-modal-foto { max-height: 430px; }
 }
 
 @media (max-width: 768px) {
-    .layout {
-        display: block;
-    }
+    .layout { display: block; }
+    .conteudo { margin-left: 0; }
 
-    .conteudo {
-        margin-left: 0;
-    }
-
-    .menu-lateral {
-        width: 270px;
+    .sidebar {
         transform: translateX(-100%);
-        transition: 0.3s ease;
-        padding: 24px;
     }
-
-    .menu-lateral.aberto {
+    .sidebar.open {
         transform: translateX(0);
     }
+    .sidebar-overlay.active { display: block; }
 
-    .overlay-menu {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background-color: rgba(0, 0, 0, 0.55);
-        z-index: 900;
-    }
-
-    .overlay-menu.ativo {
-        display: block;
-    }
-
-    .btn-menu-mobile {
-        display: block;
-    }
+    .btn-menu-mobile { display: block; }
 
     .topo {
         min-height: 82px;
@@ -564,179 +519,45 @@ body {
         gap: 10px;
     }
 
-    .btn-menu-mobile {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .caminho {
-        grid-column: 2;
-        grid-row: 1;
-        font-size: 12px;
-        gap: 5px;
-        line-height: 1.5;
-    }
-
-    .perfil-area {
-        grid-column: 3;
-        grid-row: 1;
-        gap: 10px;
-    }
-
-    .perfil span {
-        display: none;
-    }
-
-    .perfil-circulo {
-        width: 42px;
-        height: 42px;
-    }
-
-    .notification-menu {
-        right: -70px;
-        width: 270px;
-    }
-
-    .area-principal {
-        padding: 20px;
-    }
-
-    .cabecalho-paciente {
-        padding: 22px;
-    }
-
-    .paciente-info {
-        align-items: flex-start;
-    }
-
-    .paciente-circulo {
-        width: 55px;
-        height: 55px;
-    }
-
-    .paciente-info h1 {
-        font-size: 21px;
-    }
-
-    .paciente-info p {
-        font-size: 14px;
-    }
-
-    .cards-fotos {
-        gap: 20px;
-    }
-
-    .card-foto {
-        width: 100%;
-        max-width: 340px;
-    }
-
-    .foto-area {
-        height: 220px;
-    }
-
-    .botao-voltar {
-        width: 100%;
-        max-width: 340px;
-    }
-
-    .modal-conteudo {
-        width: 95vw;
-        min-height: 430px;
-        padding: 25px;
-    }
-
-    .modal-imagem-area {
-        height: 300px;
-    }
-
-    .imagem-modal-icone {
-        font-size: 170px;
-    }
-
-    .imagem-modal-foto {
-        max-height: 300px;
-    }
-
-    .fechar-modal {
-        width: 40px;
-        height: 40px;
-    }
+    .btn-menu-mobile { grid-column: 1; grid-row: 1; }
+    .caminho { grid-column: 2; grid-row: 1; font-size: 12px; gap: 5px; line-height: 1.5; }
+    .perfil-area { grid-column: 3; grid-row: 1; gap: 10px; }
+    .perfil span { display: none; }
+    .perfil-circulo { width: 42px; height: 42px; }
+    .notification-menu { right: -70px; width: 270px; }
+    .area-principal { padding: 20px; }
+    .cabecalho-paciente { padding: 22px; }
+    .paciente-info { align-items: flex-start; }
+    .paciente-circulo { width: 55px; height: 55px; }
+    .paciente-info h1 { font-size: 21px; }
+    .paciente-info p { font-size: 14px; }
+    .cards-fotos { gap: 20px; }
+    .card-foto { width: 100%; max-width: 340px; }
+    .foto-area { height: 220px; }
+    .botao-voltar { width: 100%; max-width: 340px; }
+    .modal-conteudo { width: 95vw; min-height: 430px; padding: 25px; }
+    .modal-imagem-area { height: 300px; }
+    .imagem-modal-icone { font-size: 170px; }
+    .imagem-modal-foto { max-height: 300px; }
+    .fechar-modal { width: 40px; height: 40px; }
 }
 
 @media (max-width: 480px) {
-    .topo {
-        padding: 14px;
-        grid-template-columns: 28px 1fr auto;
-    }
-
-    .caminho {
-        font-size: 11px;
-        gap: 4px;
-    }
-
-    .notificacao {
-        display: block;
-    }
-
-    .notification-menu {
-        right: -95px;
-        width: 250px;
-    }
-
-    .perfil-circulo {
-        width: 38px;
-        height: 38px;
-    }
-
-    .area-principal {
-        padding: 14px;
-    }
-
-    .cabecalho-paciente {
-        padding: 18px;
-    }
-
-    .paciente-info {
-        flex-direction: column;
-    }
-
-    .paciente-info h1 {
-        font-size: 20px;
-    }
-
-    .card-foto {
-        max-width: 100%;
-    }
-
-    .foto-area {
-        height: 190px;
-        font-size: 60px;
-    }
-
-    .card-info {
-        padding: 16px;
-    }
-
-    .botao-ampliar {
-        padding: 10px 14px;
-    }
-
-    .modal-conteudo {
-        width: 95vw;
-        min-height: 400px;
-        padding: 25px;
-    }
-
-    .modal-imagem-area {
-        height: 270px;
-    }
-
-    .imagem-modal-icone {
-        font-size: 150px;
-    }
-
-    .imagem-modal-foto {
-        max-height: 270px;
-    }
+    .topo { padding: 14px; grid-template-columns: 28px 1fr auto; }
+    .caminho { font-size: 11px; gap: 4px; }
+    .notificacao { display: block; }
+    .notification-menu { right: -95px; width: 250px; }
+    .perfil-circulo { width: 38px; height: 38px; }
+    .area-principal { padding: 14px; }
+    .cabecalho-paciente { padding: 18px; }
+    .paciente-info { flex-direction: column; }
+    .paciente-info h1 { font-size: 20px; }
+    .card-foto { max-width: 100%; }
+    .foto-area { height: 190px; font-size: 60px; }
+    .card-info { padding: 16px; }
+    .botao-ampliar { padding: 10px 14px; }
+    .modal-conteudo { width: 95vw; min-height: 400px; padding: 25px; }
+    .modal-imagem-area { height: 270px; }
+    .imagem-modal-icone { font-size: 150px; }
+    .imagem-modal-foto { max-height: 270px; }
 }
