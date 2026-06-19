@@ -102,7 +102,7 @@ body {
   font-size:14px;
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:12px;
   transition:all .2s;
 }
 
@@ -161,9 +161,9 @@ body {
   border-bottom:1px solid var(--neutral);
   flex-shrink:0;
   gap:12px;
+  overflow:visible;
 }
 
-/* Hamburger — oculto no desktop */
 .hamburger {
   display:none;
   background:none;
@@ -175,7 +175,7 @@ body {
 }
 
 .page-title {
-  font-size:18px;
+  font-size:14px;
   font-weight:700;
   color:var(--blue);
   flex:1;
@@ -433,7 +433,7 @@ body {
 
 .alerts-hero h1,
 .messages-hero h1 {
-  font-size:26px;
+  font-size:22px;
   margin-bottom:8px;
   line-height:1.2;
 }
@@ -714,7 +714,7 @@ body {
   box-shadow:0 8px 30px rgba(40,61,116,.14);
   overflow-y:auto;
   display:none;
-  z-index:20;
+  z-index:200;
   max-height:285px;
   overscroll-behavior:contain;
   scrollbar-gutter:stable;
@@ -1354,14 +1354,18 @@ body {
 @media (max-width:600px) {
   body { overflow:auto; height:auto; min-height:100vh; }
 
-  .topbar { height:60px; padding:0 16px; }
+  .topbar { height:60px; padding:0 16px; overflow:visible; }
 
   .user-name { display:none; }
 
   .notification-menu {
-    right:auto;
-    left:-60px;
-    width:270px;
+    position:fixed;
+    top:60px;
+    left:16px;
+    right:16px;
+    width:auto;
+    max-height:220px;
+    z-index:200;
   }
 
   .content-area { padding:16px; }
@@ -1390,7 +1394,7 @@ body {
   .alerts-hero h1,
   .messages-hero h1 { font-size:20px; }
 
-  .page-title { font-size:16px; }
+  .page-title { font-size:13px; }
 
   .settings-actions { flex-direction:column; }
   .settings-actions .btn-secondary,
@@ -1401,4 +1405,7 @@ body {
   .page-title { font-size:14px; }
   .kpi-info h3 { font-size:22px; }
   .topbar-actions { gap:10px; }
+}
+#nav-configuracoes {
+    display: none;
 }

@@ -3,13 +3,12 @@
     flex-direction: column;
     align-items: center;
     padding: 40px;
-    overflow-y: auto;
 }
 
 .cartao-duvida {
-    background-color: #fdfff9;
-    border: 1px solid #c9d6e3;
-    border-radius: 12px;
+    background-color: var(--white);
+    border: 1px solid var(--neutral);
+    border-radius: var(--radius);
     width: 100%;
     max-width: 760px;
     overflow: hidden;
@@ -17,34 +16,32 @@
 
 .cartao-cabecalho {
     padding: 28px 32px;
-    border-bottom: 1px solid #c9d6e3;
+    border-bottom: 1px solid var(--neutral);
 }
 
 .cartao-titulo {
     font-size: 20px;
     font-weight: 700;
-    color: #283d74;
+    color: var(--blue);
     text-decoration: underline;
     margin-bottom: 8px;
 }
 
 .cartao-subtitulo {
     font-size: 14px;
-    color: #4a6070;
+    color: var(--text-soft);
     line-height: 1.5;
 }
 
 .cartao-secao {
     padding: 24px 32px;
-    border-bottom: 1px solid #c9d6e3;
+    border-bottom: 1px solid var(--neutral);
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.cartao-secao-botao {
-    padding: 0;
-}
+.cartao-secao-botao { padding: 0; }
 
 .secao-label {
     display: flex;
@@ -52,26 +49,24 @@
     gap: 10px;
     font-size: 15px;
     font-weight: 700;
-    color: #1a2a40;
+    color: var(--text);
 }
 
 .duvida-textarea {
     width: 100%;
     min-height: 110px;
     padding: 16px;
-    border: 1.5px solid #c9d6e3;
+    border: 1.5px solid var(--neutral);
     border-radius: 8px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    color: #1a2a40;
+    color: var(--text);
     resize: vertical;
     outline: none;
     transition: border-color 0.2s;
 }
 
-.duvida-textarea:focus {
-    border-color: #283d74;
-}
+.duvida-textarea:focus { border-color: var(--blue); }
 
 .zona-upload-duvida {
     display: flex;
@@ -79,7 +74,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    border: 2px dashed #a0b4c8;
+    border: 2px dashed var(--neutral-mid);
     border-radius: 10px;
     padding: 16px 24px;
     cursor: pointer;
@@ -90,23 +85,19 @@
 }
 
 .zona-upload-duvida:hover {
-    border-color: #283d74;
-    background-color: #e8edf5;
+    border-color: var(--blue);
+    background-color: var(--blue-pale);
 }
 
 .upload-texto-principal {
     font-size: 15px;
     font-weight: 700;
-    color: #1a2a40;
+    color: var(--text);
 }
 
 .upload-texto-dica {
     font-size: 13px;
-    color: #4a6070;
-}
-
-.input-arquivo {
-    display: none;
+    color: var(--text-soft);
 }
 
 .preview-duvida {
@@ -118,7 +109,7 @@
 
 .trocar-imagem {
     font-size: 12px;
-    color: #4a6070;
+    color: var(--text-soft);
     margin-top: 8px;
 }
 
@@ -129,10 +120,10 @@
     gap: 10px;
     width: 100%;
     padding: 18px;
-    background-color: #283d74;
-    color: #fdfff9;
+    background-color: var(--blue);
+    color: var(--white);
     border: none;
-    border-radius: 0 0 12px 12px;
+    border-radius: 0 0 var(--radius) var(--radius);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 700;
@@ -140,54 +131,10 @@
     transition: background-color 0.2s;
 }
 
-.botao-enviar-duvida:hover {
-    background-color: #2f4a8c;
-}
+.botao-enviar-duvida:hover { background-color: var(--blue-mid); }
 
-.topbar-direita {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.sino-btn {
-    position: relative;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #4a6070;
-    display: flex;
-    align-items: center;
-    padding: 4px;
-}
-
-.sino-btn:hover {
-    color: #283d74;
-}
-
-.sino-bolinha {
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    width: 9px;
-    height: 9px;
-    background-color: #e74c3c;
-    border-radius: 50%;
-    border: 2px solid #fdfff9;
-}
-
-.aviso-toast {
-    position: fixed;
-    top: 24px;
-    right: 24px;
-    background: #2e7d32;
-    color: #fff;
-    padding: 14px 24px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 700;
-    z-index: 9999;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    opacity: 0;
-    transition: opacity 0.4s;
+@media (max-width: 600px) {
+    .conteudo-duvida { padding: 16px; }
+    .cartao-cabecalho,
+    .cartao-secao { padding: 20px 16px; }
 }

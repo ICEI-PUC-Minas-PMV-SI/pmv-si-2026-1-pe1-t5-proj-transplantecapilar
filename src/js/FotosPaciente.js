@@ -139,24 +139,45 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function irParaPainel(secao) {
-        localStorage.setItem("secaoPainelMedico", secao);
-        window.location.href = "PainelMedico.html";
+    if (btnMenuMobile) {
+        btnMenuMobile.addEventListener("click", abrirMenu);
     }
 
-    if (btnMenuMobile) btnMenuMobile.addEventListener("click", abrirMenu);
-    if (overlayMenu) overlayMenu.addEventListener("click", fecharMenu);
+    if (overlayMenu) {
+        overlayMenu.addEventListener("click", fecharMenu);
+    }
 
     if (btnVoltar) {
         btnVoltar.addEventListener("click", function () {
-            history.back();
+            window.location.href = "detalhes-pacientes.html";
         });
     }
 
     if (linkDetalhesPaciente) {
         linkDetalhesPaciente.addEventListener("click", function (event) {
             event.preventDefault();
-            history.back();
+            window.location.href = "detalhes-pacientes.html";
+        });
+    }
+
+    if (btnAlertas) {
+        btnAlertas.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "orientacoes.html";
+        });
+    }
+
+    if (btnMensagens) {
+        btnMensagens.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "RegistrarDuvidas.html";
+        });
+    }
+
+    if (btnConfiguracoes) {
+        btnConfiguracoes.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "cadastro.html";
         });
     }
 
@@ -164,28 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btnSair.addEventListener("click", function (event) {
             event.preventDefault();
             localStorage.removeItem("usuarioLogado");
-            window.location.href = "../../index.html";
-        });
-    }
-
-    if (btnAlertas) {
-        btnAlertas.addEventListener("click", function (event) {
-            event.preventDefault();
-            irParaPainel("alertas");
-        });
-    }
-
-    if (btnMensagens) {
-        btnMensagens.addEventListener("click", function (event) {
-            event.preventDefault();
-            irParaPainel("mensagens");
-        });
-    }
-
-    if (btnConfiguracoes) {
-        btnConfiguracoes.addEventListener("click", function (event) {
-            event.preventDefault();
-            irParaPainel("configuracoes");
+            window.location.href = "login.html";
         });
     }
 
@@ -203,38 +203,40 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.querySelectorAll(".notification-item").forEach(function (item) {
+        item.addEventListener("click", function () {
+            const secao = item.dataset.targetSection;
+            const alvo = item.dataset.targetId;
+            const categoria = item.dataset.notificationCategory;
 
-    item.addEventListener("click", function () {
+            if (secao) {
+                localStorage.setItem("secaoPainelMedico", secao);
+            }
 
-        const secao = item.dataset.targetSection;
-        const alvo = item.dataset.targetId;
-        const categoria = item.dataset.notificationCategory;
+            if (alvo) {
+                localStorage.setItem("alvoPainelMedico", alvo);
+            }
 
-        if (secao) {
-            localStorage.setItem("secaoPainelMedico", secao);
-        }
+            if (categoria) {
+                localStorage.setItem("categoriaPainelMedico", categoria);
+            }
 
-        if (alvo) {
-            localStorage.setItem("alvoPainelMedico", alvo);
-        }
+            if (notificationMenu) {
+                notificationMenu.classList.remove("open");
+            }
 
-        if (categoria) {
-            localStorage.setItem("categoriaPainelMedico", categoria);
-        }
-
-        notificationMenu.classList.remove("open");
-
-        window.location.href = "PainelMedico.html";
-
+            window.location.href = "PainelMedico.html";
+        });
     });
 
-});
-
-    if (fecharModal) fecharModal.addEventListener("click", fecharModalFoto);
+    if (fecharModal) {
+        fecharModal.addEventListener("click", fecharModalFoto);
+    }
 
     if (modalFoto) {
         modalFoto.addEventListener("click", function (event) {
-            if (event.target === modalFoto) fecharModalFoto();
+            if (event.target === modalFoto) {
+                fecharModalFoto();
+            }
         });
     }
 

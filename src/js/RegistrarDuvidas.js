@@ -1,6 +1,25 @@
+function toggleSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    var overlay = document.getElementById('sidebar-overlay');
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('active');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const zonaUpload = document.querySelector('.zona-upload-duvida');
     let arquivoSelecionado = null;
+
+    var notifBtn = document.getElementById('notification-btn');
+    var notifMenu = document.getElementById('notification-menu');
+    if (notifBtn && notifMenu) {
+        notifBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            notifMenu.classList.toggle('open');
+        });
+        document.addEventListener('click', function () {
+            notifMenu.classList.remove('open');
+        });
+    }
 
     function mostrarAviso(mensagem) {
         const aviso = document.createElement('div');

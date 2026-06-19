@@ -29,7 +29,6 @@ body {
   overflow: hidden;
 }
 
-/* ── OVERLAY (mobile) ── */
 .sidebar-overlay {
   display: none;
   position: fixed;
@@ -39,7 +38,6 @@ body {
 }
 .sidebar-overlay.active { display: block; }
 
-/* ── SIDEBAR ── */
 .sidebar {
   width: 260px;
   background: var(--blue);
@@ -71,7 +69,6 @@ body {
   margin-bottom: 8px;
 }
 
-/* Tamanhos de texto da sidebar alinhados com orientacoes.css */
 .brand-name     { font-size: 20px; font-weight: 700; letter-spacing: 0.5px; }
 .brand-subtitle { font-size: 11px; color: var(--neutral); text-transform: uppercase; letter-spacing: 1px; }
 
@@ -83,7 +80,6 @@ body {
   flex: 1;
 }
 
-/* nav-item idêntico ao de orientacoes.css */
 .nav-item {
   padding: 14px 16px;
   color: rgba(253,255,249,0.8);
@@ -93,7 +89,7 @@ body {
   font-size: 14px;
   display: flex;
   align-items: center;
-  gap: 12px;        /* orientacoes usa 12px (painel usava 10px) */
+  gap: 12px;        
   transition: all 0.2s;
 }
 .nav-item i { width: 18px; text-align: center; font-size: 15px; flex-shrink: 0; }
@@ -105,10 +101,8 @@ body {
 .nav-divider { margin: 16px 0; height: 1px; background: rgba(255,255,255,0.1); }
 .nav-footer  { margin-top: auto; display: flex; flex-direction: column; gap: 8px; }
 
-/* ── ÁREA PRINCIPAL ── */
 .main-wrapper { flex: 1; display: flex; flex-direction: column; overflow-y: auto; min-width: 0; }
 
-/* ── TOPBAR — padronizado com orientacoes (height 70px, padding 0 40px) ── */
 .topbar {
   background: var(--white);
   height: 70px;
@@ -119,6 +113,7 @@ body {
   border-bottom: 1px solid var(--neutral);
   flex-shrink: 0;
   gap: 12px;
+  overflow: visible;
 }
 
 .hamburger {
@@ -131,7 +126,6 @@ body {
   flex-shrink: 0;
 }
 
-/* page-title — mesmo tamanho/peso do breadcrumb de orientacoes (14px 700) */
 .page-title {
   font-size: 14px;
   font-weight: 700;
@@ -141,7 +135,6 @@ body {
 
 .topbar-actions { display: flex; align-items: center; gap: 22px; flex-shrink: 0; }
 
-/* notification — sem alteração de estrutura, só ajuste visual */
 .notification-wrapper { position: relative; }
 
 .notification-btn {
@@ -229,11 +222,9 @@ body {
 .notification-icon.yellow { background: var(--warning); }
 .notification-icon.blue   { background: var(--blue-light); }
 
-/* textos de notificação — alinhados com 13/12px de orientacoes */
 .notification-text strong { display: block; color: var(--text); font-size: 13px; margin-bottom: 3px; }
 .notification-text span   { color: var(--text-soft); font-size: 12px; line-height: 1.4; }
 
-/* user-profile — idêntico ao de orientacoes.css */
 .user-profile {
   display: flex; align-items: center; gap: 12px;
   font-size: 14px; font-weight: 700; color: var(--text);
@@ -253,7 +244,6 @@ body {
   overflow: hidden;
 }
 
-/* ── CONTENT AREA ── */
 .content-area {
   padding: 40px;
   max-width: 1100px;
@@ -264,22 +254,19 @@ body {
 .page-section { display: block; }
 .page-section.hidden { display: none; }
 
-/* ── HERO — ajuste de tipografia para alinhar com orientacoes ── */
 .hero-panel {
   background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
-  border-radius: 16px;        /* orientacoes usa 16px no page-container */
+  border-radius: 16px;        
   padding: 32px 40px;
   color: var(--white);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
-  box-shadow: 0 8px 30px rgba(40,61,116,0.15); /* igual ao box-shadow de orientacoes */
+  box-shadow: 0 8px 30px rgba(40,61,116,0.15); 
 }
 
-/* h1 do hero alinhado ao page-title de orientacoes (22px) */
 .hero-text h1 { font-size: 22px; margin-bottom: 6px; }
-/* subtítulo alinhado ao page-subtitle de orientacoes (14px) */
 .hero-text p  { font-size: 14px; color: var(--blue-pale); opacity: 0.9; }
 
 .progress-widget {
@@ -298,33 +285,30 @@ body {
 .progress-track { height: 8px; background: rgba(255,255,255,0.2); border-radius: 10px; overflow: hidden; }
 .progress-fill  { height: 100%; width: 16.6%; background: var(--white); border-radius: 10px; }
 
-/* ── DASHBOARD GRID ── */
 .dashboard-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 32px;
 }
 
-/* section-title alinhado (18px 700 — mesmo padrão de orientacoes h3/títulos internos) */
 .section-title { font-size: 15px; color: var(--text); margin-bottom: 16px; font-weight: 700; }
 
 .task-list { display: flex; flex-direction: column; gap: 16px; }
 
-/* task-item — borda e radius alinhados com orientacao-card (1.5px, radius 12px) */
 .task-item {
   background: var(--white);
-  border: 1.5px solid var(--neutral);  /* orientacoes usa 1.5px */
+  border: 1.5px solid var(--neutral);  
   border-radius: var(--radius);
   padding: 20px 24px;
   display: flex;
   align-items: center;
   gap: 20px;
   transition: all 0.2s;
-  box-shadow: 0 2px 8px rgba(40,61,116,0.04); /* sutil como orientacoes */
+  box-shadow: 0 2px 8px rgba(40,61,116,0.04); 
 }
 .task-item:hover {
   border-color: var(--blue-light);
-  box-shadow: 0 4px 16px rgba(40,61,116,0.08); /* igual ao timeline-card hover */
+  box-shadow: 0 4px 16px rgba(40,61,116,0.08); 
 }
 
 .task-icon {
@@ -338,11 +322,9 @@ body {
 }
 
 .task-content { flex: 1; }
-/* h3 das tasks alinhado com orientacao-item (14px) */
 .task-content h3 { font-size: 14px; color: var(--text); margin-bottom: 4px; font-weight: 700; }
 .task-content p  { font-size: 13px; color: var(--text-soft); line-height: 1.6; }
 
-/* badges — alinhados com tl-badge de orientacoes (10px 700 uppercase) */
 .status-badge {
   padding: 4px 10px;
   border-radius: 999px;
@@ -354,7 +336,6 @@ body {
 .badge-warning { background: var(--warning-bg); color: #b45309; }
 .badge-success { background: var(--success-bg); color: var(--success); }
 
-/* botões — alinhados com btn-support de orientacoes */
 .btn-action {
   background: var(--blue);
   color: var(--white);
@@ -375,7 +356,6 @@ body {
   color: var(--text);
 }
 
-/* support-card — alinhado com page-container de orientacoes */
 .support-card {
   background: var(--white);
   border: 1.5px solid var(--neutral);
@@ -395,11 +375,9 @@ body {
   margin: 0 auto 16px;
 }
 
-/* textos do support-card alinhados com orientacao-card (15px título, 14px texto) */
 .support-card h3 { font-size: 15px; color: var(--text); margin-bottom: 8px; font-weight: 700; }
 .support-card p  { font-size: 14px; color: var(--text-soft); line-height: 1.6; margin-bottom: 24px; }
 
-/* btn-support idêntico ao de orientacoes.css */
 .btn-support {
   display: block; width: 100%; padding: 12px;
   background: var(--white);
@@ -412,7 +390,6 @@ body {
 }
 .btn-support:hover { background: var(--blue); color: var(--white); }
 
-/* ── FILTROS (historico) ── */
 .filter-row {
   display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px;
 }
@@ -431,7 +408,6 @@ body {
   background: var(--blue); border-color: var(--blue); color: var(--white);
 }
 
-/* ── HISTORICO HERO — alinhado com page-header de orientacoes ── */
 .historico-hero {
   background: var(--white);
   color: var(--text);
@@ -446,9 +422,7 @@ body {
   box-shadow: 0 2px 8px rgba(40,61,116,0.04);
 }
 
-/* h1 alinhado com page-title de orientacoes (22px 700) */
 .historico-hero h1 { font-size: 22px; margin-bottom: 6px; font-weight: 700; line-height: 1.2; }
-/* subtítulo alinhado com page-subtitle de orientacoes (14px) */
 .historico-hero p  { color: var(--text-soft); font-size: 14px; line-height: 1.5; max-width: 580px; }
 
 .historico-counter {
@@ -468,7 +442,6 @@ body {
   text-transform: uppercase; letter-spacing: .6px;
 }
 
-/* ── HISTORICO LAYOUT ── */
 .historico-layout {
   display: grid;
   grid-template-columns: minmax(0,1.4fr) minmax(240px,.75fr);
@@ -482,7 +455,6 @@ body {
 
 .timeline-group { display: flex; flex-direction: column; gap: 0; }
 
-/* day label alinhado com orientacao-card-title (font-size 12px uppercase) */
 .timeline-day-label {
   font-size: 12px;
   font-weight: 700;
@@ -499,7 +471,6 @@ body {
 
 .timeline-dot { display: none; }
 
-/* timeline-card — alinhado com orientacao-card de orientacoes */
 .timeline-card {
   background: var(--white);
   border: 1.5px solid var(--neutral);
@@ -522,9 +493,7 @@ body {
 }
 
 .timeline-card-header > div:nth-child(2) { flex: 1; min-width: 0; }
-/* h4 alinhado com orientacao-card-title (15px 700) */
 .timeline-card-header h4 { font-size: 14px; color: var(--text); font-weight: 700; margin-bottom: 3px; }
-/* meta alinhado com orientacao-item (12px) */
 .timeline-meta { font-size: 12px; color: var(--neutral-dk); font-weight: 700; }
 
 .timeline-icon-wrap {
@@ -539,9 +508,7 @@ body {
 .icon-foto      { background: #e0f2fe; color: #0284c7; }
 .icon-tarefa    { background: var(--blue-pale); color: var(--blue); }
 .icon-mensagem  { background: #ede9fe; color: #7c3aed; }
-.icon-medicacao { background: var(--success-bg); color: var(--success); }
 
-/* desc alinhado com orientacao-item (14px 1.6) */
 .timeline-desc {
   font-size: 13px;
   color: var(--text-soft);
@@ -550,7 +517,6 @@ body {
 }
 .timeline-desc strong { color: var(--text); }
 
-/* tl-badge — mesmo padrão de status-badge acima */
 .tl-badge {
   padding: 4px 10px;
   border-radius: 999px;
@@ -566,7 +532,6 @@ body {
 .badge-success-tl  { background: var(--success-bg); color: var(--success); }
 .badge-mensagem    { background: #ede9fe; color: #7c3aed; }
 
-/* chat bubbles — alinhados com orientacao-item (14px 1.6) */
 .timeline-chat-bubble {
   border-radius: 10px;
   padding: 12px 14px;
@@ -594,7 +559,6 @@ body {
   opacity: .7;
 }
 
-/* btn-tl-action alinhado com orientacoes (12px 700) */
 .btn-tl-action {
   display: inline-flex;
   align-items: center;
@@ -611,7 +575,6 @@ body {
 }
 .btn-tl-action:hover { background: var(--neutral); }
 
-/* empty state */
 .empty-historico {
   padding: 28px 24px;
   text-align: center;
@@ -626,7 +589,6 @@ body {
   display: block; color: var(--text); font-size: 16px; margin-bottom: 6px;
 }
 
-/* ── HISTORICO ASIDE — alinhado com page-container de orientacoes ── */
 .historico-side-panel {
   background: var(--white);
   border: 1.5px solid var(--neutral);
@@ -640,7 +602,6 @@ body {
   border-bottom: 1px solid var(--neutral);
 }
 .historico-side-card:last-child { border-bottom: none; }
-/* h3 alinhado com orientacao-card-title (15px 700) */
 .historico-side-card h3 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 14px; }
 
 .hist-summary-list { display: flex; flex-direction: column; gap: 10px; }
@@ -670,7 +631,6 @@ body {
   border-radius: 10px;
 }
 
-/* ── PLACEHOLDER ── */
 .placeholder-section {
   display: flex;
   flex-direction: column;
@@ -682,11 +642,9 @@ body {
   gap: 16px;
 }
 .placeholder-icon { font-size: 48px; color: var(--neutral-mid); }
-/* alinhado com page-title de orientacoes */
 .placeholder-section h2 { font-size: 22px; color: var(--text); }
 .placeholder-section p  { font-size: 14px; }
 
-/* ── MODAIS ── */
 .modal-overlay {
   position: fixed; inset: 0;
   background: rgba(26,42,64,.45);
@@ -698,7 +656,6 @@ body {
 }
 .modal-overlay.open { display: flex; }
 
-/* modal-card alinhado com page-container de orientacoes (border-radius 16px, border 1px) */
 .modal-card {
   width: min(760px, 100%);
   max-height: 86vh;
@@ -717,7 +674,6 @@ body {
   justify-content: space-between;
   gap: 18px;
 }
-/* modal h2 alinhado com page-title de orientacoes (22px → mantemos 18px pois é modal) */
 .modal-header h2   { font-size: 18px; color: var(--text); margin-bottom: 4px; font-weight: 700; }
 .modal-header span { font-size: 12px; color: var(--text-soft); font-weight: 700; }
 
@@ -761,7 +717,6 @@ body {
 .photo-placeholder:hover { transform: scale(1.015); }
 
 .photo-caption { padding: 13px 14px; background: var(--white); border-top: 1px solid var(--neutral); }
-/* caption alinhado com orientacao-item (14px/13px) */
 .photo-caption strong { display: block; font-size: 14px; color: var(--text); margin-bottom: 3px; font-weight: 700; }
 .photo-caption span   { font-size: 12px; color: var(--text-soft); line-height: 1.4; }
 
@@ -792,7 +747,6 @@ body {
   box-shadow: 0 4px 15px rgba(40,61,116,0.08);
 }
 
-/* ── TOAST ── */
 #toast-msg {
   position: fixed;
   bottom: 28px;
@@ -821,7 +775,6 @@ body {
   transition: outline 0.2s;
 }
 
-/* ── RESPONSIVIDADE (idêntica a orientacoes) ── */
 @media (max-width: 1000px) {
   body { height: auto; min-height: 100vh; overflow: auto; }
 
@@ -848,9 +801,19 @@ body {
 
 @media (max-width: 600px) {
   body { overflow: auto; height: auto; min-height: 100vh; }
-  .topbar { height: 60px; padding: 0 16px; }
+  .topbar { height: 60px; padding: 0 16px; overflow: visible; }
   .user-name { display: none; }
-  .notification-menu { right: auto; left: -60px; width: 270px; }
+
+  .notification-menu {
+    position: fixed;
+    top: 60px;
+    left: 16px;
+    right: 16px;
+    width: auto;
+    max-height: 220px;
+    z-index: 200;
+  }
+
   .content-area { padding: 16px; }
 
   .hero-panel { flex-direction: column; gap: 24px; padding: 24px; }
@@ -863,4 +826,7 @@ body {
 
   .historico-hero h1 { font-size: 18px; }
   .page-title { font-size: 13px; }
+}
+#nav-configuracoes {
+    display: none;
 }
