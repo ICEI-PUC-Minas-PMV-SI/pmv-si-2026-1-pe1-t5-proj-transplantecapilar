@@ -14,7 +14,45 @@ function toggleSidebar() {
 }
 
 // ==========================================
-// 2. Feedback visual (mensagem na página)
+// 2. Carrega o nome do paciente logado (puxado do localStorage)
+// ==========================================
+function carregarUsuarioLogado() {
+  const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+
+  // Se ninguém estiver logado, mantém o placeholder padrão da tela
+  if (!usuarioLogado || !usuarioLogado.nome) {
+    console.warn('Nenhum usuário logado encontrado no localStorage.');
+    return;
+  }
+
+  const nomeEl = document.querySelector('.user-name');
+  const avatarEl = document.querySelector('.avatar');
+
+  if (nomeEl) {
+    nomeEl.textContent = usuarioLogado.nome;
+  }
+
+  if (avatarEl) {
+    avatarEl.textContent = gerarIniciais(usuarioLogado.nome);
+  }
+}
+
+// Gera as iniciais a partir do nome completo (ex: "João da Silva" -> "JS")
+function gerarIniciais(nomeCompleto) {
+  const partes = nomeCompleto.trim().split(' ').filter(Boolean);
+
+  if (partes.length === 1) {
+    return partes[0].slice(0, 2).toUpperCase();
+  }
+
+  const primeiraLetra = partes[0][0];
+  const ultimaLetra = partes[partes.length - 1][0];
+
+  return (primeiraLetra + ultimaLetra).toUpperCase();
+}
+
+// ==========================================
+// 3. Feedback visual (mensagem na página)
 // ==========================================
 function mostrarFeedback(mensagem, tipo = 'sucesso') {
   // Remove feedback anterior se existir
@@ -89,7 +127,7 @@ function mostrarFeedback(mensagem, tipo = 'sucesso') {
 }
 
 // ==========================================
-// 3. Salvar questionário no localStorage
+// 4. Salvar questionário no localStorage
 // ==========================================
 function salvarQuestionario(dados) {
   const CHAVE = 'historico_questionarios';
@@ -97,9 +135,14 @@ function salvarQuestionario(dados) {
   // Recupera o histórico existente ou inicia um array vazio
   const historicoAtual = JSON.parse(localStorage.getItem(CHAVE) || '[]');
 
-  // Adiciona a nova resposta com data/hora
+  // Identifica o paciente logado para vincular a resposta a ele
+  const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+
+  // Adiciona a nova resposta com data/hora e identificação do paciente
   const novaResposta = {
     ...dados,
+    pacienteId: usuarioLogado?.id || null,
+    pacienteNome: usuarioLogado?.nome || 'Desconhecido',
     dataHora: new Date().toLocaleString('pt-BR')
   };
 
@@ -115,6 +158,9 @@ function salvarQuestionario(dados) {
 // Aguarda o carregamento completo da tela
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
+
+  // Preenche nome/avatar do paciente logado na topbar
+  carregarUsuarioLogado();
 
   const btnSubmit = document.querySelector('.btn-submit');
 
