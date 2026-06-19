@@ -7,17 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalFoto = document.getElementById("modalFoto");
     const fecharModal = document.getElementById("fecharModal");
     const modalImagemArea = document.getElementById("modalImagemArea");
-
     const btnVoltar = document.getElementById("btnVoltar");
-    const btnSair = document.getElementById("btnSair");
-    const btnAlertas = document.getElementById("btnAlertas");
-    const btnMensagens = document.getElementById("btnMensagens");
-    const btnConfiguracoes = document.getElementById("btnConfiguracoes");
-    const btnMenuMobile = document.getElementById("btnMenuMobile");
 
-    const menuLateral = document.getElementById("menuLateral");
-    const overlayMenu = document.getElementById("overlayMenu");
-    const linkDetalhesPaciente = document.getElementById("linkDetalhesPaciente");
+    const sidebar = document.getElementById("sidebar");
+    const sidebarOverlay = document.getElementById("sidebar-overlay");
 
     const nomeUsuarioTopo = document.getElementById("nomeUsuarioTopo");
     const perfilCirculo = document.getElementById("perfilCirculo");
@@ -50,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="foto-area">
                         <i class="fa-regular fa-image"></i>
                     </div>
-
                     <div class="card-info">
                         <div>
                             <span class="data">Nenhuma foto enviada</span>
@@ -72,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         Object.keys(upload.fotos).forEach(function (idFoto) {
             const imagemFoto = upload.fotos[idFoto];
-
             if (!imagemFoto) return;
 
             const relato = upload.relato && upload.relato.trim() !== ""
@@ -84,14 +75,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="foto-area">
                         <img src="${imagemFoto}" class="foto-paciente" alt="${nomesFotos[idFoto]}">
                     </div>
-
                     <div class="card-info">
                         <div>
                             <span class="data">${upload.data}</span>
                             <h3>${nomesFotos[idFoto]}</h3>
                             <p class="relato-card">${relato}</p>
                         </div>
-
                         <button class="botao-ampliar" data-imagem="${imagemFoto}">
                             Ampliar
                         </button>
@@ -105,140 +94,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function abrirModal(imagem) {
         if (!modalFoto || !modalImagemArea) return;
-
         modalImagemArea.innerHTML = `
             <img src="${imagem}" alt="Foto ampliada do paciente" class="imagem-modal-foto">
         `;
-
         modalFoto.classList.add("abrir");
     }
 
-    function fecharModalFoto() {
-        if (modalFoto) modalFoto.classList.remove("abrir");
-    }
-
-    function ativarBotoesAmpliar() {
-        document.querySelectorAll(".botao-ampliar").forEach(function (botao) {
-            botao.addEventListener("click", function () {
-                abrirModal(botao.getAttribute("data-imagem"));
-            });
-        });
-    }
-
-    function abrirMenu() {
-        if (menuLateral && overlayMenu) {
-            menuLateral.classList.add("aberto");
-            overlayMenu.classList.add("ativo");
-        }
-    }
-
-    function fecharMenu() {
-        if (menuLateral && overlayMenu) {
-            menuLateral.classList.remove("aberto");
-            overlayMenu.classList.remove("ativo");
-        }
-    }
-
-    if (btnMenuMobile) {
-        btnMenuMobile.addEventListener("click", abrirMenu);
-    }
-
-    if (overlayMenu) {
-        overlayMenu.addEventListener("click", fecharMenu);
-    }
-
-    if (btnVoltar) {
-        btnVoltar.addEventListener("click", function () {
-            window.location.href = "detalhes-pacientes.html";
-        });
-    }
-
-    if (linkDetalhesPaciente) {
-        linkDetalhesPaciente.addEventListener("click", function (event) {
-            event.preventDefault();
-            window.location.href = "detalhes-pacientes.html";
-        });
-    }
-
-    if (btnAlertas) {
-        btnAlertas.addEventListener("click", function (event) {
-            event.preventDefault();
-            window.location.href = "orientacoes.html";
-        });
-    }
-
-    if (btnMensagens) {
-        btnMensagens.addEventListener("click", function (event) {
-            event.preventDefault();
-            window.location.href = "RegistrarDuvidas.html";
-        });
-    }
-
-    if (btnConfiguracoes) {
-        btnConfiguracoes.addEventListener("click", function (event) {
-            event.preventDefault();
-            window.location.href = "cadastro.html";
-        });
-    }
-
-    if (btnSair) {
-        btnSair.addEventListener("click", function (event) {
-            event.preventDefault();
-            localStorage.removeItem("usuarioLogado");
-            window.location.href = "login.html";
-        });
-    }
-
-    if (notificationBtn && notificationMenu) {
-        notificationBtn.addEventListener("click", function (event) {
-            event.stopPropagation();
-            notificationMenu.classList.toggle("open");
-        });
-
-        document.addEventListener("click", function (event) {
-            if (!notificationMenu.contains(event.target) && !notificationBtn.contains(event.target)) {
-                notificationMenu.classList.remove("open");
-            }
-        });
-    }
-
-    document.querySelectorAll(".notification-item").forEach(function (item) {
-        item.addEventListener("click", function () {
-            const secao = item.dataset.targetSection;
-            const alvo = item.dataset.targetId;
-            const categoria = item.dataset.notificationCategory;
-
-            if (secao) {
-                localStorage.setItem("secaoPainelMedico", secao);
-            }
-
-            if (alvo) {
-                localStorage.setItem("alvoPainelMedico", alvo);
-            }
-
-            if (categoria) {
-                localStorage.setItem("categoriaPainelMedico", categoria);
-            }
-
-            if (notificationMenu) {
-                notificationMenu.classList.remove("open");
-            }
-
-            window.location.href = "PainelMedico.html";
-        });
-    });
-
-    if (fecharModal) {
-        fecharModal.addEventListener("click", fecharModalFoto);
-    }
-
-    if (modalFoto) {
-        modalFoto.addEventListener("click", function (event) {
-            if (event.target === modalFoto) {
-                fecharModalFoto();
-            }
-        });
-    }
-
-    carregarFotosDoUpload();
-});
+    function fe
