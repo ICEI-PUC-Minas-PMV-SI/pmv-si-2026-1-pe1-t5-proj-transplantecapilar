@@ -9,7 +9,7 @@ O sistema foi desenvolvido com foco no acompanhamento da recuperação de pacien
 | Arquivo | Descrição |
 | --- | --- |
 | presentation/README.md | Documento com descrição da apresentação do projeto |
-| presentation/apresentacao-final.pdf | Slides da apresentação final do projeto |
+| Apresentação comercial do projeto etapa 5.pdf | Slides da apresentação final do projeto |
 | presentation/video-demonstracao.mp4 | Vídeo demonstrando o funcionamento do sistema |
 
 ## Conteúdo da apresentação
@@ -50,8 +50,8 @@ Faça uma apresentação de um resumo de todos o processo de desenvolvimento e n
 Liste os arquivos produzidos e postados nesta pasta, com suas localizaçãoes e descrição do conteúdo neste arquivo Readme.md.
 
 
-* [Pitch inicial](./sample-pitch.pdf) -- arquivo com os slides da apresentação inicial
-* [Apresentação final](./sample-presentation.pdf) -- arquivo com os slides da apresentação final
+* [Pitch inicial](./Apresentação%20comercial%20do%20projeto%20etapa%205.pdf) -- arquivo com os slides da apresentação inicial
+* [Apresentação final](./Apresentação%20comercial%20do%20projeto%20etapa%205.pdf) -- arquivo com os slides da apresentação final
 * [Vídeo de demonstração](./sample-video.mp4) -- arquivo com a demonstração do funcionamento do sistema
 
 O conjunto de slides deve ser apresentado em um arquivo PowerPoint ou PDF. A apresentação do projeto deve contemplar todos os itens trabalhados nos demais artefatos. Alguns aspectos que devem ser contemplados na apresentação são listados a seguir.
